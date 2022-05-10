@@ -1,24 +1,10 @@
-# README
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Book a class
 
-Things you may want to cover:
+>  This is the final group capstone project The back-end is Book-a-class
 
-* Ruby version
+## Project requirements
 
-* System dependencies
+The project requirements can be viewed [here](https://github.com/microverseinc/curriculum-final-capstone/blob/main/projects/business_requirements.md)
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
