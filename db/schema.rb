@@ -14,7 +14,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_07_162820) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "classes", force: :cascade do |t|
+  create_table "courses", force: :cascade do |t|
     t.string "title"
     t.text "description"
     t.string "category"
@@ -25,22 +25,22 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_07_162820) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "classes_reservations", force: :cascade do |t|
-    t.bigint "class_id"
+  create_table "courses_reservations", force: :cascade do |t|
+    t.bigint "course_id"
     t.bigint "reservation_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["class_id"], name: "index_classes_reservations_on_class_id"
-    t.index ["reservation_id"], name: "index_classes_reservations_on_reservation_id"
+    t.index ["course_id"], name: "index_courses_reservations_on_course_id"
+    t.index ["reservation_id"], name: "index_courses_reservations_on_reservation_id"
   end
 
-  create_table "classes_users", force: :cascade do |t|
+  create_table "courses_users", force: :cascade do |t|
     t.bigint "user_id"
-    t.bigint "class_id"
+    t.bigint "course_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["class_id"], name: "index_classes_users_on_class_id"
-    t.index ["user_id"], name: "index_classes_users_on_user_id"
+    t.index ["course_id"], name: "index_courses_users_on_course_id"
+    t.index ["user_id"], name: "index_courses_users_on_user_id"
   end
 
   create_table "reservations", force: :cascade do |t|
@@ -54,10 +54,10 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_07_162820) do
 
   create_table "start_dates", force: :cascade do |t|
     t.string "start_date"
-    t.bigint "class_id"
+    t.bigint "course_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["class_id"], name: "index_start_dates_on_class_id"
+    t.index ["course_id"], name: "index_start_dates_on_course_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -66,10 +66,10 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_07_162820) do
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "classes_reservations", "classes"
-  add_foreign_key "classes_reservations", "reservations"
-  add_foreign_key "classes_users", "classes"
-  add_foreign_key "classes_users", "users"
+  add_foreign_key "courses_reservations", "courses"
+  add_foreign_key "courses_reservations", "reservations"
+  add_foreign_key "courses_users", "courses"
+  add_foreign_key "courses_users", "users"
   add_foreign_key "reservations", "users"
-  add_foreign_key "start_dates", "classes"
+  add_foreign_key "start_dates", "courses"
 end
