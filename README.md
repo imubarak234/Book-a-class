@@ -45,3 +45,22 @@ The WebDev server will ask you to change the port 3000, since it is already ocup
 
 ## Testing
 
+## Authors
+
+👤 **Mubarak A Ibrahim**
+
+- GitHub: [@imubarak234](https://github.com/imubarak234)
+- LinkedIn: [Mubarak Ibrahim](https://www.linkedin.com/in/mubarak-ibrahim-1540a5208/)
+
+👤 **Kalolo Chola Lemba**
+
+- GitHub: [@KayLemba](https://github.com/KayLemba)
+- Twitter: [@King_Kaylo1](https://twitter.com/King_Kaylo1)
+- LinkedIn: [Kalolo (Chola) Lemba](https://www.linkedin.com/in/kalolo-lemba-41a8339a/)
+
+👤 **Yuriy Chamkoriyski**
+
+- GitHub: [@Hombre2014](https://github.com/Hombre2014)
+- Twitter: [@Chamkoriyski](https://twitter.com/Chamkoriyski)
+- LinkedIn: [axebit](https://linkedin.com/in/axebit)
+
