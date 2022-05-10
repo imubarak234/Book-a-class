@@ -1,4 +1,4 @@
-class ClassesReservation < ApplicationRecord
+class CourseReservation < ApplicationRecord
   belongs_to :reservation
   belongs_to :class
 end
