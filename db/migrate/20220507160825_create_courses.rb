@@ -7,7 +7,7 @@ class CreateCourses < ActiveRecord::Migration[7.0]
       t.integer :duration
       t.string :photo
       t.float :price
-
+      t.references :user, foreign_key: true
       t.timestamps
     end
   end

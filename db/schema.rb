@@ -21,17 +21,10 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_07_162820) do
     t.integer "duration"
     t.string "photo"
     t.float "price"
+    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "courses_reservations", force: :cascade do |t|
-    t.bigint "course_id"
-    t.bigint "reservation_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["course_id"], name: "index_courses_reservations_on_course_id"
-    t.index ["reservation_id"], name: "index_courses_reservations_on_reservation_id"
+    t.index ["user_id"], name: "index_courses_on_user_id"
   end
 
   create_table "courses_users", force: :cascade do |t|
@@ -47,8 +40,10 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_07_162820) do
     t.string "reserve_date"
     t.integer "duration"
     t.bigint "user_id"
+    t.bigint "course_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["course_id"], name: "index_reservations_on_course_id"
     t.index ["user_id"], name: "index_reservations_on_user_id"
   end
 
@@ -66,10 +61,10 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_07_162820) do
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "courses_reservations", "courses"
-  add_foreign_key "courses_reservations", "reservations"
+  add_foreign_key "courses", "users"
   add_foreign_key "courses_users", "courses"
   add_foreign_key "courses_users", "users"
+  add_foreign_key "reservations", "courses"
   add_foreign_key "reservations", "users"
   add_foreign_key "start_dates", "courses"
 end
