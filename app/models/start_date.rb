@@ -1,3 +1,3 @@
 class StartDate < ApplicationRecord
-  belongs_to :class
+  belongs_to :course
 end
