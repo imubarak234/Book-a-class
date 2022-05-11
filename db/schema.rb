@@ -21,8 +21,10 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_07_162820) do
     t.integer "duration"
     t.string "photo"
     t.float "price"
+    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_courses_on_user_id"
   end
 
   create_table "courses_users", force: :cascade do |t|
@@ -59,6 +61,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_07_162820) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "courses", "users"
   add_foreign_key "courses_users", "courses"
   add_foreign_key "courses_users", "users"
   add_foreign_key "reservations", "courses"
