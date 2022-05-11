@@ -4,6 +4,7 @@ class CreateReservations < ActiveRecord::Migration[7.0]
       t.string :reserve_date
       t.integer :duration
       t.references :user, foreign_key: true
+      t.references :course, foreign_key: true
       t.timestamps
     end
   end
