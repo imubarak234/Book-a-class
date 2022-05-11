@@ -22,6 +22,7 @@ end
     category: Faker::Educator.subject,
     duration: Faker::Number.within(range: 4..30),
     photo: Faker::Internet.domain_name,
+    price: Faker::Number.within(range: 100..650),
     user_id: Faker::Number.within(range: 1..5)
   )
   course.save
