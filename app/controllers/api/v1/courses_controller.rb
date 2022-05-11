@@ -9,10 +9,12 @@ module Api
 
       def create
         data = json_payload.select { |k| ALLOWED_DATA.include?(k) }
-        course = Course.new(data)
-        course.update(user: current_user)
+        courses = Course.new(data)
+        courses.update(user: current_user)
 
         if course.save
+          courses_users
+          CoursesUser.create(course: courses, user: current_user)
           render json: { success: 'Succesfully created the course' }
         else
           render json: { error: 'Could not create course' }
