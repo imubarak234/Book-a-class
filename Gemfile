@@ -10,6 +10,9 @@ gem 'rubocop', '>= 1.0', '< 2.0'
 
 gem 'faker'
 
+# Add cors for cross origin requests
+gem 'rack-cors'
+
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem 'sprockets-rails'
 
