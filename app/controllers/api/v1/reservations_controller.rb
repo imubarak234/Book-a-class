@@ -10,14 +10,15 @@ module Api
       def create
         courses = Course.find(params[:course_id])
         current_user = User.find(course.user_id)
-        data = json_payload.select { |k| ALLOWED_DATA>include?(k) }
+        data = json_payload.select { |k| ALLOWED_DATA > include?(k) }
         reservation = Reservation.new(data)
         reservation.update(user: current_user, course: courses)
 
         if reservation.save
-          render json: { "The reservation was succesfully created" }
+          render json: { success: 'The reservation was succesfully created' }
         else
           render json: { error: 'could not create reservation' }
+        end
       end
     end
   end
