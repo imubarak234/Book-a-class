@@ -2108,3 +2108,64 @@ Processing by Api::V1::ReservationsController#index as JSON
 Completed 200 OK in 4ms (Views: 1.6ms | ActiveRecord: 0.6ms | Allocations: 1699)
 
 
+Started POST "/api/v1/courses/3/reservations" for ::1 at 2022-05-12 17:25:59 +0100
+Processing by Api::V1::ReservationsController#create as JSON
+  Parameters: {"duration"=>5, "reserve_date"=>"one day", "course_id"=>"3", "user_id"=>4, "reservation"=>{"reserve_date"=>"one day", "duration"=>5, "user_id"=>4, "course_id"=>"3"}}
+Can't verify CSRF token authenticity.
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 15.7ms | Allocations: 3511)
+
+
+  
+NoMethodError (undefined method `include?' for #<Api::V1::ReservationsController:0x000000000592e0>
+
+        data = json_payload.select { |k| ALLOWED_DATA > include?(k) }
+                                                        ^^^^^^^^):
+  
+app/controllers/api/v1/reservations_controller.rb:15:in `block in create'
+app/controllers/api/v1/reservations_controller.rb:15:in `create'
+Started POST "/api/v1/courses/3/reservations" for ::1 at 2022-05-12 17:27:07 +0100
+Processing by Api::V1::ReservationsController#create as JSON
+  Parameters: {"duration"=>5, "reserve_date"=>"one day", "course_id"=>"3", "user_id"=>4, "reservation"=>{"reserve_date"=>"one day", "duration"=>5, "user_id"=>4, "course_id"=>"3"}}
+Can't verify CSRF token authenticity.
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/reservations_controller.rb:18:in `create'
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:18:in `create'
+  [1m[36mReservation Create (8.4ms)[0m  [1m[32mINSERT INTO "reservations" ("reserve_date", "duration", "user_id", "course_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["reserve_date", "one day"], ["duration", 5], ["user_id", 4], ["course_id", 3], ["created_at", "2022-05-12 16:27:08.121772"], ["updated_at", "2022-05-12 16:27:08.121772"]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/reservations_controller.rb:18:in `create'
+Completed 200 OK in 60ms (Views: 0.3ms | ActiveRecord: 33.6ms | Allocations: 9629)
+
+
+  [1m[36mReservation Load (0.8ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" ORDER BY "reservations"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started DELETE "/api/v1/courses/3/reservations/62" for ::1 at 2022-05-12 17:31:47 +0100
+Processing by Api::V1::ReservationsController#destroy as JSON
+  Parameters: {"course_id"=>"3", "id"=>"62"}
+Can't verify CSRF token authenticity.
+  [1m[36mReservation Load (1.5ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."id" = $1 LIMIT $2[0m  [["id", 62], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:26:in `destroy'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/reservations_controller.rb:26:in `destroy'
+  [1m[36mReservation Destroy (4.3ms)[0m  [1m[31mDELETE FROM "reservations" WHERE "reservations"."id" = $1[0m  [["id", 62]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:26:in `destroy'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/reservations_controller.rb:26:in `destroy'
+No template found for Api::V1::ReservationsController#destroy, rendering head :no_content
+Completed 204 No Content in 25ms (ActiveRecord: 7.4ms | Allocations: 3207)
+
+
+  [1m[36mReservation Load (0.6ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" ORDER BY "reservations"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started DELETE "/api/v1/courses/3/reservations/62" for ::1 at 2022-05-12 17:32:07 +0100
+Processing by Api::V1::ReservationsController#destroy as JSON
+  Parameters: {"course_id"=>"3", "id"=>"62"}
+Can't verify CSRF token authenticity.
+  [1m[36mReservation Load (0.9ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."id" = $1 LIMIT $2[0m  [["id", 62], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:26:in `destroy'
+Completed 404 Not Found in 8ms (ActiveRecord: 0.9ms | Allocations: 995)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Reservation with 'id'=62):
+  
+app/controllers/api/v1/reservations_controller.rb:26:in `destroy'

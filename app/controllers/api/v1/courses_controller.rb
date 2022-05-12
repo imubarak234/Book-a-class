@@ -7,6 +7,10 @@ module Api
         render json: Course.all
       end
 
+      def show
+        render json: Course.find(params[:id])
+      end
+
       def create
 
         data = json_payload.select { |k| ALLOWED_DATA.include?(k) }

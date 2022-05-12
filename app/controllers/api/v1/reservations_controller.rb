@@ -1,7 +1,7 @@
 module Api
   module V1
     class ReservationsController < ApplicationController
-      ALLOWED_DATA = %[duration, reserve_date].freeze
+      ALLOWED_DATA = %[duration, reserve_date, course_id, user_id].freeze
 
       def index
         render json: Reservation.where(course_id: Course.find(params[:course_id]).id) 
@@ -12,11 +12,8 @@ module Api
       end
 
       def create
-        courses = Course.find(params[:course_id])
-        current_user = User.find(course.user_id)
-        data = json_payload.select { |k| ALLOWED_DATA > include?(k) }
+        data = json_payload.select { |k| ALLOWED_DATA.include?(k) }
         reservation = Reservation.new(data)
-        reservation.update(user: current_user, course: courses)
 
         if reservation.save
           render json: { success: 'The reservation was succesfully created' }
