@@ -15,10 +15,20 @@ module Api
         if course.save
           courses_users
           CoursesUser.create(course: courses, user: current_user)
-          render json: { success: 'Succesfully created the course' }
+          render json: status: :created
         else
-          render json: { error: 'Could not create course' }
+          render json: course.errors, status: :unproccessable_entity
         end
+      end
+
+      def destroy
+        Course.find(params[:id]).destroy!
+      end
+
+      private 
+
+      def course_params
+        #params.require(:course).permit(:title, :description, :category, :duration, :photo, :price)
       end
     end
   end

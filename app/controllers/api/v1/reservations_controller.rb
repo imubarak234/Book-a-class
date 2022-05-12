@@ -20,6 +20,10 @@ module Api
           render json: { error: 'could not create reservation' }
         end
       end
+
+      def destroy
+        Reservation.find(params[:id]).destroy!
+      end
     end
   end
 end
