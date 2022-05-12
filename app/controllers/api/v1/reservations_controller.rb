@@ -4,7 +4,11 @@ module Api
       ALLOWED_DATA = %[duration, reserve_date].freeze
 
       def index
-        render json: Course.find(params[:course_id]).reservations
+        render json: Reservation.where(course_id: Course.find(params[:course_id]).id) 
+      end
+
+      def show
+        render json: Reservation.find(params[:id])
       end
 
       def create

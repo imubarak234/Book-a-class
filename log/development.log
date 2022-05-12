@@ -2050,3 +2050,61 @@ Completed 500 Internal Server Error in 23ms (ActiveRecord: 4.5ms | Allocations: 
 NoMethodError (undefined method `reservations' for #<Course id: 20, title: "Teaching 199", description: "Molestiae omnis omnis. Molestias facilis libero. Q...", category: "Education", duration: 22, photo: "cassin.co", price: nil, user_id: 5, created_at: "2022-05-11 02:50:22.285247000 +0000", updated_at: "2022-05-11 02:50:22.285247000 +0000">):
   
 app/controllers/api/v1/reservations_controller.rb:7:in `index'
+Started GET "/api/v1/courses/20/reservations" for ::1 at 2022-05-12 17:00:14 +0100
+Processing by Api::V1::ReservationsController#index as JSON
+  Parameters: {"course_id"=>"20"}
+  [1m[36mCourse Load (0.3ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:7:in `index'
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 3.2ms | Allocations: 10838)
+
+
+  
+NoMethodError (undefined method `reservation' for #<Course id: 20, title: "Teaching 199", description: "Molestiae omnis omnis. Molestias facilis libero. Q...", category: "Education", duration: 22, photo: "cassin.co", price: nil, user_id: 5, created_at: "2022-05-11 02:50:22.285247000 +0000", updated_at: "2022-05-11 02:50:22.285247000 +0000">):
+  
+app/controllers/api/v1/reservations_controller.rb:7:in `index'
+Started GET "/api/v1/courses/20/reservations" for ::1 at 2022-05-12 17:05:42 +0100
+Processing by Api::V1::ReservationsController#index as JSON
+  Parameters: {"course_id"=>"20"}
+  [1m[36mCourse Load (0.4ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:7:in `index'
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 4.9ms | Allocations: 8397)
+
+
+  
+ActiveRecord::StatementInvalid (PG::UndefinedColumn: ERROR:  column reservations.course does not exist
+LINE 1: SELECT "reservations".* FROM "reservations" WHERE "reservati...
+                                                          ^
+HINT:  Perhaps you meant to reference the column "reservations.course_id".
+):
+  
+app/controllers/api/v1/reservations_controller.rb:7:in `index'
+Started GET "/api/v1/courses/20/reservations" for ::1 at 2022-05-12 17:06:48 +0100
+Processing by Api::V1::ReservationsController#index as JSON
+  Parameters: {"course_id"=>"20"}
+  [1m[36mCourse Load (0.3ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:7:in `index'
+  [1m[36mReservation Load (0.2ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."course_id" = $1[0m  [["course_id", 20]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:7:in `index'
+Completed 200 OK in 16ms (Views: 1.5ms | ActiveRecord: 4.8ms | Allocations: 8046)
+
+
+Started GET "/api/v1/courses/2/reservations" for ::1 at 2022-05-12 17:06:57 +0100
+Processing by Api::V1::ReservationsController#index as JSON
+  Parameters: {"course_id"=>"2"}
+  [1m[36mCourse Load (0.3ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:7:in `index'
+  [1m[36mReservation Load (0.2ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."course_id" = $1[0m  [["course_id", 2]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:7:in `index'
+Completed 200 OK in 6ms (Views: 2.5ms | ActiveRecord: 1.7ms | Allocations: 3020)
+
+
+Started GET "/api/v1/courses/3/reservations" for ::1 at 2022-05-12 17:07:04 +0100
+Processing by Api::V1::ReservationsController#index as JSON
+  Parameters: {"course_id"=>"3"}
+  [1m[36mCourse Load (0.3ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:7:in `index'
+  [1m[36mReservation Load (0.3ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."course_id" = $1[0m  [["course_id", 3]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 1.6ms | ActiveRecord: 0.6ms | Allocations: 1699)
+
+
