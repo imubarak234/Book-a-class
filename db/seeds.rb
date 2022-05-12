@@ -24,6 +24,7 @@ end
     photo: Faker::Internet.domain_name,
     price: Faker::Number.within(range: 100..650),
     user_id: Faker::Number.within(range: 1..5)
+    price: Faker::Number.within(range: 100..650),
   )
   course.save
 end

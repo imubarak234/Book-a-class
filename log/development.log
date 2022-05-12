@@ -1914,6 +1914,7 @@ FOREIGN KEY ("course_id")
   [1m[36mStartDate Create (0.2ms)[0m  [1m[32mINSERT INTO "start_dates" ("start_date", "course_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["start_date", "2022-04-10"], ["course_id", 1], ["created_at", "2022-05-11 03:32:59.800563"], ["updated_at", "2022-05-11 03:32:59.800563"]]
   [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
   [1m[36mCoursesUser Load (0.3ms)[0m  [1m[34mSELECT "courses_users".* FROM "courses_users"[0m
+<<<<<<< HEAD
 Started GET "/api/v1/courses" for 127.0.0.1 at 2022-05-11 14:13:27 +0200
   [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
 Processing by Api::V1::CoursesController#index as JSON
@@ -44573,5 +44574,385 @@ Processing by Api::V1::CoursesController#index as JSON
   [1m[36mCourse Load (0.8ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
   ↳ app/controllers/api/v1/courses_controller.rb:7:in `index'
 Completed 200 OK in 16ms (Views: 14.4ms | ActiveRecord: 0.8ms | Allocations: 2760)
+=======
+Started GET "/routes" for 127.0.0.1 at 2022-05-12 02:40:03 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/routes"):
+  
+Started POST "/api/v1/courses" for ::1 at 2022-05-12 15:04:08 +0100
+  
+SyntaxError (/mnt/c/Users/m_bth/Desktop/stuff/code/Module 6 repos/Capstone/Book-a-class/app/controllers/api/v1/courses_controller.rb:18: syntax error, unexpected label, expecting `end'
+          render json: status: :created
+                       ^~~~~~~
+):
+  
+app/controllers/api/v1/courses_controller.rb:18: syntax error, unexpected label, expecting `end'
+app/controllers/api/v1/courses_controller.rb:18: syntax error, unexpected label, expecting `end'
+app/controllers/api/v1/courses_controller.rb:18: syntax error, unexpected label, expecting `end'
+Started GET "/api/v1/courses" for ::1 at 2022-05-12 15:04:49 +0100
+  
+SyntaxError (/mnt/c/Users/m_bth/Desktop/stuff/code/Module 6 repos/Capstone/Book-a-class/app/controllers/api/v1/courses_controller.rb:18: syntax error, unexpected label, expecting `end'
+          render json: status: :created
+                       ^~~~~~~
+):
+  
+app/controllers/api/v1/courses_controller.rb:18: syntax error, unexpected label, expecting `end'
+app/controllers/api/v1/courses_controller.rb:18: syntax error, unexpected label, expecting `end'
+app/controllers/api/v1/courses_controller.rb:18: syntax error, unexpected label, expecting `end'
+Started GET "/api/v1/courses" for ::1 at 2022-05-12 15:06:46 +0100
+Processing by Api::V1::CoursesController#index as JSON
+  Parameters: {"course"=>{}}
+  [1m[36mCourse Load (5.5ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:7:in `index'
+Completed 200 OK in 61ms (Views: 53.7ms | ActiveRecord: 22.3ms | Allocations: 34359)
+
+
+Started GET "/api/v1/courses" for ::1 at 2022-05-12 15:07:16 +0100
+  
+SyntaxError (/mnt/c/Users/m_bth/Desktop/stuff/code/Module 6 repos/Capstone/Book-a-class/app/controllers/api/v1/courses_controller.rb:18: syntax error, unexpected label, expecting `end'
+          render json: status: :created
+                       ^~~~~~~
+):
+  
+app/controllers/api/v1/courses_controller.rb:18: syntax error, unexpected label, expecting `end'
+app/controllers/api/v1/courses_controller.rb:18: syntax error, unexpected label, expecting `end'
+app/controllers/api/v1/courses_controller.rb:18: syntax error, unexpected label, expecting `end'
+Started GET "/api/v1/courses" for ::1 at 2022-05-12 15:08:34 +0100
+Processing by Api::V1::CoursesController#index as JSON
+  Parameters: {"course"=>{}}
+  [1m[36mCourse Load (2.3ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:7:in `index'
+Completed 200 OK in 80ms (Views: 70.5ms | ActiveRecord: 22.2ms | Allocations: 32913)
+
+
+Started POST "/api/v1/courses" for ::1 at 2022-05-12 15:32:25 +0100
+Processing by Api::V1::CoursesController#create as JSON
+  Parameters: {"title"=>"Testing1", "description"=>"Dummy descriptions design to give a feel of things that are things which are not things you catch my drift", "category"=>"Computer", "duration"=>2, "photo"=>"Blank photo", "price"=>345.3, "user_id"=>20, "course"=>{"title"=>"Testing1", "description"=>"Dummy descriptions design to give a feel of things that are things which are not things you catch my drift", "category"=>"Computer", "duration"=>2, "photo"=>"Blank photo", "price"=>345.3, "user_id"=>20}}
+Can't verify CSRF token authenticity.
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 17.3ms | Allocations: 5501)
+
+
+  
+NameError (undefined local variable or method `course' for #<Api::V1::CoursesController:0x0000000002c970>
+
+        if course.save
+           ^^^^^^
+Did you mean?  courses):
+  
+app/controllers/api/v1/courses_controller.rb:16:in `create'
+Started POST "/api/v1/courses" for ::1 at 2022-05-12 15:33:04 +0100
+Processing by Api::V1::CoursesController#create as JSON
+  Parameters: {"title"=>"Testing1", "description"=>"Dummy descriptions design to give a feel of things that are things which are not things you catch my drift", "category"=>"Computer", "duration"=>2, "photo"=>"Blank photo", "price"=>345.3, "user_id"=>20, "course"=>{"title"=>"Testing1", "description"=>"Dummy descriptions design to give a feel of things that are things which are not things you catch my drift", "category"=>"Computer", "duration"=>2, "photo"=>"Blank photo", "price"=>345.3, "user_id"=>20}}
+Can't verify CSRF token authenticity.
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:16:in `create'
+  [1m[36mCourse Create (7.4ms)[0m  [1m[32mINSERT INTO "courses" ("title", "description", "category", "duration", "photo", "price", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["title", "Testing1"], ["description", "Dummy descriptions design to give a feel of things that are things which are not things you catch my drift"], ["category", "Computer"], ["duration", 2], ["photo", "Blank photo"], ["price", 345.3], ["user_id", 20], ["created_at", "2022-05-12 14:33:05.540910"], ["updated_at", "2022-05-12 14:33:05.540910"]]
+  ↳ app/controllers/api/v1/courses_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:16:in `create'
+Completed 500 Internal Server Error in 45ms (ActiveRecord: 27.4ms | Allocations: 8579)
+
+
+  
+NameError (undefined local variable or method `courses_users' for #<Api::V1::CoursesController:0x00000000032460>
+
+          courses_users
+          ^^^^^^^^^^^^^
+Did you mean?  courses):
+  
+app/controllers/api/v1/courses_controller.rb:17:in `create'
+Started POST "/api/v1/courses" for ::1 at 2022-05-12 15:35:43 +0100
+Processing by Api::V1::CoursesController#create as JSON
+  Parameters: {"title"=>"Testing1", "description"=>"Dummy descriptions design to give a feel of things that are things which are not things you catch my drift", "category"=>"Computer", "duration"=>2, "photo"=>"Blank photo", "price"=>345.3, "user_id"=>20, "course"=>{"title"=>"Testing1", "description"=>"Dummy descriptions design to give a feel of things that are things which are not things you catch my drift", "category"=>"Computer", "duration"=>2, "photo"=>"Blank photo", "price"=>345.3, "user_id"=>20}}
+Can't verify CSRF token authenticity.
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:16:in `create'
+  [1m[36mCourse Create (0.9ms)[0m  [1m[32mINSERT INTO "courses" ("title", "description", "category", "duration", "photo", "price", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["title", "Testing1"], ["description", "Dummy descriptions design to give a feel of things that are things which are not things you catch my drift"], ["category", "Computer"], ["duration", 2], ["photo", "Blank photo"], ["price", 345.3], ["user_id", 20], ["created_at", "2022-05-12 14:35:44.245947"], ["updated_at", "2022-05-12 14:35:44.245947"]]
+  ↳ app/controllers/api/v1/courses_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:16:in `create'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/courses_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:18:in `create'
+  [1m[36mCoursesUser Create (2.3ms)[0m  [1m[32mINSERT INTO "courses_users" ("user_id", "course_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 20], ["course_id", 228], ["created_at", "2022-05-12 14:35:44.311221"], ["updated_at", "2022-05-12 14:35:44.311221"]]
+  ↳ app/controllers/api/v1/courses_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:18:in `create'
+Completed 201 Created in 83ms (Views: 0.9ms | ActiveRecord: 22.5ms | Allocations: 17023)
+
+
+Started POST "/api/v1/couses/20/reservations" for ::1 at 2022-05-12 16:53:52 +0100
+  
+ActionController::RoutingError (No route matches [POST] "/api/v1/couses/20/reservations"):
+  
+Started GET "/api/v1/couses/20/reservations" for ::1 at 2022-05-12 16:54:15 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/couses/20/reservations"):
+  
+Started GET "/api/v1/courses/20/reservations" for ::1 at 2022-05-12 16:54:40 +0100
+Processing by Api::V1::ReservationsController#index as JSON
+  Parameters: {"course_id"=>"20"}
+  [1m[36mReservation Load (1.8ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations"[0m
+  ↳ app/controllers/api/v1/reservations_controller.rb:7:in `index'
+Completed 200 OK in 50ms (Views: 45.7ms | ActiveRecord: 13.0ms | Allocations: 12944)
+
+
+Started GET "/api/v1/courses/20/reservations" for ::1 at 2022-05-12 16:58:05 +0100
+Processing by Api::V1::ReservationsController#index as JSON
+  Parameters: {"course_id"=>"20"}
+  [1m[36mCourse Load (0.7ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:7:in `index'
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 4.5ms | Allocations: 10947)
+
+
+  
+NoMethodError (undefined method `reservations' for #<Course id: 20, title: "Teaching 199", description: "Molestiae omnis omnis. Molestias facilis libero. Q...", category: "Education", duration: 22, photo: "cassin.co", price: nil, user_id: 5, created_at: "2022-05-11 02:50:22.285247000 +0000", updated_at: "2022-05-11 02:50:22.285247000 +0000">):
+  
+app/controllers/api/v1/reservations_controller.rb:7:in `index'
+Started GET "/api/v1/courses/20/reservations" for ::1 at 2022-05-12 17:00:14 +0100
+Processing by Api::V1::ReservationsController#index as JSON
+  Parameters: {"course_id"=>"20"}
+  [1m[36mCourse Load (0.3ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:7:in `index'
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 3.2ms | Allocations: 10838)
+
+
+  
+NoMethodError (undefined method `reservation' for #<Course id: 20, title: "Teaching 199", description: "Molestiae omnis omnis. Molestias facilis libero. Q...", category: "Education", duration: 22, photo: "cassin.co", price: nil, user_id: 5, created_at: "2022-05-11 02:50:22.285247000 +0000", updated_at: "2022-05-11 02:50:22.285247000 +0000">):
+  
+app/controllers/api/v1/reservations_controller.rb:7:in `index'
+Started GET "/api/v1/courses/20/reservations" for ::1 at 2022-05-12 17:05:42 +0100
+Processing by Api::V1::ReservationsController#index as JSON
+  Parameters: {"course_id"=>"20"}
+  [1m[36mCourse Load (0.4ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:7:in `index'
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 4.9ms | Allocations: 8397)
+
+
+  
+ActiveRecord::StatementInvalid (PG::UndefinedColumn: ERROR:  column reservations.course does not exist
+LINE 1: SELECT "reservations".* FROM "reservations" WHERE "reservati...
+                                                          ^
+HINT:  Perhaps you meant to reference the column "reservations.course_id".
+):
+  
+app/controllers/api/v1/reservations_controller.rb:7:in `index'
+Started GET "/api/v1/courses/20/reservations" for ::1 at 2022-05-12 17:06:48 +0100
+Processing by Api::V1::ReservationsController#index as JSON
+  Parameters: {"course_id"=>"20"}
+  [1m[36mCourse Load (0.3ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:7:in `index'
+  [1m[36mReservation Load (0.2ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."course_id" = $1[0m  [["course_id", 20]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:7:in `index'
+Completed 200 OK in 16ms (Views: 1.5ms | ActiveRecord: 4.8ms | Allocations: 8046)
+
+
+Started GET "/api/v1/courses/2/reservations" for ::1 at 2022-05-12 17:06:57 +0100
+Processing by Api::V1::ReservationsController#index as JSON
+  Parameters: {"course_id"=>"2"}
+  [1m[36mCourse Load (0.3ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:7:in `index'
+  [1m[36mReservation Load (0.2ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."course_id" = $1[0m  [["course_id", 2]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:7:in `index'
+Completed 200 OK in 6ms (Views: 2.5ms | ActiveRecord: 1.7ms | Allocations: 3020)
+
+
+Started GET "/api/v1/courses/3/reservations" for ::1 at 2022-05-12 17:07:04 +0100
+Processing by Api::V1::ReservationsController#index as JSON
+  Parameters: {"course_id"=>"3"}
+  [1m[36mCourse Load (0.3ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:7:in `index'
+  [1m[36mReservation Load (0.3ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."course_id" = $1[0m  [["course_id", 3]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 1.6ms | ActiveRecord: 0.6ms | Allocations: 1699)
+
+
+Started POST "/api/v1/courses/3/reservations" for ::1 at 2022-05-12 17:25:59 +0100
+Processing by Api::V1::ReservationsController#create as JSON
+  Parameters: {"duration"=>5, "reserve_date"=>"one day", "course_id"=>"3", "user_id"=>4, "reservation"=>{"reserve_date"=>"one day", "duration"=>5, "user_id"=>4, "course_id"=>"3"}}
+Can't verify CSRF token authenticity.
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 15.7ms | Allocations: 3511)
+
+
+  
+NoMethodError (undefined method `include?' for #<Api::V1::ReservationsController:0x000000000592e0>
+
+        data = json_payload.select { |k| ALLOWED_DATA > include?(k) }
+                                                        ^^^^^^^^):
+  
+app/controllers/api/v1/reservations_controller.rb:15:in `block in create'
+app/controllers/api/v1/reservations_controller.rb:15:in `create'
+Started POST "/api/v1/courses/3/reservations" for ::1 at 2022-05-12 17:27:07 +0100
+Processing by Api::V1::ReservationsController#create as JSON
+  Parameters: {"duration"=>5, "reserve_date"=>"one day", "course_id"=>"3", "user_id"=>4, "reservation"=>{"reserve_date"=>"one day", "duration"=>5, "user_id"=>4, "course_id"=>"3"}}
+Can't verify CSRF token authenticity.
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/reservations_controller.rb:18:in `create'
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:18:in `create'
+  [1m[36mReservation Create (8.4ms)[0m  [1m[32mINSERT INTO "reservations" ("reserve_date", "duration", "user_id", "course_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["reserve_date", "one day"], ["duration", 5], ["user_id", 4], ["course_id", 3], ["created_at", "2022-05-12 16:27:08.121772"], ["updated_at", "2022-05-12 16:27:08.121772"]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/reservations_controller.rb:18:in `create'
+Completed 200 OK in 60ms (Views: 0.3ms | ActiveRecord: 33.6ms | Allocations: 9629)
+
+
+  [1m[36mReservation Load (0.8ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" ORDER BY "reservations"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started DELETE "/api/v1/courses/3/reservations/62" for ::1 at 2022-05-12 17:31:47 +0100
+Processing by Api::V1::ReservationsController#destroy as JSON
+  Parameters: {"course_id"=>"3", "id"=>"62"}
+Can't verify CSRF token authenticity.
+  [1m[36mReservation Load (1.5ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."id" = $1 LIMIT $2[0m  [["id", 62], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:26:in `destroy'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/reservations_controller.rb:26:in `destroy'
+  [1m[36mReservation Destroy (4.3ms)[0m  [1m[31mDELETE FROM "reservations" WHERE "reservations"."id" = $1[0m  [["id", 62]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:26:in `destroy'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/reservations_controller.rb:26:in `destroy'
+No template found for Api::V1::ReservationsController#destroy, rendering head :no_content
+Completed 204 No Content in 25ms (ActiveRecord: 7.4ms | Allocations: 3207)
+
+
+  [1m[36mReservation Load (0.6ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" ORDER BY "reservations"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started DELETE "/api/v1/courses/3/reservations/62" for ::1 at 2022-05-12 17:32:07 +0100
+Processing by Api::V1::ReservationsController#destroy as JSON
+  Parameters: {"course_id"=>"3", "id"=>"62"}
+Can't verify CSRF token authenticity.
+  [1m[36mReservation Load (0.9ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."id" = $1 LIMIT $2[0m  [["id", 62], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:26:in `destroy'
+Completed 404 Not Found in 8ms (ActiveRecord: 0.9ms | Allocations: 995)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Reservation with 'id'=62):
+  
+app/controllers/api/v1/reservations_controller.rb:26:in `destroy'
+  [1m[36mCourse Load (3.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" ORDER BY "courses"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started DELETE "/api/v1/courses/228" for ::1 at 2022-05-12 17:33:51 +0100
+Processing by Api::V1::CoursesController#destroy as JSON
+  Parameters: {"id"=>"228"}
+Can't verify CSRF token authenticity.
+  [1m[36mCourse Load (0.8ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 228], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/courses_controller.rb:31:in `destroy'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:31:in `destroy'
+  [1m[36mCourse Destroy (12.7ms)[0m  [1m[31mDELETE FROM "courses" WHERE "courses"."id" = $1[0m  [["id", 228]]
+  ↳ app/controllers/api/v1/courses_controller.rb:31:in `destroy'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:31:in `destroy'
+Completed 500 Internal Server Error in 46ms (ActiveRecord: 20.8ms | Allocations: 8042)
+
+
+  
+ActiveRecord::InvalidForeignKey (PG::ForeignKeyViolation: ERROR:  update or delete on table "courses" violates foreign key constraint "fk_rails_4d4e1b0c2c" on table "courses_users"
+DETAIL:  Key (id)=(228) is still referenced from table "courses_users".
+):
+  
+app/controllers/api/v1/courses_controller.rb:31:in `destroy'
+Started DELETE "/api/v1/courses/228" for ::1 at 2022-05-12 17:35:03 +0100
+Processing by Api::V1::CoursesController#destroy as JSON
+  Parameters: {"id"=>"228"}
+Can't verify CSRF token authenticity.
+  [1m[36mCourse Load (1.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 228], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/courses_controller.rb:31:in `destroy'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:31:in `destroy'
+  [1m[36mCourse Destroy (2.4ms)[0m  [1m[31mDELETE FROM "courses" WHERE "courses"."id" = $1[0m  [["id", 228]]
+  ↳ app/controllers/api/v1/courses_controller.rb:31:in `destroy'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:31:in `destroy'
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 4.6ms | Allocations: 3074)
+
+
+  
+ActiveRecord::InvalidForeignKey (PG::ForeignKeyViolation: ERROR:  update or delete on table "courses" violates foreign key constraint "fk_rails_4d4e1b0c2c" on table "courses_users"
+DETAIL:  Key (id)=(228) is still referenced from table "courses_users".
+):
+  
+app/controllers/api/v1/courses_controller.rb:31:in `destroy'
+Started DELETE "/api/v1/courses/228" for ::1 at 2022-05-12 17:39:29 +0100
+Processing by Api::V1::CoursesController#destroy as JSON
+  Parameters: {"id"=>"228"}
+Can't verify CSRF token authenticity.
+  [1m[36mCoursesUser Load (0.8ms)[0m  [1m[34mSELECT "courses_users".* FROM "courses_users" WHERE "courses_users"."course_id" = $1[0m  [["course_id", 228]]
+  ↳ app/controllers/api/v1/courses_controller.rb:32:in `destroy'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:32:in `destroy'
+  [1m[36mCoursesUser Destroy (0.8ms)[0m  [1m[31mDELETE FROM "courses_users" WHERE "courses_users"."id" = $1[0m  [["id", 11]]
+  ↳ app/controllers/api/v1/courses_controller.rb:32:in `destroy'
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:32:in `destroy'
+  [1m[36mCourse Load (1.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 228], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/courses_controller.rb:33:in `destroy'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:33:in `destroy'
+  [1m[36mCourse Destroy (1.7ms)[0m  [1m[31mDELETE FROM "courses" WHERE "courses"."id" = $1[0m  [["id", 228]]
+  ↳ app/controllers/api/v1/courses_controller.rb:33:in `destroy'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:33:in `destroy'
+No template found for Api::V1::CoursesController#destroy, rendering head :no_content
+Completed 204 No Content in 79ms (ActiveRecord: 24.6ms | Allocations: 12236)
+
+
+  [1m[36mCourse Load (0.5ms)[0m  [1m[34mSELECT "courses".* FROM "courses" ORDER BY "courses"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started POST "/api/v1/courses/3/reservations" for ::1 at 2022-05-12 17:41:08 +0100
+Processing by Api::V1::ReservationsController#create as JSON
+  Parameters: {"duration"=>5, "reserve_date"=>"one day", "course_id"=>"3", "user_id"=>4, "reservation"=>{"reserve_date"=>"one day", "duration"=>5, "user_id"=>4, "course_id"=>"3"}}
+Can't verify CSRF token authenticity.
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/reservations_controller.rb:18:in `create'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:18:in `create'
+  [1m[36mReservation Create (1.3ms)[0m  [1m[32mINSERT INTO "reservations" ("reserve_date", "duration", "user_id", "course_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["reserve_date", "one day"], ["duration", 5], ["user_id", 4], ["course_id", 3], ["created_at", "2022-05-12 16:41:09.080543"], ["updated_at", "2022-05-12 16:41:09.080543"]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/reservations_controller.rb:18:in `create'
+Completed 200 OK in 41ms (Views: 0.4ms | ActiveRecord: 14.8ms | Allocations: 9077)
+
+
+Started POST "/api/v1/courses" for ::1 at 2022-05-12 17:41:17 +0100
+Processing by Api::V1::CoursesController#create as JSON
+  Parameters: {"title"=>"Testing1", "description"=>"Dummy descriptions design to give a feel of things that are things which are not things you catch my drift", "category"=>"Computer", "duration"=>2, "photo"=>"Blank photo", "price"=>345.3, "user_id"=>20, "course"=>{"title"=>"Testing1", "description"=>"Dummy descriptions design to give a feel of things that are things which are not things you catch my drift", "category"=>"Computer", "duration"=>2, "photo"=>"Blank photo", "price"=>345.3, "user_id"=>20}}
+Can't verify CSRF token authenticity.
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:19:in `create'
+  [1m[36mCourse Create (2.4ms)[0m  [1m[32mINSERT INTO "courses" ("title", "description", "category", "duration", "photo", "price", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["title", "Testing1"], ["description", "Dummy descriptions design to give a feel of things that are things which are not things you catch my drift"], ["category", "Computer"], ["duration", 2], ["photo", "Blank photo"], ["price", 345.3], ["user_id", 20], ["created_at", "2022-05-12 16:41:17.413793"], ["updated_at", "2022-05-12 16:41:17.413793"]]
+  ↳ app/controllers/api/v1/courses_controller.rb:19:in `create'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:19:in `create'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/courses_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:21:in `create'
+  [1m[36mCoursesUser Create (1.9ms)[0m  [1m[32mINSERT INTO "courses_users" ("user_id", "course_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 20], ["course_id", 229], ["created_at", "2022-05-12 16:41:17.447165"], ["updated_at", "2022-05-12 16:41:17.447165"]]
+  ↳ app/controllers/api/v1/courses_controller.rb:21:in `create'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:21:in `create'
+Completed 201 Created in 55ms (Views: 0.8ms | ActiveRecord: 20.2ms | Allocations: 11377)
+
+
+Started POST "/api/v1/courses" for ::1 at 2022-05-12 17:41:27 +0100
+Processing by Api::V1::CoursesController#create as JSON
+  Parameters: {"title"=>"Testing888", "description"=>"Dummy descriptions design to give a feel of things that are things which are not things you catch my drift", "category"=>"Computer", "duration"=>2, "photo"=>"Blank photo", "price"=>345.3, "user_id"=>20, "course"=>{"title"=>"Testing888", "description"=>"Dummy descriptions design to give a feel of things that are things which are not things you catch my drift", "category"=>"Computer", "duration"=>2, "photo"=>"Blank photo", "price"=>345.3, "user_id"=>20}}
+Can't verify CSRF token authenticity.
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:19:in `create'
+  [1m[36mCourse Create (1.2ms)[0m  [1m[32mINSERT INTO "courses" ("title", "description", "category", "duration", "photo", "price", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["title", "Testing888"], ["description", "Dummy descriptions design to give a feel of things that are things which are not things you catch my drift"], ["category", "Computer"], ["duration", 2], ["photo", "Blank photo"], ["price", 345.3], ["user_id", 20], ["created_at", "2022-05-12 16:41:27.354806"], ["updated_at", "2022-05-12 16:41:27.354806"]]
+  ↳ app/controllers/api/v1/courses_controller.rb:19:in `create'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:19:in `create'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/courses_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:21:in `create'
+  [1m[36mCoursesUser Create (0.9ms)[0m  [1m[32mINSERT INTO "courses_users" ("user_id", "course_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 20], ["course_id", 230], ["created_at", "2022-05-12 16:41:27.367851"], ["updated_at", "2022-05-12 16:41:27.367851"]]
+  ↳ app/controllers/api/v1/courses_controller.rb:21:in `create'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:21:in `create'
+Completed 201 Created in 26ms (Views: 0.8ms | ActiveRecord: 5.5ms | Allocations: 4597)
+>>>>>>> api-create-delete
 
 
