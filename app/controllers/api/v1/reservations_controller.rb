@@ -1,10 +1,10 @@
 module Api
   module V1
     class ReservationsController < ApplicationController
-      ALLOWED_DATA = %[duration, reserve_date, course_id, user_id].freeze
+      ALLOWED_DATA = %(duration, reserve_date, course_id, user_id).freeze
 
       def index
-        render json: Reservation.where(course_id: Course.find(params[:course_id]).id) 
+        render json: Reservation.where(course_id: Course.find(params[:course_id]).id)
       end
 
       def show

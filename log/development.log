@@ -2169,3 +2169,128 @@ Completed 404 Not Found in 8ms (ActiveRecord: 0.9ms | Allocations: 995)
 ActiveRecord::RecordNotFound (Couldn't find Reservation with 'id'=62):
   
 app/controllers/api/v1/reservations_controller.rb:26:in `destroy'
+  [1m[36mCourse Load (3.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" ORDER BY "courses"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started DELETE "/api/v1/courses/228" for ::1 at 2022-05-12 17:33:51 +0100
+Processing by Api::V1::CoursesController#destroy as JSON
+  Parameters: {"id"=>"228"}
+Can't verify CSRF token authenticity.
+  [1m[36mCourse Load (0.8ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 228], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/courses_controller.rb:31:in `destroy'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:31:in `destroy'
+  [1m[36mCourse Destroy (12.7ms)[0m  [1m[31mDELETE FROM "courses" WHERE "courses"."id" = $1[0m  [["id", 228]]
+  ↳ app/controllers/api/v1/courses_controller.rb:31:in `destroy'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:31:in `destroy'
+Completed 500 Internal Server Error in 46ms (ActiveRecord: 20.8ms | Allocations: 8042)
+
+
+  
+ActiveRecord::InvalidForeignKey (PG::ForeignKeyViolation: ERROR:  update or delete on table "courses" violates foreign key constraint "fk_rails_4d4e1b0c2c" on table "courses_users"
+DETAIL:  Key (id)=(228) is still referenced from table "courses_users".
+):
+  
+app/controllers/api/v1/courses_controller.rb:31:in `destroy'
+Started DELETE "/api/v1/courses/228" for ::1 at 2022-05-12 17:35:03 +0100
+Processing by Api::V1::CoursesController#destroy as JSON
+  Parameters: {"id"=>"228"}
+Can't verify CSRF token authenticity.
+  [1m[36mCourse Load (1.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 228], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/courses_controller.rb:31:in `destroy'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:31:in `destroy'
+  [1m[36mCourse Destroy (2.4ms)[0m  [1m[31mDELETE FROM "courses" WHERE "courses"."id" = $1[0m  [["id", 228]]
+  ↳ app/controllers/api/v1/courses_controller.rb:31:in `destroy'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:31:in `destroy'
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 4.6ms | Allocations: 3074)
+
+
+  
+ActiveRecord::InvalidForeignKey (PG::ForeignKeyViolation: ERROR:  update or delete on table "courses" violates foreign key constraint "fk_rails_4d4e1b0c2c" on table "courses_users"
+DETAIL:  Key (id)=(228) is still referenced from table "courses_users".
+):
+  
+app/controllers/api/v1/courses_controller.rb:31:in `destroy'
+Started DELETE "/api/v1/courses/228" for ::1 at 2022-05-12 17:39:29 +0100
+Processing by Api::V1::CoursesController#destroy as JSON
+  Parameters: {"id"=>"228"}
+Can't verify CSRF token authenticity.
+  [1m[36mCoursesUser Load (0.8ms)[0m  [1m[34mSELECT "courses_users".* FROM "courses_users" WHERE "courses_users"."course_id" = $1[0m  [["course_id", 228]]
+  ↳ app/controllers/api/v1/courses_controller.rb:32:in `destroy'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:32:in `destroy'
+  [1m[36mCoursesUser Destroy (0.8ms)[0m  [1m[31mDELETE FROM "courses_users" WHERE "courses_users"."id" = $1[0m  [["id", 11]]
+  ↳ app/controllers/api/v1/courses_controller.rb:32:in `destroy'
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:32:in `destroy'
+  [1m[36mCourse Load (1.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 228], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/courses_controller.rb:33:in `destroy'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:33:in `destroy'
+  [1m[36mCourse Destroy (1.7ms)[0m  [1m[31mDELETE FROM "courses" WHERE "courses"."id" = $1[0m  [["id", 228]]
+  ↳ app/controllers/api/v1/courses_controller.rb:33:in `destroy'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:33:in `destroy'
+No template found for Api::V1::CoursesController#destroy, rendering head :no_content
+Completed 204 No Content in 79ms (ActiveRecord: 24.6ms | Allocations: 12236)
+
+
+  [1m[36mCourse Load (0.5ms)[0m  [1m[34mSELECT "courses".* FROM "courses" ORDER BY "courses"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started POST "/api/v1/courses/3/reservations" for ::1 at 2022-05-12 17:41:08 +0100
+Processing by Api::V1::ReservationsController#create as JSON
+  Parameters: {"duration"=>5, "reserve_date"=>"one day", "course_id"=>"3", "user_id"=>4, "reservation"=>{"reserve_date"=>"one day", "duration"=>5, "user_id"=>4, "course_id"=>"3"}}
+Can't verify CSRF token authenticity.
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/reservations_controller.rb:18:in `create'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:18:in `create'
+  [1m[36mReservation Create (1.3ms)[0m  [1m[32mINSERT INTO "reservations" ("reserve_date", "duration", "user_id", "course_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["reserve_date", "one day"], ["duration", 5], ["user_id", 4], ["course_id", 3], ["created_at", "2022-05-12 16:41:09.080543"], ["updated_at", "2022-05-12 16:41:09.080543"]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/reservations_controller.rb:18:in `create'
+Completed 200 OK in 41ms (Views: 0.4ms | ActiveRecord: 14.8ms | Allocations: 9077)
+
+
+Started POST "/api/v1/courses" for ::1 at 2022-05-12 17:41:17 +0100
+Processing by Api::V1::CoursesController#create as JSON
+  Parameters: {"title"=>"Testing1", "description"=>"Dummy descriptions design to give a feel of things that are things which are not things you catch my drift", "category"=>"Computer", "duration"=>2, "photo"=>"Blank photo", "price"=>345.3, "user_id"=>20, "course"=>{"title"=>"Testing1", "description"=>"Dummy descriptions design to give a feel of things that are things which are not things you catch my drift", "category"=>"Computer", "duration"=>2, "photo"=>"Blank photo", "price"=>345.3, "user_id"=>20}}
+Can't verify CSRF token authenticity.
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:19:in `create'
+  [1m[36mCourse Create (2.4ms)[0m  [1m[32mINSERT INTO "courses" ("title", "description", "category", "duration", "photo", "price", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["title", "Testing1"], ["description", "Dummy descriptions design to give a feel of things that are things which are not things you catch my drift"], ["category", "Computer"], ["duration", 2], ["photo", "Blank photo"], ["price", 345.3], ["user_id", 20], ["created_at", "2022-05-12 16:41:17.413793"], ["updated_at", "2022-05-12 16:41:17.413793"]]
+  ↳ app/controllers/api/v1/courses_controller.rb:19:in `create'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:19:in `create'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/courses_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:21:in `create'
+  [1m[36mCoursesUser Create (1.9ms)[0m  [1m[32mINSERT INTO "courses_users" ("user_id", "course_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 20], ["course_id", 229], ["created_at", "2022-05-12 16:41:17.447165"], ["updated_at", "2022-05-12 16:41:17.447165"]]
+  ↳ app/controllers/api/v1/courses_controller.rb:21:in `create'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:21:in `create'
+Completed 201 Created in 55ms (Views: 0.8ms | ActiveRecord: 20.2ms | Allocations: 11377)
+
+
+Started POST "/api/v1/courses" for ::1 at 2022-05-12 17:41:27 +0100
+Processing by Api::V1::CoursesController#create as JSON
+  Parameters: {"title"=>"Testing888", "description"=>"Dummy descriptions design to give a feel of things that are things which are not things you catch my drift", "category"=>"Computer", "duration"=>2, "photo"=>"Blank photo", "price"=>345.3, "user_id"=>20, "course"=>{"title"=>"Testing888", "description"=>"Dummy descriptions design to give a feel of things that are things which are not things you catch my drift", "category"=>"Computer", "duration"=>2, "photo"=>"Blank photo", "price"=>345.3, "user_id"=>20}}
+Can't verify CSRF token authenticity.
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:19:in `create'
+  [1m[36mCourse Create (1.2ms)[0m  [1m[32mINSERT INTO "courses" ("title", "description", "category", "duration", "photo", "price", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["title", "Testing888"], ["description", "Dummy descriptions design to give a feel of things that are things which are not things you catch my drift"], ["category", "Computer"], ["duration", 2], ["photo", "Blank photo"], ["price", 345.3], ["user_id", 20], ["created_at", "2022-05-12 16:41:27.354806"], ["updated_at", "2022-05-12 16:41:27.354806"]]
+  ↳ app/controllers/api/v1/courses_controller.rb:19:in `create'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:19:in `create'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/courses_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:21:in `create'
+  [1m[36mCoursesUser Create (0.9ms)[0m  [1m[32mINSERT INTO "courses_users" ("user_id", "course_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 20], ["course_id", 230], ["created_at", "2022-05-12 16:41:27.367851"], ["updated_at", "2022-05-12 16:41:27.367851"]]
+  ↳ app/controllers/api/v1/courses_controller.rb:21:in `create'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:21:in `create'
+Completed 201 Created in 26ms (Views: 0.8ms | ActiveRecord: 5.5ms | Allocations: 4597)
+
+
