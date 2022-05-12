@@ -13,12 +13,12 @@ module Api
         courses = Course.new(data)
         #courses.update(user: current_user)
 
-        if course.save
-          courses_users
-          CoursesUser.create(course: courses, user: current_user)
-          render json: course, status: :created
+        if courses.save
+          courses_users = User.find(courses.user_id)
+          CoursesUser.create(course: courses, user: courses_users)
+          render json: courses, status: :created
         else
-          render json: course.errors, status: :unproccessable_entity
+          render json: courses.errors, status: :unproccessable_entity
         end
 
       end

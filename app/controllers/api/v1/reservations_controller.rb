@@ -1,10 +1,10 @@
 module Api
   module V1
     class ReservationsController < ApplicationController
-      ALLOWED_DATA = %(duration, reserve_date).freeze
+      ALLOWED_DATA = %[duration, reserve_date].freeze
 
       def index
-        render json: Reservation.all
+        render json: Course.find(params[:course_id]).reservations
       end
 
       def create
