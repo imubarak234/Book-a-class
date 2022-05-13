@@ -16,8 +16,6 @@ gem 'rack-cors'
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem 'sprockets-rails'
 
-gem 'rack-cors'
-
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 1.1'
 
@@ -36,6 +34,7 @@ gem 'stimulus-rails'
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem 'jbuilder'
 
+gem 'jwt'
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
