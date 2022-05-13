@@ -9,6 +9,8 @@ Rails.application.routes.draw do
       resources :courses do 
         resources :reservations
       end
+
+      post 'authenticate', to: 'authentication#create'
     end
   end 
 end
