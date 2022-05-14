@@ -13,6 +13,8 @@ gem 'faker'
 # Add cors for cross origin requests
 gem 'rack-cors'
 
+gem 'devise'
+
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem 'sprockets-rails'
 
