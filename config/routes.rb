@@ -11,6 +11,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :courses do 
         resources :reservations
+        get '/start_dates', to: 'start_dates#index'
       end
 
       post 'authenticate', to: 'authentication#create'
