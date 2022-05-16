@@ -3160,3 +3160,124 @@ Migrating to AddEmailToUser (20220516061418)
   [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
   [1m[36mCourse Create (0.5ms)[0m  [1m[32mINSERT INTO "courses" ("title", "description", "category", "duration", "photo", "price", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["title", "Tester4"], ["description", "Descriptions for the forth testers"], ["category", "Fourth"], ["duration", 6], ["photo", "photo_4"], ["price", nil], ["user_id", 7], ["created_at", "2022-05-16 13:49:33.861722"], ["updated_at", "2022-05-16 13:49:33.861722"]]
   [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+Started POST "/api/v1/courses" for ::1 at 2022-05-16 14:56:28 +0100
+  
+SyntaxError (/mnt/c/Users/m_bth/Desktop/stuff/code/Module 6 repos/Capstone/Book-a-class/config/routes.rb:13: syntax error, unexpected local variable or method, expecting `end'
+      resources :users  only: [:index] do
+                        ^~~~
+/mnt/c/Users/m_bth/Desktop/stuff/code/Module 6 repos/Capstone/Book-a-class/config/routes.rb:13: syntax error, unexpected `do', expecting `end'
+...urces :users  only: [:index] do
+...                             ^~
+/mnt/c/Users/m_bth/Desktop/stuff/code/Module 6 repos/Capstone/Book-a-class/config/routes.rb:14: syntax error, unexpected local variable or method, expecting end-of-input
+...   resources :reservations only: [:index, :create, :destroy,...
+...                           ^~~~
+):
+  
+config/routes.rb:13: syntax error, unexpected local variable or method, expecting `end'
+config/routes.rb:13: syntax error, unexpected `do', expecting `end'
+config/routes.rb:14: syntax error, unexpected local variable or method, expecting end-of-input
+config/routes.rb:13: syntax error, unexpected local variable or method, expecting `end'
+config/routes.rb:13: syntax error, unexpected `do', expecting `end'
+config/routes.rb:14: syntax error, unexpected local variable or method, expecting end-of-input
+config/routes.rb:13: syntax error, unexpected local variable or method, expecting `end'
+config/routes.rb:13: syntax error, unexpected `do', expecting `end'
+config/routes.rb:14: syntax error, unexpected local variable or method, expecting end-of-input
+Started POST "/api/v1/courses" for ::1 at 2022-05-16 14:58:51 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::CoursesController#create as JSON
+  Parameters: {"title"=>"Testing888", "description"=>"Dummy descriptions design to give a feel of things that are things which are not things you catch my drift", "category"=>"Computer", "duration"=>2, "photo"=>"Blank photo", "price"=>345.3, "user_id"=>20, "course"=>{"title"=>"Testing888", "description"=>"Dummy descriptions design to give a feel of things that are things which are not things you catch my drift", "category"=>"Computer", "duration"=>2, "photo"=>"Blank photo", "price"=>345.3, "user_id"=>20}}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:20:in `create'
+  [1m[36mCourse Create (5.1ms)[0m  [1m[32mINSERT INTO "courses" ("title", "description", "category", "duration", "photo", "price", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["title", "Testing888"], ["description", "Dummy descriptions design to give a feel of things that are things which are not things you catch my drift"], ["category", "Computer"], ["duration", 2], ["photo", "Blank photo"], ["price", 345.3], ["user_id", 20], ["created_at", "2022-05-16 13:58:51.153042"], ["updated_at", "2022-05-16 13:58:51.153042"]]
+  ↳ app/controllers/api/v1/courses_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:20:in `create'
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 7.9ms | Allocations: 9850)
+
+
+  
+ActiveRecord::InvalidForeignKey (PG::ForeignKeyViolation: ERROR:  insert or update on table "courses" violates foreign key constraint "fk_rails_b3c61f05ef"
+DETAIL:  Key (user_id)=(20) is not present in table "users".
+):
+  
+app/controllers/api/v1/courses_controller.rb:20:in `create'
+Started POST "/api/v1/courses" for ::1 at 2022-05-16 14:59:16 +0100
+Processing by Api::V1::CoursesController#create as JSON
+  Parameters: {"title"=>"Testing888", "description"=>"Dummy descriptions design to give a feel of things that are things which are not things you catch my drift", "category"=>"Computer", "duration"=>2, "photo"=>"Blank photo", "price"=>345.3, "user_id"=>2, "course"=>{"title"=>"Testing888", "description"=>"Dummy descriptions design to give a feel of things that are things which are not things you catch my drift", "category"=>"Computer", "duration"=>2, "photo"=>"Blank photo", "price"=>345.3, "user_id"=>2}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:20:in `create'
+  [1m[36mCourse Create (0.5ms)[0m  [1m[32mINSERT INTO "courses" ("title", "description", "category", "duration", "photo", "price", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["title", "Testing888"], ["description", "Dummy descriptions design to give a feel of things that are things which are not things you catch my drift"], ["category", "Computer"], ["duration", 2], ["photo", "Blank photo"], ["price", 345.3], ["user_id", 2], ["created_at", "2022-05-16 13:59:16.503148"], ["updated_at", "2022-05-16 13:59:16.503148"]]
+  ↳ app/controllers/api/v1/courses_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (3.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:20:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/courses_controller.rb:21:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:22:in `create'
+  [1m[36mCoursesUser Create (1.1ms)[0m  [1m[32mINSERT INTO "courses_users" ("user_id", "course_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["course_id", 23], ["created_at", "2022-05-16 13:59:16.533165"], ["updated_at", "2022-05-16 13:59:16.533165"]]
+  ↳ app/controllers/api/v1/courses_controller.rb:22:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:22:in `create'
+Completed 201 Created in 36ms (Views: 0.4ms | ActiveRecord: 11.9ms | Allocations: 16857)
+
+
+Started POST "/api/v1/users/3/reservations" for ::1 at 2022-05-16 15:00:08 +0100
+Processing by Api::V1::ReservationsController#create as JSON
+  Parameters: {"duration"=>6, "reserve_date"=>"one day two naira", "course_id"=>3, "user_id"=>"3", "reservation"=>{"reserve_date"=>"one day two naira", "duration"=>6, "user_id"=>"3", "course_id"=>3}}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/reservations_controller.rb:19:in `create'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:19:in `create'
+  [1m[36mReservation Create (1.1ms)[0m  [1m[32mINSERT INTO "reservations" ("reserve_date", "duration", "user_id", "course_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["reserve_date", "one day two naira"], ["duration", 6], ["user_id", 4], ["course_id", 3], ["created_at", "2022-05-16 14:00:08.744004"], ["updated_at", "2022-05-16 14:00:08.744004"]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:19:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/reservations_controller.rb:19:in `create'
+Completed 200 OK in 13ms (Views: 0.2ms | ActiveRecord: 4.2ms | Allocations: 7385)
+
+
+Started GET "/api/v1/courses/3/start_dates" for ::1 at 2022-05-16 15:00:23 +0100
+Processing by Api::V1::StartDatesController#index as JSON
+  Parameters: {"course_id"=>"3"}
+  [1m[36mStartDate Pluck (0.7ms)[0m  [1m[34mSELECT "start_dates"."start_date" FROM "start_dates" WHERE "start_dates"."course_id" = $1[0m  [["course_id", 3]]
+  ↳ app/controllers/api/v1/start_dates_controller.rb:5:in `index'
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 1.6ms | Allocations: 2104)
+
+
+Started GET "/api/v1/courses/1/start_dates" for ::1 at 2022-05-16 15:00:32 +0100
+Processing by Api::V1::StartDatesController#index as JSON
+  Parameters: {"course_id"=>"1"}
+  [1m[36mStartDate Pluck (0.3ms)[0m  [1m[34mSELECT "start_dates"."start_date" FROM "start_dates" WHERE "start_dates"."course_id" = $1[0m  [["course_id", 1]]
+  ↳ app/controllers/api/v1/start_dates_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 629)
+
+
+  [1m[36mStartDate Load (1.0ms)[0m  [1m[34mSELECT "start_dates".* FROM "start_dates"[0m
+Started GET "/api/v1/courses/4/start_dates" for ::1 at 2022-05-16 15:01:29 +0100
+Processing by Api::V1::StartDatesController#index as JSON
+  Parameters: {"course_id"=>"4"}
+  [1m[36mStartDate Pluck (0.3ms)[0m  [1m[34mSELECT "start_dates"."start_date" FROM "start_dates" WHERE "start_dates"."course_id" = $1[0m  [["course_id", 4]]
+  ↳ app/controllers/api/v1/start_dates_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 639)
+
+
+Started GET "/api/v1/users/3/reservations" for ::1 at 2022-05-16 15:01:53 +0100
+Processing by Api::V1::ReservationsController#index as JSON
+  Parameters: {"user_id"=>"3", "reservation"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:8:in `index'
+  [1m[36mReservation Load (0.7ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 1.5ms | ActiveRecord: 1.0ms | Allocations: 1415)
+
+
+  [1m[36mReservation Load (1.1ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations"[0m
+Started GET "/api/v1/users/4/reservations" for ::1 at 2022-05-16 15:02:52 +0100
+Processing by Api::V1::ReservationsController#index as JSON
+  Parameters: {"user_id"=>"4", "reservation"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:8:in `index'
+  [1m[36mReservation Load (0.2ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."user_id" = $1[0m  [["user_id", 4]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 1.3ms | ActiveRecord: 0.6ms | Allocations: 1527)
+
+

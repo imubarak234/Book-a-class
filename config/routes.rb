@@ -10,10 +10,10 @@ Rails.application.routes.draw do
 
   namespace :api, defaults: { format: :json } do 
     namespace :v1 do
-      resources :users  only: [:index] do
-        resources :reservations only: [:index, :create, :destroy, :show]
+      resources :users,  only: [:index] do
+        resources :reservations, only: [:index, :create, :destroy, :show]
       end
-      resources :courses only: [:index, :create, :destroy, :show] do 
+      resources :courses, only: [:index, :create, :destroy, :show] do 
         get '/start_dates', to: 'start_dates#index'
       end
 
