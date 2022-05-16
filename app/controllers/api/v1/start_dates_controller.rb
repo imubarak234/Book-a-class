@@ -3,7 +3,9 @@ module Api
     class StartDatesController < ApplicationController
 
       def index
-        StartDate.where(course_id: params[:id]).pluck(:start_date)
+        render json: StartDate.where(course_id: params[:course_id]).pluck(:start_date)
       end
 
     end
+  end
+end
