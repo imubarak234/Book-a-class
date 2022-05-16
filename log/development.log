@@ -2908,3 +2908,255 @@ Processing by Api::V1::CoursesController#index as JSON
 Completed 401 Unauthorized in 12ms (ActiveRecord: 1.8ms | Allocations: 1513)
 
 
+  [1m[36mCourse Load (1.6ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6900849768098577585)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddEmailToUser (20220516061418)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (5.2ms)[0m  [1m[35mALTER TABLE "users" ADD "email" character varying[0m
+  [1m[35m (8.7ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220516061418"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(6900849768098577585)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (1.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "First_username"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "First_username"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "First_username"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "First_username"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "First_username"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "First_username"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "First_username"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "First_username"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "firstemail@emali.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "First_username"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "First_username"], ["LIMIT", 1]]
+  [1m[36mUser Create (3.6ms)[0m  [1m[32mINSERT INTO "users" ("full_name", "created_at", "updated_at", "username", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["full_name", "Testing1 tester1"], ["created_at", "2022-05-16 13:40:54.166543"], ["updated_at", "2022-05-16 13:40:54.166543"], ["username", "First_username"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["email", "firstemail@emali.com"]]
+  [1m[36mTRANSACTION (3.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (10.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jeffery@hartmann.co"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "beau"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "beau"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23:in `validate_username'
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("full_name", "created_at", "updated_at", "username", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["full_name", "Sana Lindgren"], ["created_at", "2022-05-16 13:41:28.379005"], ["updated_at", "2022-05-16 13:41:28.379005"], ["username", "beau"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["email", "jeffery@hartmann.co"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "necole_robel@walsh-crona.biz"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "belen"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "belen"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23:in `validate_username'
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("full_name", "created_at", "updated_at", "username", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["full_name", "Verdie O'Conner"], ["created_at", "2022-05-16 13:41:28.557181"], ["updated_at", "2022-05-16 13:41:28.557181"], ["username", "belen"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["email", "necole_robel@walsh-crona.biz"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "valeria@boyle.io"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "neal"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "neal"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23:in `validate_username'
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("full_name", "created_at", "updated_at", "username", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["full_name", "Cynthia Koss"], ["created_at", "2022-05-16 13:41:28.734180"], ["updated_at", "2022-05-16 13:41:28.734180"], ["username", "neal"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["email", "valeria@boyle.io"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "brandon@harvey.biz"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "riley_king"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "riley_king"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23:in `validate_username'
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("full_name", "created_at", "updated_at", "username", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["full_name", "Gov. Awilda Zieme"], ["created_at", "2022-05-16 13:41:28.911619"], ["updated_at", "2022-05-16 13:41:28.911619"], ["username", "riley_king"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["email", "brandon@harvey.biz"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "bernita_gibson@dickinson.net"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "kristal.bogan"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "kristal.bogan"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23:in `validate_username'
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("full_name", "created_at", "updated_at", "username", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["full_name", "Mui Hirthe"], ["created_at", "2022-05-16 13:41:29.091629"], ["updated_at", "2022-05-16 13:41:29.091629"], ["username", "kristal.bogan"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["email", "bernita_gibson@dickinson.net"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCourse Create (2.2ms)[0m  [1m[32mINSERT INTO "courses" ("title", "description", "category", "duration", "photo", "price", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["title", "Computer Science 337"], ["description", "Suscipit ea ullam. Voluptates eos tempora. Autem provident quos. Molestiae ad consequuntur. Dicta sunt dolor. Temporibus nihil ratione. Facere inventore sed. Quo nisi dicta. Vel minima veritatis. Consequuntur quidem debitis."], ["category", "Medicine"], ["duration", 24], ["photo", "willms.info"], ["price", 136.0], ["user_id", 1], ["created_at", "2022-05-16 13:41:29.104377"], ["updated_at", "2022-05-16 13:41:29.104377"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCourse Create (0.4ms)[0m  [1m[32mINSERT INTO "courses" ("title", "description", "category", "duration", "photo", "price", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["title", "Biomedical Science 512"], ["description", "Asperiores laborum officia. Accusamus aperiam nihil. Expedita quia saepe. Consequatur autem quo. Odio illum ipsa. Non accusamus provident. Et earum sit. Illo aut sint. Accusamus ut incidunt. Laboriosam quasi id."], ["category", "Computer Science"], ["duration", 14], ["photo", "shanahan.info"], ["price", 207.0], ["user_id", 4], ["created_at", "2022-05-16 13:41:29.111062"], ["updated_at", "2022-05-16 13:41:29.111062"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCourse Create (0.3ms)[0m  [1m[32mINSERT INTO "courses" ("title", "description", "category", "duration", "photo", "price", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["title", "Commerce 397"], ["description", "Minima earum magni. Quis occaecati in. Dolores quia aliquam. Qui ad veritatis. Minus ut repudiandae. Itaque sint dolore. Saepe qui facilis. Sit sunt consequuntur. Qui qui est. Nostrum cupiditate iste."], ["category", "Psychology"], ["duration", 7], ["photo", "raynor.name"], ["price", 359.0], ["user_id", 3], ["created_at", "2022-05-16 13:41:29.115601"], ["updated_at", "2022-05-16 13:41:29.115601"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCourse Create (0.3ms)[0m  [1m[32mINSERT INTO "courses" ("title", "description", "category", "duration", "photo", "price", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["title", "Medicine 188"], ["description", "Sunt quidem repellendus. Maxime assumenda sapiente. Libero consequatur nesciunt. Esse iusto consequatur. Repudiandae vel et. Eius excepturi et. Aspernatur enim eos. Non expedita delectus. Repudiandae id ipsum. Officiis explicabo debitis."], ["category", "Nursing"], ["duration", 4], ["photo", "romaguera.com"], ["price", 188.0], ["user_id", 3], ["created_at", "2022-05-16 13:41:29.119595"], ["updated_at", "2022-05-16 13:41:29.119595"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCourse Create (0.3ms)[0m  [1m[32mINSERT INTO "courses" ("title", "description", "category", "duration", "photo", "price", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["title", "Arts 232"], ["description", "Assumenda dicta fuga. Tempore accusantium aut. Placeat et libero. Sed sed mollitia. Rem quibusdam et. Vel ut labore. Quo qui ab. Quibusdam earum aut. Qui quasi cupiditate. Reprehenderit rerum tenetur."], ["category", "Business"], ["duration", 12], ["photo", "gutkowski.io"], ["price", 224.0], ["user_id", 2], ["created_at", "2022-05-16 13:41:29.123610"], ["updated_at", "2022-05-16 13:41:29.123610"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCourse Create (0.3ms)[0m  [1m[32mINSERT INTO "courses" ("title", "description", "category", "duration", "photo", "price", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["title", "Communications 496"], ["description", "Omnis eaque eos. Reprehenderit voluptate et. Quibusdam nam enim. Eaque tenetur possimus. Tempora labore explicabo. Est perferendis voluptas. Magnam eveniet ut. Aperiam nulla laboriosam. Dolores aut accusantium. Temporibus ipsa nesciunt."], ["category", "Law"], ["duration", 10], ["photo", "little.co"], ["price", 580.0], ["user_id", 5], ["created_at", "2022-05-16 13:41:29.127732"], ["updated_at", "2022-05-16 13:41:29.127732"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCourse Create (0.3ms)[0m  [1m[32mINSERT INTO "courses" ("title", "description", "category", "duration", "photo", "price", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["title", "Engineering 497"], ["description", "Quod molestiae nihil. Sed est neque. Quae cupiditate reiciendis. Assumenda atque est. Delectus sed at. Sit reiciendis dicta. Aut iure deserunt. Excepturi alias voluptas. Voluptas ipsam laudantium. Enim facere molestiae."], ["category", "Applied Science (Psychology)"], ["duration", 5], ["photo", "towne.co"], ["price", 555.0], ["user_id", 1], ["created_at", "2022-05-16 13:41:29.131946"], ["updated_at", "2022-05-16 13:41:29.131946"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCourse Create (0.3ms)[0m  [1m[32mINSERT INTO "courses" ("title", "description", "category", "duration", "photo", "price", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["title", "Business 332"], ["description", "Et itaque accusantium. Veniam voluptas quo. Vel quia id. Aliquid molestias quam. Quis corrupti qui. Sunt voluptatem commodi. Quia sit sed. Alias repellat et. Adipisci hic ut. Sed ut velit."], ["category", "Architectural Technology"], ["duration", 16], ["photo", "haley.com"], ["price", 282.0], ["user_id", 4], ["created_at", "2022-05-16 13:41:29.135907"], ["updated_at", "2022-05-16 13:41:29.135907"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCourse Create (0.3ms)[0m  [1m[32mINSERT INTO "courses" ("title", "description", "category", "duration", "photo", "price", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["title", "Commerce 184"], ["description", "Ut voluptatum a. Qui vitae provident. Voluptates aut iure. Et aut mollitia. Sit at quisquam. Alias sit optio. Temporibus voluptatem necessitatibus. Quaerat sequi aut. Dicta id officia. Corporis qui odio."], ["category", "Criminology"], ["duration", 24], ["photo", "nolan.name"], ["price", 299.0], ["user_id", 1], ["created_at", "2022-05-16 13:41:29.140209"], ["updated_at", "2022-05-16 13:41:29.140209"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCourse Create (0.3ms)[0m  [1m[32mINSERT INTO "courses" ("title", "description", "category", "duration", "photo", "price", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["title", "Biological Science 518"], ["description", "Reiciendis laborum nihil. In aut aspernatur. Voluptatem vel ut. Adipisci nam eos. Consequatur odit dicta. Perferendis nihil totam. Modi illo laboriosam. Pariatur et quos. Nobis aut rerum. Sit perspiciatis ipsa."], ["category", "Arts"], ["duration", 22], ["photo", "hermann.io"], ["price", 363.0], ["user_id", 5], ["created_at", "2022-05-16 13:41:29.144307"], ["updated_at", "2022-05-16 13:41:29.144307"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCourse Create (0.3ms)[0m  [1m[32mINSERT INTO "courses" ("title", "description", "category", "duration", "photo", "price", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["title", "Biological Science 412"], ["description", "Ut ratione alias. Quis et in. Quibusdam cum adipisci. In asperiores est. Qui cumque quia. Nulla qui quibusdam. Mollitia quis minus. Impedit magnam delectus. Odit repudiandae a. Sed alias omnis."], ["category", "Arts"], ["duration", 21], ["photo", "schinner.com"], ["price", 451.0], ["user_id", 4], ["created_at", "2022-05-16 13:41:29.148386"], ["updated_at", "2022-05-16 13:41:29.148386"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCourse Create (0.3ms)[0m  [1m[32mINSERT INTO "courses" ("title", "description", "category", "duration", "photo", "price", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["title", "Health Science 313"], ["description", "Qui dolorem optio. Illo ipsa repudiandae. Eum doloremque aperiam. Repellat nihil vel. Sit est enim. Beatae nihil omnis. Maxime animi fugiat. Perferendis exercitationem ut. Suscipit est sit. Sed non pariatur."], ["category", "Creative Arts"], ["duration", 10], ["photo", "quigley.net"], ["price", 259.0], ["user_id", 4], ["created_at", "2022-05-16 13:41:29.152418"], ["updated_at", "2022-05-16 13:41:29.152418"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCourse Create (0.3ms)[0m  [1m[32mINSERT INTO "courses" ("title", "description", "category", "duration", "photo", "price", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["title", "Teaching 256"], ["description", "Ut quo quaerat. Eum non beatae. Maxime cupiditate soluta. Dolorem esse labore. Sint ad molestiae. Ipsam possimus excepturi. Omnis reiciendis dolores. Nemo ex velit. Aspernatur iusto dolor. Veritatis velit eius."], ["category", "Applied Science (Psychology)"], ["duration", 4], ["photo", "anderson.biz"], ["price", 621.0], ["user_id", 3], ["created_at", "2022-05-16 13:41:29.156427"], ["updated_at", "2022-05-16 13:41:29.156427"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCourse Create (0.3ms)[0m  [1m[32mINSERT INTO "courses" ("title", "description", "category", "duration", "photo", "price", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["title", "Biological Science 165"], ["description", "Nulla natus ea. Ex beatae eos. Qui sint hic. Et voluptatem qui. Amet omnis quia. Dolore saepe dolores. Quos totam fuga. Animi et voluptatem. Vel odit veniam. Praesentium facilis debitis."], ["category", "Information Systems"], ["duration", 19], ["photo", "goyette.com"], ["price", 119.0], ["user_id", 5], ["created_at", "2022-05-16 13:41:29.160699"], ["updated_at", "2022-05-16 13:41:29.160699"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCourse Create (0.3ms)[0m  [1m[32mINSERT INTO "courses" ("title", "description", "category", "duration", "photo", "price", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["title", "Computer Science 337"], ["description", "Odio velit dolorem. Non natus officia. Illo praesentium sint. Modi dolores magni. Voluptatum iste ut. Dolorem voluptas vel. Blanditiis optio qui. Minima dolorem at. Iusto dolores odio. Voluptatem ipsa facilis."], ["category", "Health Science"], ["duration", 26], ["photo", "hahn.com"], ["price", 445.0], ["user_id", 2], ["created_at", "2022-05-16 13:41:29.165031"], ["updated_at", "2022-05-16 13:41:29.165031"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mReservation Create (2.7ms)[0m  [1m[32mINSERT INTO "reservations" ("reserve_date", "duration", "user_id", "course_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["reserve_date", "2022-03-31"], ["duration", 27], ["user_id", 2], ["course_id", 6], ["created_at", "2022-05-16 13:41:29.190070"], ["updated_at", "2022-05-16 13:41:29.190070"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReservation Create (0.3ms)[0m  [1m[32mINSERT INTO "reservations" ("reserve_date", "duration", "user_id", "course_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["reserve_date", "2022-03-21"], ["duration", 10], ["user_id", 1], ["course_id", 4], ["created_at", "2022-05-16 13:41:29.197343"], ["updated_at", "2022-05-16 13:41:29.197343"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mReservation Create (0.3ms)[0m  [1m[32mINSERT INTO "reservations" ("reserve_date", "duration", "user_id", "course_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["reserve_date", "2022-01-17"], ["duration", 28], ["user_id", 5], ["course_id", 3], ["created_at", "2022-05-16 13:41:29.201075"], ["updated_at", "2022-05-16 13:41:29.201075"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mReservation Create (0.3ms)[0m  [1m[32mINSERT INTO "reservations" ("reserve_date", "duration", "user_id", "course_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["reserve_date", "2021-12-27"], ["duration", 17], ["user_id", 4], ["course_id", 11], ["created_at", "2022-05-16 13:41:29.204825"], ["updated_at", "2022-05-16 13:41:29.204825"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mReservation Create (0.3ms)[0m  [1m[32mINSERT INTO "reservations" ("reserve_date", "duration", "user_id", "course_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["reserve_date", "2022-01-24"], ["duration", 11], ["user_id", 2], ["course_id", 12], ["created_at", "2022-05-16 13:41:29.208469"], ["updated_at", "2022-05-16 13:41:29.208469"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.4ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mCoursesUser Create (2.0ms)[0m  [1m[32mINSERT INTO "courses_users" ("user_id", "course_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 5], ["course_id", 7], ["created_at", "2022-05-16 13:41:29.225141"], ["updated_at", "2022-05-16 13:41:29.225141"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mCoursesUser Create (0.4ms)[0m  [1m[32mINSERT INTO "courses_users" ("user_id", "course_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["course_id", 7], ["created_at", "2022-05-16 13:41:29.231894"], ["updated_at", "2022-05-16 13:41:29.231894"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[36mCoursesUser Create (0.3ms)[0m  [1m[32mINSERT INTO "courses_users" ("user_id", "course_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["course_id", 15], ["created_at", "2022-05-16 13:41:29.236598"], ["updated_at", "2022-05-16 13:41:29.236598"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mCoursesUser Create (0.3ms)[0m  [1m[32mINSERT INTO "courses_users" ("user_id", "course_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 3], ["course_id", 14], ["created_at", "2022-05-16 13:41:29.241342"], ["updated_at", "2022-05-16 13:41:29.241342"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCoursesUser Create (0.3ms)[0m  [1m[32mINSERT INTO "courses_users" ("user_id", "course_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 3], ["course_id", 9], ["created_at", "2022-05-16 13:41:29.245818"], ["updated_at", "2022-05-16 13:41:29.245818"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCoursesUser Create (0.3ms)[0m  [1m[32mINSERT INTO "courses_users" ("user_id", "course_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 1], ["course_id", 1], ["created_at", "2022-05-16 13:41:29.250239"], ["updated_at", "2022-05-16 13:41:29.250239"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mCoursesUser Create (0.2ms)[0m  [1m[32mINSERT INTO "courses_users" ("user_id", "course_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["course_id", 11], ["created_at", "2022-05-16 13:41:29.254707"], ["updated_at", "2022-05-16 13:41:29.254707"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mCoursesUser Create (0.2ms)[0m  [1m[32mINSERT INTO "courses_users" ("user_id", "course_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 1], ["course_id", 5], ["created_at", "2022-05-16 13:41:29.258982"], ["updated_at", "2022-05-16 13:41:29.258982"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mCoursesUser Create (0.4ms)[0m  [1m[32mINSERT INTO "courses_users" ("user_id", "course_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 1], ["course_id", 10], ["created_at", "2022-05-16 13:41:29.263476"], ["updated_at", "2022-05-16 13:41:29.263476"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mCoursesUser Create (0.3ms)[0m  [1m[32mINSERT INTO "courses_users" ("user_id", "course_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 5], ["course_id", 5], ["created_at", "2022-05-16 13:41:29.268806"], ["updated_at", "2022-05-16 13:41:29.268806"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mStartDate Create (1.7ms)[0m  [1m[32mINSERT INTO "start_dates" ("start_date", "course_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["start_date", "2022-04-06"], ["course_id", 10], ["created_at", "2022-05-16 13:41:29.280834"], ["updated_at", "2022-05-16 13:41:29.280834"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mStartDate Create (0.3ms)[0m  [1m[32mINSERT INTO "start_dates" ("start_date", "course_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["start_date", "2022-02-07"], ["course_id", 2], ["created_at", "2022-05-16 13:41:29.286894"], ["updated_at", "2022-05-16 13:41:29.286894"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mStartDate Create (0.3ms)[0m  [1m[32mINSERT INTO "start_dates" ("start_date", "course_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["start_date", "2022-03-20"], ["course_id", 5], ["created_at", "2022-05-16 13:41:29.291070"], ["updated_at", "2022-05-16 13:41:29.291070"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mStartDate Create (0.3ms)[0m  [1m[32mINSERT INTO "start_dates" ("start_date", "course_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["start_date", "2022-04-30"], ["course_id", 13], ["created_at", "2022-05-16 13:41:29.295043"], ["updated_at", "2022-05-16 13:41:29.295043"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mStartDate Create (0.3ms)[0m  [1m[32mINSERT INTO "start_dates" ("start_date", "course_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["start_date", "2022-02-18"], ["course_id", 4], ["created_at", "2022-05-16 13:41:29.299293"], ["updated_at", "2022-05-16 13:41:29.299293"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mStartDate Create (0.3ms)[0m  [1m[32mINSERT INTO "start_dates" ("start_date", "course_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["start_date", "2022-03-11"], ["course_id", 4], ["created_at", "2022-05-16 13:41:29.303499"], ["updated_at", "2022-05-16 13:41:29.303499"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mStartDate Create (0.2ms)[0m  [1m[32mINSERT INTO "start_dates" ("start_date", "course_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["start_date", "2022-03-29"], ["course_id", 5], ["created_at", "2022-05-16 13:41:29.307485"], ["updated_at", "2022-05-16 13:41:29.307485"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mStartDate Create (0.3ms)[0m  [1m[32mINSERT INTO "start_dates" ("start_date", "course_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["start_date", "2022-04-29"], ["course_id", 4], ["created_at", "2022-05-16 13:41:29.311393"], ["updated_at", "2022-05-16 13:41:29.311393"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mStartDate Create (0.3ms)[0m  [1m[32mINSERT INTO "start_dates" ("start_date", "course_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["start_date", "2022-03-04"], ["course_id", 10], ["created_at", "2022-05-16 13:41:29.315515"], ["updated_at", "2022-05-16 13:41:29.315515"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mStartDate Create (0.2ms)[0m  [1m[32mINSERT INTO "start_dates" ("start_date", "course_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["start_date", "2022-04-24"], ["course_id", 8], ["created_at", "2022-05-16 13:41:29.319414"], ["updated_at", "2022-05-16 13:41:29.319414"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "secondemail@emali.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "Second_username"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "Second_username"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("full_name", "created_at", "updated_at", "username", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["full_name", "Testing2 tester2"], ["created_at", "2022-05-16 13:46:36.478716"], ["updated_at", "2022-05-16 13:46:36.478716"], ["username", "Second_username"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["email", "secondemail@emali.com"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCourse Create (0.9ms)[0m  [1m[32mINSERT INTO "courses" ("title", "description", "category", "duration", "photo", "price", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["title", "Tester1"], ["description", "Descriptions for the first testers"], ["category", "First"], ["duration", 5], ["photo", "photo_1"], ["price", nil], ["user_id", 1], ["created_at", "2022-05-16 13:48:25.742069"], ["updated_at", "2022-05-16 13:48:25.742069"]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCourse Create (0.5ms)[0m  [1m[32mINSERT INTO "courses" ("title", "description", "category", "duration", "photo", "price", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["title", "Tester2"], ["description", "Descriptions for the second testers"], ["category", "Second"], ["duration", 4], ["photo", "photo_2"], ["price", nil], ["user_id", 7], ["created_at", "2022-05-16 13:48:45.785614"], ["updated_at", "2022-05-16 13:48:45.785614"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCourse Create (0.5ms)[0m  [1m[32mINSERT INTO "courses" ("title", "description", "category", "duration", "photo", "price", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["title", "Tester3"], ["description", "Descriptions for the third testers"], ["category", "Third"], ["duration", 3], ["photo", "photo_3"], ["price", nil], ["user_id", 1], ["created_at", "2022-05-16 13:48:57.306910"], ["updated_at", "2022-05-16 13:48:57.306910"]]
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCourse Create (0.5ms)[0m  [1m[32mINSERT INTO "courses" ("title", "description", "category", "duration", "photo", "price", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["title", "Tester3"], ["description", "Descriptions for the third testers"], ["category", "Third"], ["duration", 3], ["photo", "photo_3"], ["price", nil], ["user_id", 1], ["created_at", "2022-05-16 13:48:59.533108"], ["updated_at", "2022-05-16 13:48:59.533108"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCourse Create (0.6ms)[0m  [1m[32mINSERT INTO "courses" ("title", "description", "category", "duration", "photo", "price", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["title", "Tester3"], ["description", "Descriptions for the third testers"], ["category", "Third"], ["duration", 3], ["photo", "photo_3"], ["price", nil], ["user_id", 1], ["created_at", "2022-05-16 13:49:15.549658"], ["updated_at", "2022-05-16 13:49:15.549658"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCourse Create (0.5ms)[0m  [1m[32mINSERT INTO "courses" ("title", "description", "category", "duration", "photo", "price", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["title", "Tester4"], ["description", "Descriptions for the forth testers"], ["category", "Fourth"], ["duration", 6], ["photo", "photo_4"], ["price", nil], ["user_id", 7], ["created_at", "2022-05-16 13:49:33.861722"], ["updated_at", "2022-05-16 13:49:33.861722"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m

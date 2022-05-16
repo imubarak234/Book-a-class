@@ -10,7 +10,10 @@ require "faker"
 
 5.times do
   users = User.new(
-    full_name: Faker::Name.name
+    full_name: Faker::Name.name,
+    email: Faker::Internet.email,
+    username: Faker::Internet.username,
+    password: Faker::Internet.password(min_length: 6, max_length: 12, special_characters: false)
   )
   users.save
 end
@@ -24,7 +27,6 @@ end
     photo: Faker::Internet.domain_name,
     price: Faker::Number.within(range: 100..650),
     user_id: Faker::Number.within(range: 1..5)
-    price: Faker::Number.within(range: 100..650),
   )
   course.save
 end

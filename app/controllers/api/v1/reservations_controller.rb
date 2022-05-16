@@ -1,11 +1,11 @@
 module Api
   module V1
     class ReservationsController < ApplicationController
-      before_action :authenticate_user!
+      #before_action :authenticate_user!
       ALLOWED_DATA = %(duration, reserve_date, course_id, user_id).freeze
 
       def index
-        render json: Reservation.where(course_id: Course.find(params[:course_id]).id)
+        render json: Reservation.where(user_id: User.find(params[:user_id]).id)
       end
 
       def show
