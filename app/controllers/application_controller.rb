@@ -1,4 +1,4 @@
-class ApplicationController < ActionController::Base
+class ApplicationController < ActionController::API
   before_action :set_default_format
   protect_from_forgery with: :null_session
   # include Knock::Authenticable

@@ -15,6 +15,8 @@ gem 'rack-cors'
 
 gem 'devise'
 
+gem 'devise-jwt'
+
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem 'sprockets-rails'
 
