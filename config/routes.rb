@@ -4,13 +4,16 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
   devise_for :users, controllers: {
-    sessions: 'users/sessions'
+    sessions: 'users/sessions',
+    registrations: 'users/registrations'
   }
 
   namespace :api, defaults: { format: :json } do 
     namespace :v1 do
-      resources :courses do 
-        resources :reservations
+      resources :users,  only: [:index] do
+        resources :reservations, only: [:index, :create, :destroy, :show]
+      end
+      resources :courses, only: [:index, :create, :destroy, :show] do 
         get '/start_dates', to: 'start_dates#index'
       end
 
