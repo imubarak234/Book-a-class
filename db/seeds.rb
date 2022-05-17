@@ -82,3 +82,18 @@ course1 = Course.create(
     user_id: user2.id,
     course_id: course2.id
   )
+
+  # courses_users1 = CoursesUsers.create(
+#   user_id: user1.id,
+#   course_id: course1.id
+# )
+
+# courses_users2 = CoursesUsers.create(
+#   user_id: user2.id,
+#   course_id: course2.id
+# )
+
+start_date1 = StartDate.create(
+  start_date: '2020-05-10',
+  course_id: course1.id
+)
