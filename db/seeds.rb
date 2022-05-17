@@ -32,3 +32,12 @@ course1 = Course.create(
     photo: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fcommons.wikimedia.org%2Fwiki%2FFile%3ADevicon-ruby-plain-wordmark.svg&psig=AOvVaw1YHCNwo37ZLbQD01-BQ1tf&ust=1652868335117000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCKiVlci_5vcCFQAAAAAdAAAAABAD',
     price: '1000'
   )
+
+  course2 = Course.create(
+    title: 'JavaScript',
+    description: 'Learn JavaScript and become a front-end developer',
+    category: 'Web Development',
+    duration: '400',
+    photo: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fpngset.com%2Fdownload-free-png-efdei&psig=AOvVaw11wiqURoiQjnyYU_ShrUrt&ust=1652868441865000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCLjW_YjA5vcCFQAAAAAdAAAAABAD',
+    price: '2000'
+  )
