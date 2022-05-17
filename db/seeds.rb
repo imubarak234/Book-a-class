@@ -6,53 +6,12 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-require "faker"
+#require "faker"
 
-5.times do
-  users = User.new(
-    full_name: Faker::Name.name,
-    email: Faker::Internet.email,
-    username: Faker::Internet.username,
-    password: Faker::Internet.password(min_length: 6, max_length: 12, special_characters: false)
-  )
-  users.save
-end
-
-15.times do
-  course = Course.new(
-    title: Faker::Educator.course_name,
-    description: Faker::Lorem.paragraph(sentence_count: 10),
-    category: Faker::Educator.subject,
-    duration: Faker::Number.within(range: 4..30),
-    photo: Faker::Internet.domain_name,
-    price: Faker::Number.within(range: 100..650),
-    user_id: Faker::Number.within(range: 1..5)
-  )
-  course.save
-end
-
-5.times do
-  reservation = Reservation.new(
-    reserve_date: Faker::Date.backward(days: 140),
-    duration: Faker::Number.within(range: 4..30),
-    user_id: Faker::Number.within(range: 1..5),
-    course_id: Faker::Number.within(range: 1..15)
-  )
-  reservation.save
-end
-
-10.times do
-  courses_users = CoursesUser.new(
-    user_id: Faker::Number.within(range: 1..5),
-    course_id: Faker::Number.within(range: 1..15)
-  )
-  courses_users.save
-end
-
-10.times do
-  start_date = StartDate.new(
-    start_date: Faker::Date.backward(days: 100),
-    course_id: Faker::Number.within(range: 1..15)
-  )
-  start_date.save
-end
+  
+user1 = User.create!(
+  full_name: 'Kalolo Lemba',
+  email: 'kalololemba@gmail.com',
+  username: 'KingKaylo',
+  password: '123456'
+)
