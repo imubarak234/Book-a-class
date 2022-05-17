@@ -5838,3 +5838,87 @@ Processing by Api::V1::ReservationsController#index as JSON
 Completed 200 OK in 4ms (Views: 0.9ms | ActiveRecord: 0.6ms | Allocations: 2095)
 
 
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (1.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "Eight_username"], ["LIMIT", 1]]
+  [1m[36mUser Create (1.3ms)[0m  [1m[32mINSERT INTO "users" ("full_name", "created_at", "updated_at", "username", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "email", "password_digest") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["full_name", "Testing8 tester8"], ["created_at", "2022-05-17 14:02:36.404664"], ["updated_at", "2022-05-17 14:02:36.404664"], ["username", "Eight_username"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["email", "eightemail@emali.com"], ["password_digest", "[FILTERED]"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+Started POST "/api/v1/authenticate" for ::1 at 2022-05-17 15:03:38 +0100
+Processing by Api::V1::AuthenticationController#create as JSON
+  Parameters: {"username"=>"Eight_username", "password"=>"[FILTERED]", "authentication"=>{"username"=>"Eight_username", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Eight_username"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/authentication_controller.rb:24:in `user'
+Completed 201 Created in 216ms (Views: 0.2ms | ActiveRecord: 8.4ms | Allocations: 6758)
+
+
+Started GET "/api/v1/courses" for ::1 at 2022-05-17 15:04:43 +0100
+Processing by Api::V1::CoursesController#index as JSON
+  Parameters: {"course"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1234567890], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `authenticateing_users'
+Completed 404 Not Found in 2ms (ActiveRecord: 3.0ms | Allocations: 1656)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=1234567890):
+  
+app/controllers/application_controller.rb:17:in `authenticateing_users'
+Started GET "/api/v1/courses" for ::1 at 2022-05-17 15:04:55 +0100
+Processing by Api::V1::CoursesController#index as JSON
+  Parameters: {"course"=>{}}
+Filter chain halted as :authenticateing_users rendered or redirected
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 165)
+
+
+Started GET "/api/v1/courses" for ::1 at 2022-05-17 15:05:03 +0100
+Processing by Api::V1::CoursesController#index as JSON
+  Parameters: {"course"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `authenticateing_users'
+  [1m[36mCourse Load (13.5ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:8:in `index'
+Completed 200 OK in 23ms (Views: 6.1ms | ActiveRecord: 15.6ms | Allocations: 6656)
+
+
+Started GET "/api/v1/courses" for ::1 at 2022-05-17 15:05:19 +0100
+Processing by Api::V1::CoursesController#index as JSON
+  Parameters: {"course"=>{}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 508)
+
+
+  
+JWT::VerificationError (Signature verification raised):
+  
+app/services/authentication_token_service.rb:12:in `decode'
+app/controllers/application_controller.rb:16:in `authenticateing_users'
+Started GET "/api/v1/courses" for ::1 at 2022-05-17 15:05:29 +0100
+Processing by Api::V1::CoursesController#index as JSON
+  Parameters: {"course"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `authenticateing_users'
+  [1m[36mCourse Load (0.3ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.0ms | ActiveRecord: 0.6ms | Allocations: 4651)
+
+
+Started GET "/api/v1/courses" for ::1 at 2022-05-17 15:05:50 +0100
+Processing by Api::V1::CoursesController#index as JSON
+  Parameters: {"course"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 133333], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `authenticateing_users'
+Completed 404 Not Found in 3ms (ActiveRecord: 0.4ms | Allocations: 1033)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=133333):
+  
+app/controllers/application_controller.rb:17:in `authenticateing_users'
+Started GET "/api/v1/courses" for ::1 at 2022-05-17 15:10:23 +0100
+Processing by Api::V1::CoursesController#index as JSON
+  Parameters: {"course"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `authenticateing_users'
+  [1m[36mCourse Load (0.3ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 2.7ms | ActiveRecord: 0.6ms | Allocations: 4650)
+
+

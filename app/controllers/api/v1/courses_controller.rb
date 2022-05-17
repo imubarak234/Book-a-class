@@ -22,7 +22,7 @@ module Api
           CoursesUser.create(course: courses, user: courses_users)
           render json: courses, status: :created
         else
-          render json: courses.errors, status: :unproccessable_entity
+          render json: courses.errors, status: :unprocessable_entity
         end
       end
 
