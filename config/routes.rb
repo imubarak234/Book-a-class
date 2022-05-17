@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
-  devise_for :users, defaults: { format: :json }, controllers: {
+  devise_for :users, controllers: {
     sessions: 'users/sessions',
     registrations: 'users/registrations'
   }
@@ -17,7 +17,7 @@ Rails.application.routes.draw do
         get '/start_dates', to: 'start_dates#index'
       end
 
-      post 'authenticate', to: 'authentication#create'
+      post '/authenticate', to: 'authentication#create'
     end
   end 
 end

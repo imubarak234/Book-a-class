@@ -4872,3 +4872,696 @@ Processing by Users::RegistrationsController#create as JSON
 Completed 200 OK in 177ms (Views: 0.1ms | ActiveRecord: 2.3ms | Allocations: 4677)
 
 
+Started POST "/users/sign_in" for ::1 at 2022-05-17 01:59:09 +0100
+Processing by Users::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"Six_username", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"username"=>"Six_username", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+Completed 200 OK in 35ms (Views: 0.2ms | ActiveRecord: 6.3ms | Allocations: 4702)
+
+
+Started GET "/api/v1/users/4/reservations" for ::1 at 2022-05-17 02:01:48 +0100
+Processing by Api::V1::ReservationsController#index as JSON
+  Parameters: {"user_id"=>"4", "reservation"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:8:in `index'
+  [1m[36mReservation Load (2.5ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."user_id" = $1[0m  [["user_id", 4]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:8:in `index'
+Completed 200 OK in 13ms (Views: 4.6ms | ActiveRecord: 7.8ms | Allocations: 6263)
+
+
+Started GET "/api/v1/users/4/reservations" for ::1 at 2022-05-17 02:02:00 +0100
+Processing by Api::V1::ReservationsController#index as JSON
+  Parameters: {"user_id"=>"4", "reservation"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:8:in `index'
+  [1m[36mReservation Load (0.2ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."user_id" = $1[0m  [["user_id", 4]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 1.0ms | ActiveRecord: 0.8ms | Allocations: 2776)
+
+
+Started GET "/api/v1/users/4/reservations" for ::1 at 2022-05-17 02:02:02 +0100
+Processing by Api::V1::ReservationsController#index as JSON
+  Parameters: {"user_id"=>"4", "reservation"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:8:in `index'
+  [1m[36mReservation Load (0.5ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."user_id" = $1[0m  [["user_id", 4]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 2.0ms | ActiveRecord: 1.1ms | Allocations: 2781)
+
+
+Started GET "/api/v1/users/4/reservations" for ::1 at 2022-05-17 02:02:12 +0100
+Processing by Api::V1::ReservationsController#index as JSON
+  Parameters: {"user_id"=>"4", "reservation"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:8:in `index'
+  [1m[36mReservation Load (0.2ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."user_id" = $1[0m  [["user_id", 4]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 0.9ms | ActiveRecord: 0.8ms | Allocations: 2764)
+
+
+Started POST "/api/v1/courses" for ::1 at 2022-05-17 02:02:52 +0100
+Processing by Api::V1::CoursesController#create as JSON
+  Parameters: {"title"=>"Testing888", "description"=>"Dummy descriptions design to give a feel of things that are things which are not things you catch my drift", "category"=>"Computer", "duration"=>2, "photo"=>"Blank photo", "price"=>345.3, "user_id"=>2, "course"=>{"title"=>"Testing888", "description"=>"Dummy descriptions design to give a feel of things that are things which are not things you catch my drift", "category"=>"Computer", "duration"=>2, "photo"=>"Blank photo", "price"=>345.3, "user_id"=>2}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:20:in `create'
+  [1m[36mCourse Create (5.1ms)[0m  [1m[32mINSERT INTO "courses" ("title", "description", "category", "duration", "photo", "price", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["title", "Testing888"], ["description", "Dummy descriptions design to give a feel of things that are things which are not things you catch my drift"], ["category", "Computer"], ["duration", 2], ["photo", "Blank photo"], ["price", 345.3], ["user_id", 2], ["created_at", "2022-05-17 01:02:52.068499"], ["updated_at", "2022-05-17 01:02:52.068499"]]
+  ↳ app/controllers/api/v1/courses_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:20:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/courses_controller.rb:21:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:22:in `create'
+  [1m[36mCoursesUser Create (1.5ms)[0m  [1m[32mINSERT INTO "courses_users" ("user_id", "course_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["course_id", 26], ["created_at", "2022-05-17 01:02:52.092943"], ["updated_at", "2022-05-17 01:02:52.092943"]]
+  ↳ app/controllers/api/v1/courses_controller.rb:22:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:22:in `create'
+Completed 201 Created in 35ms (Views: 0.3ms | ActiveRecord: 12.5ms | Allocations: 14705)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2022-05-17 02:04:18 +0100
+Processing by Users::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+Completed 401 Unauthorized in 26ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 11424)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2022-05-17 02:04:58 +0100
+Processing by Users::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/users/sessions_controller.rb:11:in `respond_to_on_destroy'
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 5.7ms | Allocations: 3126)
+
+
+  
+ActiveRecord::StatementInvalid (PG::UndefinedTable: ERROR:  relation "jwt_denylist" does not exist
+LINE 9:  WHERE a.attrelid = '"jwt_denylist"'::regclass
+                            ^
+):
+  
+app/controllers/users/sessions_controller.rb:11:in `respond_to_on_destroy'
+Started DELETE "/users/sign_out" for ::1 at 2022-05-17 02:05:41 +0100
+Processing by Users::SessionsController#destroy as JSON
+  Parameters: {"session"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/users/sessions_controller.rb:11:in `respond_to_on_destroy'
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 1.0ms | Allocations: 2317)
+
+
+  
+ActiveRecord::StatementInvalid (PG::UndefinedTable: ERROR:  relation "jwt_denylist" does not exist
+LINE 9:  WHERE a.attrelid = '"jwt_denylist"'::regclass
+                            ^
+):
+  
+app/controllers/users/sessions_controller.rb:11:in `respond_to_on_destroy'
+Started DELETE "/users/sign_out" for ::1 at 2022-05-17 02:14:40 +0100
+Processing by Users::SessionsController#destroy as JSON
+  Parameters: {"session"=>{}}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/users/sessions_controller.rb:11:in `respond_to_on_destroy'
+  [1m[36mJwtDenylist Exists? (6.5ms)[0m  [1m[34mSELECT 1 AS one FROM "jwt_denylists" WHERE "jwt_denylists"."jti" = $1 LIMIT $2[0m  [["jti", "159d33c0-cfac-4329-83f9-c530b55ddfc0"], ["LIMIT", 1]]
+  ↳ app/controllers/users/sessions_controller.rb:11:in `respond_to_on_destroy'
+Filter chain halted as :verify_signed_out_user rendered or redirected
+Completed 200 OK in 52ms (Views: 0.3ms | ActiveRecord: 15.9ms | Allocations: 7985)
+
+
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mJwtDenylist Load (1.4ms)[0m  [1m[34mSELECT "jwt_denylists".* FROM "jwt_denylists" WHERE "jwt_denylists"."jti" = $1 AND "jwt_denylists"."exp" = $2 LIMIT $3[0m  [["jti", "159d33c0-cfac-4329-83f9-c530b55ddfc0"], ["exp", "2022-06-01 00:59:10"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mJwtDenylist Create (0.7ms)[0m  [1m[32mINSERT INTO "jwt_denylists" ("jti", "exp", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["jti", "159d33c0-cfac-4329-83f9-c530b55ddfc0"], ["exp", "2022-06-01 00:59:10"], ["created_at", "2022-05-17 01:14:40.699829"], ["updated_at", "2022-05-17 01:14:40.699829"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/api/v1/users/4/reservations" for ::1 at 2022-05-17 02:14:52 +0100
+Processing by Api::V1::ReservationsController#index as JSON
+  Parameters: {"user_id"=>"4", "reservation"=>{}}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 377)
+
+
+Started GET "/api/v1/courses" for ::1 at 2022-05-17 02:15:28 +0100
+Processing by Api::V1::CoursesController#index as JSON
+  Parameters: {"course"=>{}}
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms | Allocations: 357)
+
+
+Started POST "/api/v1/courses" for ::1 at 2022-05-17 02:15:38 +0100
+Processing by Api::V1::CoursesController#create as JSON
+  Parameters: {"title"=>"Testing888", "description"=>"Dummy descriptions design to give a feel of things that are things which are not things you catch my drift", "category"=>"Computer", "duration"=>2, "photo"=>"Blank photo", "price"=>345.3, "user_id"=>2, "course"=>{"title"=>"Testing888", "description"=>"Dummy descriptions design to give a feel of things that are things which are not things you catch my drift", "category"=>"Computer", "duration"=>2, "photo"=>"Blank photo", "price"=>345.3, "user_id"=>2}}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 224)
+
+
+Started POST "/users/sign_in" for ::1 at 2022-05-17 02:15:49 +0100
+Processing by Users::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"Six_username", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"username"=>"Six_username", "password"=>"[FILTERED]"}}}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 309)
+
+
+Started POST "/users/sign_in" for ::1 at 2022-05-17 02:16:00 +0100
+Processing by Users::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"Six_username", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"username"=>"Six_username", "password"=>"[FILTERED]"}}}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 270)
+
+
+Started POST "/users/sign_in" for ::1 at 2022-05-17 02:16:31 +0100
+Processing by Users::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"Six_username", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"username"=>"Six_username", "password"=>"[FILTERED]"}}}
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms | Allocations: 270)
+
+
+Started POST "/users/sign_in" for ::1 at 2022-05-17 02:17:22 +0100
+Processing by Users::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"Fourth_username", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"username"=>"Fourth_username", "password"=>"[FILTERED]"}}}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 261)
+
+
+Started POST "/users/sign_in" for ::1 at 2022-05-17 02:17:24 +0100
+Processing by Users::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"Fourth_username", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"username"=>"Fourth_username", "password"=>"[FILTERED]"}}}
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms | Allocations: 270)
+
+
+Started POST "/users/sign_in" for ::1 at 2022-05-17 02:18:32 +0100
+Processing by Users::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"Six_username", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"username"=>"Six_username", "password"=>"[FILTERED]"}}}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 273)
+
+
+Started POST "/users/sign_in" for ::1 at 2022-05-17 02:23:04 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Users::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"Six_username", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"username"=>"Six_username", "password"=>"[FILTERED]"}}}
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.0ms | Allocations: 720)
+
+
+Processing by Users::SessionsController#new as JSON
+  Parameters: {"user"=>{"username"=>"Six_username", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"username"=>"Six_username", "password"=>"[FILTERED]"}}}
+[31mUnpermitted parameter: :username. Context: { controller: Users::SessionsController, action: new, request: #<ActionDispatch::Request:0x00007ff79b9f6c40>, params: {"user"=>{"username"=>"Six_username", "password"=>"[FILTERED]"}, "format"=>"json", "controller"=>"users/sessions", "action"=>"create", "session"=>{"user"=>{"username"=>"Six_username", "password"=>"[FILTERED]"}}} }[0m
+Completed 200 OK in 184ms (Views: 0.3ms | ActiveRecord: 4.4ms | Allocations: 6826)
+
+
+Started POST "/users" for ::1 at 2022-05-17 02:25:54 +0100
+Processing by Users::RegistrationsController#create as JSON
+  Parameters: {"user"=>{"username"=>"Six_username", "full_name"=>"Six", "password"=>"[FILTERED]", "email"=>"Six@Six.com"}, "registration"=>{"user"=>{"username"=>"Six_username", "full_name"=>"Six", "password"=>"[FILTERED]", "email"=>"Six@Six.com"}}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "Six@Six.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "Six_username"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 200 OK in 180ms (Views: 0.2ms | ActiveRecord: 3.6ms | Allocations: 7412)
+
+
+Started GET "/api/v1/users/4/reservations" for ::1 at 2022-05-17 02:26:02 +0100
+Processing by Api::V1::ReservationsController#index as JSON
+  Parameters: {"user_id"=>"4", "reservation"=>{}}
+Completed 401 Unauthorized in 0ms (ActiveRecord: 1.2ms | Allocations: 225)
+
+
+  
+ActionDispatch::Request::Session::DisabledSessionError (Your application has sessions disabled. To write to the session you must first configure a session store):
+  
+actionpack (7.0.2.3) lib/action_dispatch/request/session.rb:253:in `load_for_write!'
+actionpack (7.0.2.3) lib/action_dispatch/request/session.rb:151:in `[]='
+devise (4.8.1) lib/devise/controllers/store_location.rb:40:in `store_location_for'
+devise (4.8.1) lib/devise/failure_app.rb:243:in `store_location!'
+devise (4.8.1) lib/devise/failure_app.rb:78:in `redirect'
+devise (4.8.1) lib/devise/failure_app.rb:43:in `respond'
+actionpack (7.0.2.3) lib/abstract_controller/base.rb:214:in `process_action'
+actionpack (7.0.2.3) lib/abstract_controller/base.rb:151:in `process'
+actionpack (7.0.2.3) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.2.3) lib/action_controller/metal.rb:235:in `block in action'
+devise (4.8.1) lib/devise/failure_app.rb:23:in `call'
+devise (4.8.1) lib/devise/delegator.rb:7:in `call'
+warden (1.2.9) lib/warden/manager.rb:143:in `call_failure_app'
+warden (1.2.9) lib/warden/manager.rb:129:in `process_unauthenticated'
+warden (1.2.9) lib/warden/manager.rb:44:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (7.0.2.3) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.2.3) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.2.3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (7.0.2.3) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.2.3) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.2.3) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.2.3) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.2.3) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (7.0.2.3) lib/rails/engine.rb:530:in `call'
+puma (5.6.4) lib/puma/configuration.rb:252:in `call'
+puma (5.6.4) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.4) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.4) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.4) lib/puma/server.rb:441:in `process_client'
+puma (5.6.4) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/api/v1/courses" for ::1 at 2022-05-17 02:26:17 +0100
+Processing by Api::V1::CoursesController#create as JSON
+  Parameters: {"title"=>"Testing888", "description"=>"Dummy descriptions design to give a feel of things that are things which are not things you catch my drift", "category"=>"Computer", "duration"=>2, "photo"=>"Blank photo", "price"=>345.3, "user_id"=>2, "course"=>{"title"=>"Testing888", "description"=>"Dummy descriptions design to give a feel of things that are things which are not things you catch my drift", "category"=>"Computer", "duration"=>2, "photo"=>"Blank photo", "price"=>345.3, "user_id"=>2}}
+Completed 401 Unauthorized in 0ms (ActiveRecord: 1.1ms | Allocations: 224)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-05-17 02:26:17 +0100
+Processing by Users::SessionsController#new as JSON
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 377)
+
+
+Started GET "/api/v1/courses" for ::1 at 2022-05-17 02:26:23 +0100
+Processing by Api::V1::CoursesController#index as JSON
+  Parameters: {"course"=>{}}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 142)
+
+
+  
+ActionDispatch::Request::Session::DisabledSessionError (Your application has sessions disabled. To write to the session you must first configure a session store):
+  
+actionpack (7.0.2.3) lib/action_dispatch/request/session.rb:253:in `load_for_write!'
+actionpack (7.0.2.3) lib/action_dispatch/request/session.rb:151:in `[]='
+devise (4.8.1) lib/devise/controllers/store_location.rb:40:in `store_location_for'
+devise (4.8.1) lib/devise/failure_app.rb:243:in `store_location!'
+devise (4.8.1) lib/devise/failure_app.rb:78:in `redirect'
+devise (4.8.1) lib/devise/failure_app.rb:43:in `respond'
+actionpack (7.0.2.3) lib/abstract_controller/base.rb:214:in `process_action'
+actionpack (7.0.2.3) lib/abstract_controller/base.rb:151:in `process'
+actionpack (7.0.2.3) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.2.3) lib/action_controller/metal.rb:235:in `block in action'
+devise (4.8.1) lib/devise/failure_app.rb:23:in `call'
+devise (4.8.1) lib/devise/delegator.rb:7:in `call'
+warden (1.2.9) lib/warden/manager.rb:143:in `call_failure_app'
+warden (1.2.9) lib/warden/manager.rb:129:in `process_unauthenticated'
+warden (1.2.9) lib/warden/manager.rb:44:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (7.0.2.3) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.2.3) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.2.3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (7.0.2.3) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.2.3) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.2.3) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.2.3) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.2.3) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (7.0.2.3) lib/rails/engine.rb:530:in `call'
+puma (5.6.4) lib/puma/configuration.rb:252:in `call'
+puma (5.6.4) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.4) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.4) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.4) lib/puma/server.rb:441:in `process_client'
+puma (5.6.4) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started DELETE "/users/sign_out" for ::1 at 2022-05-17 02:28:01 +0100
+Processing by Users::SessionsController#destroy as JSON
+  Parameters: {"session"=>{}}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 4070)
+
+
+  
+NameError (undefined local variable or method `flash' for #<Users::SessionsController:0x0000000000d778>
+
+      flash[key] = message if message.present?
+      ^^^^^):
+  
+app/controllers/devise_controller.rb:159:in `set_flash_message'
+app/controllers/devise_controller.rb:166:in `set_flash_message!'
+Started POST "/users/sign_in" for ::1 at 2022-05-17 02:28:57 +0100
+Processing by Users::SessionsController#create as JSON
+  Parameters: {"user"=>{"username"=>"Six_username", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"username"=>"Six_username", "password"=>"[FILTERED]"}}}
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms | Allocations: 196)
+
+
+Processing by Users::SessionsController#new as JSON
+  Parameters: {"user"=>{"username"=>"Six_username", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"username"=>"Six_username", "password"=>"[FILTERED]"}}}
+[31mUnpermitted parameter: :username. Context: { controller: Users::SessionsController, action: new, request: #<ActionDispatch::Request:0x00007ff79a976078>, params: {"user"=>{"username"=>"Six_username", "password"=>"[FILTERED]"}, "format"=>"json", "controller"=>"users/sessions", "action"=>"create", "session"=>{"user"=>{"username"=>"Six_username", "password"=>"[FILTERED]"}}} }[0m
+Completed 200 OK in 169ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 370)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2022-05-17 02:29:38 +0100
+Processing by Users::SessionsController#destroy as JSON
+  Parameters: {"session"=>{}}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 3896)
+
+
+  
+NameError (undefined local variable or method `flash' for #<Users::SessionsController:0x0000000000d908>
+
+      flash[key] = message if message.present?
+      ^^^^^):
+  
+app/controllers/devise_controller.rb:159:in `set_flash_message'
+app/controllers/devise_controller.rb:166:in `set_flash_message!'
+Started DELETE "/users/sign_out" for ::1 at 2022-05-17 02:29:53 +0100
+Processing by Users::SessionsController#destroy as JSON
+  Parameters: {"session"=>{}}
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 3895)
+
+
+  
+NameError (undefined local variable or method `flash' for #<Users::SessionsController:0x0000000000d980>
+
+      flash[key] = message if message.present?
+      ^^^^^):
+  
+app/controllers/devise_controller.rb:159:in `set_flash_message'
+app/controllers/devise_controller.rb:166:in `set_flash_message!'
+Started DELETE "/users/sign_out" for ::1 at 2022-05-17 02:30:07 +0100
+Processing by Users::SessionsController#destroy as JSON
+  Parameters: {"session"=>{}}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 3895)
+
+
+  
+NameError (undefined local variable or method `flash' for #<Users::SessionsController:0x0000000000d9f8>
+
+      flash[key] = message if message.present?
+      ^^^^^):
+  
+app/controllers/devise_controller.rb:159:in `set_flash_message'
+app/controllers/devise_controller.rb:166:in `set_flash_message!'
+Started POST "/api/v1/courses" for ::1 at 2022-05-17 02:31:23 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::CoursesController#create as JSON
+  Parameters: {"title"=>"Testing888", "description"=>"Dummy descriptions design to give a feel of things that are things which are not things you catch my drift", "category"=>"Computer", "duration"=>2, "photo"=>"Blank photo", "price"=>345.3, "user_id"=>2, "course"=>{"title"=>"Testing888", "description"=>"Dummy descriptions design to give a feel of things that are things which are not things you catch my drift", "category"=>"Computer", "duration"=>2, "photo"=>"Blank photo", "price"=>345.3, "user_id"=>2}}
+Completed 401 Unauthorized in 3ms (ActiveRecord: 2.6ms | Allocations: 1102)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-05-17 02:31:23 +0100
+Processing by Users::SessionsController#new as JSON
+Completed 200 OK in 10ms (Views: 0.2ms | ActiveRecord: 2.5ms | Allocations: 6213)
+
+
+Started GET "/api/v1/courses" for ::1 at 2022-05-17 02:31:41 +0100
+Processing by Api::V1::CoursesController#index as JSON
+  Parameters: {"course"=>{}}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 115)
+
+
+  
+ActionDispatch::Request::Session::DisabledSessionError (Your application has sessions disabled. To write to the session you must first configure a session store):
+  
+actionpack (7.0.2.3) lib/action_dispatch/request/session.rb:253:in `load_for_write!'
+actionpack (7.0.2.3) lib/action_dispatch/request/session.rb:151:in `[]='
+devise (4.8.1) lib/devise/controllers/store_location.rb:40:in `store_location_for'
+devise (4.8.1) lib/devise/failure_app.rb:243:in `store_location!'
+devise (4.8.1) lib/devise/failure_app.rb:78:in `redirect'
+devise (4.8.1) lib/devise/failure_app.rb:43:in `respond'
+actionpack (7.0.2.3) lib/abstract_controller/base.rb:214:in `process_action'
+actionpack (7.0.2.3) lib/abstract_controller/base.rb:151:in `process'
+actionpack (7.0.2.3) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.2.3) lib/action_controller/metal.rb:235:in `block in action'
+devise (4.8.1) lib/devise/failure_app.rb:23:in `call'
+devise (4.8.1) lib/devise/delegator.rb:7:in `call'
+warden (1.2.9) lib/warden/manager.rb:143:in `call_failure_app'
+warden (1.2.9) lib/warden/manager.rb:129:in `process_unauthenticated'
+warden (1.2.9) lib/warden/manager.rb:44:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (7.0.2.3) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.2.3) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.2.3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (7.0.2.3) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.2.3) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.2.3) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.2.3) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.2.3) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (7.0.2.3) lib/rails/engine.rb:530:in `call'
+puma (5.6.4) lib/puma/configuration.rb:252:in `call'
+puma (5.6.4) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.4) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.4) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.4) lib/puma/server.rb:441:in `process_client'
+puma (5.6.4) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/api/v1/courses" for ::1 at 2022-05-17 02:32:10 +0100
+Processing by Api::V1::CoursesController#index as JSON
+  Parameters: {"course"=>{}}
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms | Allocations: 123)
+
+
+  
+ActionDispatch::Request::Session::DisabledSessionError (Your application has sessions disabled. To write to the session you must first configure a session store):
+  
+actionpack (7.0.2.3) lib/action_dispatch/request/session.rb:253:in `load_for_write!'
+actionpack (7.0.2.3) lib/action_dispatch/request/session.rb:151:in `[]='
+devise (4.8.1) lib/devise/controllers/store_location.rb:40:in `store_location_for'
+devise (4.8.1) lib/devise/failure_app.rb:243:in `store_location!'
+devise (4.8.1) lib/devise/failure_app.rb:78:in `redirect'
+devise (4.8.1) lib/devise/failure_app.rb:43:in `respond'
+actionpack (7.0.2.3) lib/abstract_controller/base.rb:214:in `process_action'
+actionpack (7.0.2.3) lib/abstract_controller/base.rb:151:in `process'
+actionpack (7.0.2.3) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.2.3) lib/action_controller/metal.rb:235:in `block in action'
+devise (4.8.1) lib/devise/failure_app.rb:23:in `call'
+devise (4.8.1) lib/devise/delegator.rb:7:in `call'
+warden (1.2.9) lib/warden/manager.rb:143:in `call_failure_app'
+warden (1.2.9) lib/warden/manager.rb:129:in `process_unauthenticated'
+warden (1.2.9) lib/warden/manager.rb:44:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (7.0.2.3) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.2.3) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.2.3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (7.0.2.3) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.2.3) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.2.3) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.2.3) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.2.3) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (7.0.2.3) lib/rails/engine.rb:530:in `call'
+puma (5.6.4) lib/puma/configuration.rb:252:in `call'
+puma (5.6.4) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.4) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.4) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.4) lib/puma/server.rb:441:in `process_client'
+puma (5.6.4) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+  [1m[36mJwtDenylist Load (1.0ms)[0m  [1m[34mSELECT "jwt_denylists".* FROM "jwt_denylists"[0m
+Started GET "/api/v1/courses" for ::1 at 2022-05-17 03:02:11 +0100
+Processing by Api::V1::CoursesController#index as JSON
+  Parameters: {"course"=>{}}
+  [1m[36mCourse Load (1.7ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:8:in `index'
+Completed 200 OK in 15ms (Views: 7.7ms | ActiveRecord: 12.1ms | Allocations: 9023)
+
+
+Started POST "/api/v1/authentication" for ::1 at 2022-05-17 03:59:00 +0100
+  
+ActionController::RoutingError (No route matches [POST] "/api/v1/authentication"):
+  
+Started POST "/api/v1/authentication" for ::1 at 2022-05-17 03:59:45 +0100
+  
+ActionController::RoutingError (No route matches [POST] "/api/v1/authentication"):
+  
+Started POST "/api/v1/authenticate" for ::1 at 2022-05-17 04:02:20 +0100
+Processing by Api::V1::AuthenticationController#create as JSON
+  Parameters: {"username"=>"Second_username", "password"=>"[FILTERED]", "authentication"=>{"username"=>"Second_username", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "\"Second_username\""], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/authentication_controller.rb:22:in `user'
+Completed 500 Internal Server Error in 86ms (ActiveRecord: 16.4ms | Allocations: 6697)
+
+
+  
+NoMethodError (undefined method `authenticate' for nil:NilClass
+
+        raise AuthenticationError unless user.authenticate(params.require(:password))
+                                             ^^^^^^^^^^^^^):
+  
+app/controllers/api/v1/authentication_controller.rb:12:in `create'
+Started POST "/api/v1/authenticate" for ::1 at 2022-05-17 04:08:37 +0100
+Processing by Api::V1::AuthenticationController#create as JSON
+  Parameters: {"username"=>"Second_username", "password"=>"[FILTERED]", "authentication"=>{"username"=>"Second_username", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Second_username"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/authentication_controller.rb:13:in `create'
+Completed 500 Internal Server Error in 89ms (ActiveRecord: 15.6ms | Allocations: 8804)
+
+
+  
+NameError (uninitialized constant Api::V1::AuthenticationController::AuthenticationTokenServices
+
+        tokens = AuthenticationTokenServices.call(user.id)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^):
+  
+app/controllers/api/v1/authentication_controller.rb:15:in `create'
+Started POST "/api/v1/authenticate" for ::1 at 2022-05-17 04:09:57 +0100
+Processing by Api::V1::AuthenticationController#create as JSON
+  Parameters: {"username"=>"Second_username", "password"=>"[FILTERED]", "authentication"=>{"username"=>"Second_username", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Second_username"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/authentication_controller.rb:13:in `create'
+Completed 201 Created in 40ms (Views: 0.6ms | ActiveRecord: 19.4ms | Allocations: 4737)
+
+
+Started POST "/api/v1/authenticate" for ::1 at 2022-05-17 04:10:01 +0100
+Processing by Api::V1::AuthenticationController#create as JSON
+  Parameters: {"username"=>"Second_username", "password"=>"[FILTERED]", "authentication"=>{"username"=>"Second_username", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Second_username"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/authentication_controller.rb:13:in `create'
+Completed 201 Created in 4ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 753)
+
+
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6900849768098577585)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddPasswordDigestToUser (20220517060907)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(6900849768098577585)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6900849768098577585)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddPasswordDigestToUser (20220517060907)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (8.7ms)[0m  [1m[35mALTER TABLE "users" ADD "password_digest" character varying[0m
+  [1m[36mActiveRecord::SchemaMigration Create (2.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220517060907"]]
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (8.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(6900849768098577585)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "Seven_username"], ["LIMIT", 1]]
+  [1m[36mUser Create (2.4ms)[0m  [1m[32mINSERT INTO "users" ("full_name", "created_at", "updated_at", "username", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "email", "password_digest") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["full_name", "Testing7 tester7"], ["created_at", "2022-05-17 06:20:10.169172"], ["updated_at", "2022-05-17 06:20:10.169172"], ["username", "Seven_username"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["email", "sevenemail@emali.com"], ["password_digest", "[FILTERED]"]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started POST "/api/v1/authenticate" for ::1 at 2022-05-17 07:26:17 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::AuthenticationController#create as JSON
+  Parameters: {"username"=>"Seven_username", "password"=>"[FILTERED]", "authentication"=>{"username"=>"Seven_username", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "\"Seven_username\""], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/authentication_controller.rb:23:in `user'
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 2.2ms | Allocations: 3153)
+
+
+  
+NoMethodError (undefined method `authenticate' for nil:NilClass
+
+        raise AuthenticationError unless user.authenticate(params.require(:password))
+                                             ^^^^^^^^^^^^^):
+  
+app/controllers/api/v1/authentication_controller.rb:12:in `create'
+Started POST "/api/v1/authenticate" for ::1 at 2022-05-17 07:29:03 +0100
+Processing by Api::V1::AuthenticationController#create as JSON
+  Parameters: {"username"=>"Seven_username", "password"=>"[FILTERED]", "authentication"=>{"username"=>"Seven_username", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/api/v1/authentication_controller.rb:12:in `create'
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Seven_username"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/authentication_controller.rb:13:in `create'
+Completed 201 Created in 437ms (Views: 0.3ms | ActiveRecord: 12.7ms | Allocations: 5927)
+
+
+Started POST "/api/v1/authenticate" for ::1 at 2022-05-17 07:30:07 +0100
+Processing by Api::V1::AuthenticationController#create as JSON
+  Parameters: {"username"=>"Seven_username", "password"=>"[FILTERED]", "authentication"=>{"username"=>"Seven_username", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "\"Seven_username\""], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/authentication_controller.rb:19:in `create'
+Completed 200 OK in 28ms (Views: 0.3ms | ActiveRecord: 3.9ms | Allocations: 2506)
+
+
+Started POST "/api/v1/authenticate" for ::1 at 2022-05-17 07:30:36 +0100
+Processing by Api::V1::AuthenticationController#create as JSON
+  Parameters: {"username"=>"Seven_username", "password"=>"[FILTERED]", "authentication"=>{"username"=>"Seven_username", "password"=>"[FILTERED]"}}
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 843)
+
+
+Started POST "/api/v1/authenticate" for ::1 at 2022-05-17 07:31:48 +0100
+Processing by Api::V1::AuthenticationController#create as JSON
+  Parameters: {"username"=>"Seven_username", "password"=>"[FILTERED]", "authentication"=>{"username"=>"Seven_username", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "\"Seven_username\""], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/authentication_controller.rb:19:in `create'
+Completed 200 OK in 11ms (Views: 0.2ms | ActiveRecord: 2.4ms | Allocations: 2503)
+
+
+Started POST "/api/v1/authenticate" for ::1 at 2022-05-17 07:33:20 +0100
+Processing by Api::V1::AuthenticationController#create as JSON
+  Parameters: {"username"=>"Seven_username", "password"=>"[FILTERED]", "authentication"=>{"username"=>"Seven_username", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Seven_username"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/authentication_controller.rb:19:in `create'
+Completed 200 OK in 24ms (Views: 0.6ms | ActiveRecord: 6.7ms | Allocations: 4778)
+
+
+Started POST "/api/v1/authenticate" for ::1 at 2022-05-17 07:34:19 +0100
+Processing by Api::V1::AuthenticationController#create as JSON
+  Parameters: {"username"=>"Seven_username", "password"=>"[FILTERED]", "authentication"=>{"username"=>"Seven_username", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Seven_username"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/authentication_controller.rb:23:in `user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Seven_username"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/authentication_controller.rb:13:in `create'
+Completed 201 Created in 426ms (Views: 0.4ms | ActiveRecord: 6.8ms | Allocations: 5208)
+
+
