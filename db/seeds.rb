@@ -41,3 +41,12 @@ course1 = Course.create(
     photo: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fpngset.com%2Fdownload-free-png-efdei&psig=AOvVaw11wiqURoiQjnyYU_ShrUrt&ust=1652868441865000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCLjW_YjA5vcCFQAAAAAdAAAAABAD',
     price: '2000'
   )
+
+  course3 = Course.create(
+    title: 'Python',
+    description: 'Learn Python and become a back-end developer',
+    category: 'Web Development',
+    duration: '500',
+    photo: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fflyclipart.com%2Fpython-logo-png-transparent-python-logo-images-python-logo-png-205864&psig=AOvVaw1XvksYI9HwvKqdxStJeyED&ust=1652868512306000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCLjNtaHA5vcCFQAAAAAdAAAAABAO',
+    price: '3000'
+  )
