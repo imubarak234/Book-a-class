@@ -15,7 +15,7 @@ class ApplicationController < ActionController::API
     if token
       user_id = AuthenticationTokenService.decode(token)
       User.find(user_id)
-      
+
     else
       render json: { error: 'Unauthorized user' }
     end
