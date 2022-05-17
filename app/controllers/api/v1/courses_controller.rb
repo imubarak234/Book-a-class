@@ -1,7 +1,6 @@
 module Api
   module V1
     class CoursesController < ApplicationController
-
       before_action :authenticateing_users
       ALLOWED_DATA = %(title, description, category, duration, photo, price, user_id).freeze
 
@@ -38,8 +37,6 @@ module Api
       def course_params
         # params.require(:course).permit(:title, :description, :category, :duration, :photo, :price)
       end
-
-
     end
   end
 end

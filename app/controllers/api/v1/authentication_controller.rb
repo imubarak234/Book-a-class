@@ -7,9 +7,10 @@ module Api
       rescue_from AuthenticationError, with: :handle_unauthenticated
 
       def create
-        #params.require(:password).inspect
+        # params.require(:password).inspect
 
         raise AuthenticationError unless user.authenticate(params.require(:password))
+
         user = User.find_by(username: params.require(:username))
 
         tokens = AuthenticationTokenService.call(user.id)
