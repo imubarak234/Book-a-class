@@ -112,3 +112,8 @@ start_date4 = StartDate.create(
   start_date: '2020-05-13',
   course_id: course4.id
 )
+
+start_date5 = StartDate.create(
+  start_date: '2020-05-14',
+  course_id: course5.id
+)
