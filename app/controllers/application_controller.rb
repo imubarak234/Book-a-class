@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::API
+  include ActionController::HttpAuthentication::Token
   before_action :set_default_format
   before_action :configure_permitted_parameters, if: :devise_controller?
   # protect_from_forgery with: :null_session
@@ -7,6 +8,14 @@ class ApplicationController < ActionController::API
 
   def json_payload
     HashWithIndifferentAccess.new(JSON.parse(request.raw_post))
+  end
+
+  def authenticateing_users
+    token, _options = token_and_options(request)
+    user_id = AuthenticationTokenService.decode(token)
+    User.find(user_id)
+  rescue ActiveRecord::RecordNotFound
+    render json: { error: 'Unauthorized user' }
   end
 
   private

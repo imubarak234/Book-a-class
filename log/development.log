@@ -5565,3 +5565,128 @@ Processing by Api::V1::AuthenticationController#create as JSON
 Completed 201 Created in 426ms (Views: 0.4ms | ActiveRecord: 6.8ms | Allocations: 5208)
 
 
+Started GET "/api/v1/courses" for ::1 at 2022-05-17 07:53:24 +0100
+Processing by Api::V1::CoursesController#index as JSON
+  Parameters: {"course"=>{}}
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 17.6ms | Allocations: 1153)
+
+
+  
+JWT::DecodeError (Nil JSON web token):
+  
+app/services/authentication_token_service.rb:12:in `decode'
+app/controllers/api/v1/courses_controller.rb:45:in `authenticateing_users'
+Started GET "/api/v1/courses" for ::1 at 2022-05-17 07:54:16 +0100
+Processing by Api::V1::CoursesController#index as JSON
+  Parameters: {"course"=>{}}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/courses_controller.rb:46:in `authenticateing_users'
+  [1m[36mCourse Load (4.8ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:10:in `index'
+Completed 200 OK in 44ms (Views: 17.6ms | ActiveRecord: 12.6ms | Allocations: 9910)
+
+
+Started GET "/api/v1/courses" for ::1 at 2022-05-17 07:57:00 +0100
+Processing by Api::V1::CoursesController#index as JSON
+  Parameters: {"course"=>{}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 515)
+
+
+  
+JWT::VerificationError (Signature verification raised):
+  
+app/services/authentication_token_service.rb:12:in `decode'
+app/controllers/api/v1/courses_controller.rb:45:in `authenticateing_users'
+Started GET "/api/v1/courses" for ::1 at 2022-05-17 07:57:27 +0100
+Processing by Api::V1::CoursesController#index as JSON
+  Parameters: {"course"=>{}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/courses_controller.rb:46:in `authenticateing_users'
+  [1m[36mCourse Load (0.9ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:10:in `index'
+Completed 200 OK in 12ms (Views: 6.9ms | ActiveRecord: 1.6ms | Allocations: 4650)
+
+
+Started GET "/api/v1/courses" for ::1 at 2022-05-17 07:58:35 +0100
+Processing by Api::V1::CoursesController#index as JSON
+  Parameters: {"course"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/courses_controller.rb:46:in `authenticateing_users'
+  [1m[36mCourse Load (0.7ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:10:in `index'
+Completed 200 OK in 36ms (Views: 11.5ms | ActiveRecord: 15.0ms | Allocations: 10902)
+
+
+Started GET "/api/v1/courses" for ::1 at 2022-05-17 07:58:42 +0100
+Processing by Api::V1::CoursesController#index as JSON
+  Parameters: {"course"=>{}}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 536)
+
+
+  
+JWT::VerificationError (Signature verification raised):
+  
+app/services/authentication_token_service.rb:12:in `decode'
+app/controllers/api/v1/courses_controller.rb:45:in `authenticateing_users'
+Started GET "/api/v1/courses" for ::1 at 2022-05-17 07:58:56 +0100
+Processing by Api::V1::CoursesController#index as JSON
+  Parameters: {"course"=>{}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/courses_controller.rb:46:in `authenticateing_users'
+  [1m[36mCourse Load (0.9ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:10:in `index'
+Completed 200 OK in 15ms (Views: 10.1ms | ActiveRecord: 1.5ms | Allocations: 4651)
+
+
+Started GET "/api/v1/courses" for ::1 at 2022-05-17 08:01:17 +0100
+Processing by Api::V1::CoursesController#index as JSON
+  Parameters: {"course"=>{}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1234567890], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/courses_controller.rb:46:in `authenticateing_users'
+Filter chain halted as :authenticateing_users rendered or redirected
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.8ms | Allocations: 1070)
+
+
+Started GET "/api/v1/courses" for ::1 at 2022-05-17 08:02:57 +0100
+Processing by Api::V1::CoursesController#index as JSON
+  Parameters: {"course"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1234567890], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:15:in `authenticateing_users'
+Filter chain halted as :authenticateing_users rendered or redirected
+Completed 200 OK in 19ms (Views: 0.3ms | ActiveRecord: 9.9ms | Allocations: 3415)
+
+
+Started GET "/api/v1/users/4/reservations" for ::1 at 2022-05-17 08:03:20 +0100
+Processing by Api::V1::ReservationsController#index as JSON
+  Parameters: {"user_id"=>"4", "reservation"=>{}}
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 1.8ms | Allocations: 2807)
+
+
+  
+NoMethodError (undefined method `token_and_options' for #<Api::V1::ReservationsController:0x00000000059510>
+
+    token, _options = token_and_options(request)
+                      ^^^^^^^^^^^^^^^^^):
+  
+app/controllers/application_controller.rb:13:in `authenticateing_users'
+Started GET "/api/v1/users/4/reservations" for ::1 at 2022-05-17 08:03:55 +0100
+Processing by Api::V1::ReservationsController#index as JSON
+  Parameters: {"user_id"=>"4", "reservation"=>{}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1234567890], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `authenticateing_users'
+Filter chain halted as :authenticateing_users rendered or redirected
+Completed 200 OK in 72ms (Views: 0.2ms | ActiveRecord: 9.4ms | Allocations: 3408)
+
+
+Started GET "/api/v1/users/4/reservations" for ::1 at 2022-05-17 08:04:21 +0100
+Processing by Api::V1::ReservationsController#index as JSON
+  Parameters: {"user_id"=>"4", "reservation"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:16:in `authenticateing_users'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:8:in `index'
+  [1m[36mReservation Load (5.4ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."user_id" = $1[0m  [["user_id", 4]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:8:in `index'
+Completed 200 OK in 25ms (Views: 7.0ms | ActiveRecord: 8.7ms | Allocations: 6125)
+
+
