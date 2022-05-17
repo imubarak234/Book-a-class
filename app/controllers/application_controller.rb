@@ -12,10 +12,13 @@ class ApplicationController < ActionController::API
 
   def authenticateing_users
     token, _options = token_and_options(request)
-    user_id = AuthenticationTokenService.decode(token)
-    User.find(user_id)
-  rescue ActiveRecord::RecordNotFound
-    render json: { error: 'Unauthorized user' }
+    if token
+      user_id = AuthenticationTokenService.decode(token)
+      User.find(user_id)
+      
+    else
+      render json: { error: 'Unauthorized user' }
+    end
   end
 
   private

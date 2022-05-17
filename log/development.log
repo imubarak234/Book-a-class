@@ -5690,3 +5690,151 @@ Processing by Api::V1::ReservationsController#index as JSON
 Completed 200 OK in 25ms (Views: 7.0ms | ActiveRecord: 8.7ms | Allocations: 6125)
 
 
+Started GET "/api/v1/users/4/reservations" for ::1 at 2022-05-17 14:45:12 +0100
+  
+SyntaxError (/mnt/c/Users/m_bth/Desktop/stuff/code/Module 6 repos/Capstone/Book-a-class/app/controllers/application_controller.rb:18: syntax error, unexpected `rescue', expecting `end'
+    rescue ActiveRecord::RecordNotFound
+    ^~~~~~
+):
+  
+app/controllers/application_controller.rb:18: syntax error, unexpected `rescue', expecting `end'
+app/controllers/application_controller.rb:18: syntax error, unexpected `rescue', expecting `end'
+app/controllers/application_controller.rb:18: syntax error, unexpected `rescue', expecting `end'
+app/controllers/api/v1/reservations_controller.rb:3:in `<module:V1>'
+app/controllers/api/v1/reservations_controller.rb:2:in `<module:Api>'
+app/controllers/api/v1/reservations_controller.rb:1:in `<main>'
+Started GET "/api/v1/users/4/reservations" for ::1 at 2022-05-17 14:45:22 +0100
+  
+SyntaxError (/mnt/c/Users/m_bth/Desktop/stuff/code/Module 6 repos/Capstone/Book-a-class/app/controllers/application_controller.rb:18: syntax error, unexpected `rescue', expecting `end'
+    rescue ActiveRecord::RecordNotFound
+    ^~~~~~
+):
+  
+app/controllers/application_controller.rb:18: syntax error, unexpected `rescue', expecting `end'
+app/controllers/application_controller.rb:18: syntax error, unexpected `rescue', expecting `end'
+app/controllers/application_controller.rb:18: syntax error, unexpected `rescue', expecting `end'
+app/controllers/api/v1/reservations_controller.rb:3:in `<module:V1>'
+app/controllers/api/v1/reservations_controller.rb:2:in `<module:Api>'
+app/controllers/api/v1/reservations_controller.rb:1:in `<main>'
+Started GET "/api/v1/users/4/reservations" for ::1 at 2022-05-17 14:45:45 +0100
+  
+SyntaxError (/mnt/c/Users/m_bth/Desktop/stuff/code/Module 6 repos/Capstone/Book-a-class/app/controllers/application_controller.rb:18: syntax error, unexpected `rescue', expecting `end'
+    rescue ActiveRecord::RecordNotFound
+    ^~~~~~
+):
+  
+app/controllers/application_controller.rb:18: syntax error, unexpected `rescue', expecting `end'
+app/controllers/application_controller.rb:18: syntax error, unexpected `rescue', expecting `end'
+app/controllers/application_controller.rb:18: syntax error, unexpected `rescue', expecting `end'
+app/controllers/api/v1/reservations_controller.rb:3:in `<module:V1>'
+app/controllers/api/v1/reservations_controller.rb:2:in `<module:Api>'
+app/controllers/api/v1/reservations_controller.rb:1:in `<main>'
+Started GET "/api/v1/users/4/reservations" for ::1 at 2022-05-17 14:46:25 +0100
+  
+SyntaxError (/mnt/c/Users/m_bth/Desktop/stuff/code/Module 6 repos/Capstone/Book-a-class/app/controllers/application_controller.rb:18: syntax error, unexpected `rescue', expecting `end'
+    rescue ActiveRecord::RecordNotFound
+    ^~~~~~
+/mnt/c/Users/m_bth/Desktop/stuff/code/Module 6 repos/Capstone/Book-a-class/app/controllers/application_controller.rb:21: else without rescue is useless
+    else
+    ^~~~
+/mnt/c/Users/m_bth/Desktop/stuff/code/Module 6 repos/Capstone/Book-a-class/app/controllers/application_controller.rb:40: syntax error, unexpected `end', expecting end-of-input):
+  
+app/controllers/application_controller.rb:18: syntax error, unexpected `rescue', expecting `end'
+app/controllers/application_controller.rb:21: else without rescue is useless
+app/controllers/application_controller.rb:40: syntax error, unexpected `end', expecting end-of-input
+app/controllers/application_controller.rb:18: syntax error, unexpected `rescue', expecting `end'
+app/controllers/application_controller.rb:21: else without rescue is useless
+app/controllers/application_controller.rb:40: syntax error, unexpected `end', expecting end-of-input
+app/controllers/application_controller.rb:18: syntax error, unexpected `rescue', expecting `end'
+app/controllers/application_controller.rb:21: else without rescue is useless
+app/controllers/application_controller.rb:40: syntax error, unexpected `end', expecting end-of-input
+app/controllers/api/v1/reservations_controller.rb:3:in `<module:V1>'
+app/controllers/api/v1/reservations_controller.rb:2:in `<module:Api>'
+app/controllers/api/v1/reservations_controller.rb:1:in `<main>'
+Started GET "/api/v1/users/4/reservations" for ::1 at 2022-05-17 14:47:06 +0100
+Processing by Api::V1::ReservationsController#index as JSON
+  Parameters: {"user_id"=>"4", "reservation"=>{}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `authenticateing_users'
+Filter chain halted as :authenticateing_users rendered or redirected
+Completed 200 OK in 9ms (Views: 0.2ms | ActiveRecord: 9.9ms | Allocations: 4772)
+
+
+Started GET "/api/v1/users/4/reservations" for ::1 at 2022-05-17 14:47:36 +0100
+Processing by Api::V1::ReservationsController#index as JSON
+  Parameters: {"user_id"=>"4", "reservation"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `authenticateing_users'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:8:in `index'
+  [1m[36mReservation Load (1.1ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."user_id" = $1[0m  [["user_id", 4]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:8:in `index'
+Completed 200 OK in 15ms (Views: 2.4ms | ActiveRecord: 10.1ms | Allocations: 7885)
+
+
+Started GET "/api/v1/users/4/reservations" for ::1 at 2022-05-17 14:47:46 +0100
+Processing by Api::V1::ReservationsController#index as JSON
+  Parameters: {"user_id"=>"4", "reservation"=>{}}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms | Allocations: 530)
+
+
+  
+JWT::VerificationError (Signature verification raised):
+  
+app/services/authentication_token_service.rb:12:in `decode'
+app/controllers/application_controller.rb:16:in `authenticateing_users'
+Started GET "/api/v1/users/4/reservations" for ::1 at 2022-05-17 14:48:03 +0100
+Processing by Api::V1::ReservationsController#index as JSON
+  Parameters: {"user_id"=>"4", "reservation"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `authenticateing_users'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:8:in `index'
+  [1m[36mReservation Load (0.2ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."user_id" = $1[0m  [["user_id", 4]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 1.0ms | ActiveRecord: 0.8ms | Allocations: 2097)
+
+
+Started GET "/api/v1/users/4/reservations" for ::1 at 2022-05-17 14:48:24 +0100
+Processing by Api::V1::ReservationsController#index as JSON
+  Parameters: {"user_id"=>"4", "reservation"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1234567890], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `authenticateing_users'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms | Allocations: 1042)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=1234567890):
+  
+app/controllers/application_controller.rb:17:in `authenticateing_users'
+Started GET "/api/v1/users/4/reservations" for ::1 at 2022-05-17 14:51:26 +0100
+Processing by Api::V1::ReservationsController#index as JSON
+  Parameters: {"user_id"=>"4", "reservation"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1234567890], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `authenticateing_users'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms | Allocations: 1035)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=1234567890):
+  
+app/controllers/application_controller.rb:17:in `authenticateing_users'
+Started GET "/api/v1/users/4/reservations" for ::1 at 2022-05-17 14:51:53 +0100
+Processing by Api::V1::ReservationsController#index as JSON
+  Parameters: {"user_id"=>"4", "reservation"=>{}}
+Filter chain halted as :authenticateing_users rendered or redirected
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 113)
+
+
+Started GET "/api/v1/users/4/reservations" for ::1 at 2022-05-17 14:52:00 +0100
+Processing by Api::V1::ReservationsController#index as JSON
+  Parameters: {"user_id"=>"4", "reservation"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `authenticateing_users'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:8:in `index'
+  [1m[36mReservation Load (0.2ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."user_id" = $1[0m  [["user_id", 4]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 0.9ms | ActiveRecord: 0.6ms | Allocations: 2095)
+
+
