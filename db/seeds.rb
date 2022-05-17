@@ -15,3 +15,11 @@ user1 = User.create!(
   username: 'KingKaylo',
   password: '123456'
 )
+
+
+user2 = User.create!(
+  full_name: 'Ben King',
+  email: 'ben@gmail.com',
+  username: 'ben',
+  password: '123456'
+)
