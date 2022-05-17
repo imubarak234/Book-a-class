@@ -11,7 +11,7 @@ module Api
 
         raise AuthenticationError unless user.authenticate(params.require(:password))
 
-        user = User.find_by(username: params.require(:username))
+        # user = User.find_by(username: params.require(:username))
 
         tokens = AuthenticationTokenService.call(user.id)
 
