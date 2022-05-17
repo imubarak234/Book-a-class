@@ -68,3 +68,17 @@ course1 = Course.create(
     photo: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fmasteringjs.io%2Ftutorials%2Fvue%2Flogo&psig=AOvVaw2fViD_2aD9QCiBk5lC-JRy&ust=1652868633152000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCNif9NrA5vcCFQAAAAAdAAAAABAJ',
     price: '5000'
   )
+
+  reservation1 = Reservation.create(
+    reserve_date: '2020-05-10',
+    duration: '50',
+    user_id: user1.id,
+    course_id: course1.id
+  )
+
+  reservation2 = Reservation.create(
+    reserve_date: '2020-05-10',
+    duration: '50',
+    user_id: user2.id,
+    course_id: course2.id
+  )
