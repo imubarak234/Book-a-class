@@ -8,10 +8,10 @@ class User < ApplicationRecord
   has_many :classes_user
   has_many :reservation
 
-  validates :full_name, presence: true
+  #validates :full_name, presence: true
   validates :username, presence: true, uniqueness: { case_sensitive: false }
   validates_format_of :username, with: /^[a-zA-Z0-9_.]*$/, multiline: true
-  validate :validate_username
+  #validate :validate_username
 
   attr_writer :login
 

@@ -3281,3 +3281,1594 @@ Processing by Api::V1::ReservationsController#index as JSON
 Completed 200 OK in 4ms (Views: 1.3ms | ActiveRecord: 0.6ms | Allocations: 1527)
 
 
+Started GET "/api/v1/users/4/reservations" for ::1 at 2022-05-16 17:01:37 +0100
+Processing by Api::V1::ReservationsController#index as JSON
+  Parameters: {"user_id"=>"4", "reservation"=>{}}
+Completed 401 Unauthorized in 5ms (ActiveRecord: 14.5ms | Allocations: 908)
+
+
+Started GET "/users" for ::1 at 2022-05-16 17:05:26 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+Started POST "/users/sign_up" for ::1 at 2022-05-16 17:13:37 +0100
+  
+ActionController::RoutingError (No route matches [POST] "/users/sign_up"):
+  
+Started POST "/users" for ::1 at 2022-05-16 17:14:19 +0100
+Processing by Users::RegistrationsController#create as */*
+  Parameters: {"user"=>{"username"=>"Third_username", "password"=>"[FILTERED]", "full_name"=>"Testing3 tester3", "email"=>"thirdemail@email.com"}, "registration"=>{"user"=>{"username"=>"Third_username", "password"=>"[FILTERED]", "full_name"=>"Testing3 tester3", "email"=>"thirdemail@email.com"}}}
+[31mUnpermitted parameter: :full_name. Context: { controller: Users::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007fe40be84378>, params: {"user"=>{"username"=>"Third_username", "password"=>"[FILTERED]", "full_name"=>"Testing3 tester3", "email"=>"thirdemail@email.com"}, "controller"=>"users/registrations", "action"=>"create", "registration"=>{"user"=>{"username"=>"Third_username", "password"=>"[FILTERED]", "full_name"=>"Testing3 tester3", "email"=>"thirdemail@email.com"}}} }[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (2.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "thirdemail@email.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "Third_username"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "Third_username"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23:in `validate_username'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[31mROLLBACK[0m
+Completed 200 OK in 524ms (Views: 0.3ms | ActiveRecord: 23.8ms | Allocations: 12296)
+
+
+Started POST "/users" for ::1 at 2022-05-16 17:15:44 +0100
+Processing by Users::RegistrationsController#create as */*
+  Parameters: {"user"=>{"username"=>"Third_username", "password"=>"[FILTERED]", "full_name"=>"Testing3 tester3", "email"=>"thirdemail@email.com"}, "registration"=>{"user"=>{"username"=>"Third_username", "password"=>"[FILTERED]", "full_name"=>"Testing3 tester3", "email"=>"thirdemail@email.com"}}}
+[31mUnpermitted parameter: :full_name. Context: { controller: Users::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007fe40ba46d38>, params: {"user"=>{"username"=>"Third_username", "password"=>"[FILTERED]", "full_name"=>"Testing3 tester3", "email"=>"thirdemail@email.com"}, "controller"=>"users/registrations", "action"=>"create", "registration"=>{"user"=>{"username"=>"Third_username", "password"=>"[FILTERED]", "full_name"=>"Testing3 tester3", "email"=>"thirdemail@email.com"}}} }[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "thirdemail@email.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "Third_username"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "Third_username"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23:in `validate_username'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+Completed 200 OK in 423ms (Views: 0.2ms | ActiveRecord: 3.2ms | Allocations: 5863)
+
+
+Started POST "/users" for ::1 at 2022-05-16 17:16:57 +0100
+Processing by Users::RegistrationsController#create as */*
+  Parameters: {"User"=>{"username"=>"Third_username", "password"=>"[FILTERED]", "full_name"=>"Testing3 tester3", "email"=>"thirdemail@email.com"}, "registration"=>{"User"=>{"username"=>"Third_username", "password"=>"[FILTERED]", "full_name"=>"Testing3 tester3", "email"=>"thirdemail@email.com"}}}
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", ""], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23:in `validate_username'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+Completed 200 OK in 14ms (Views: 0.2ms | ActiveRecord: 2.0ms | Allocations: 4538)
+
+
+Started POST "/users" for ::1 at 2022-05-16 17:17:15 +0100
+Processing by Users::RegistrationsController#create as */*
+  Parameters: {"user"=>{"username"=>"Third_username", "password"=>"[FILTERED]"}, "registration"=>{"user"=>{"username"=>"Third_username", "password"=>"[FILTERED]"}}}
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "Third_username"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "Third_username"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23:in `validate_username'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+Completed 200 OK in 416ms (Views: 0.2ms | ActiveRecord: 2.3ms | Allocations: 4562)
+
+
+Started POST "/users" for ::1 at 2022-05-16 17:18:02 +0100
+Processing by Users::RegistrationsController#create as */*
+  Parameters: {"user"=>{"username"=>"Third_username", "password"=>"[FILTERED]", "full_name"=>"Testing3 tester3", "email"=>"thirdemail@email.com"}, "registration"=>{"user"=>{"username"=>"Third_username", "password"=>"[FILTERED]", "full_name"=>"Testing3 tester3", "email"=>"thirdemail@email.com"}}}
+[31mUnpermitted parameter: :full_name. Context: { controller: Users::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007fe40b6c4ae8>, params: {"user"=>{"username"=>"Third_username", "password"=>"[FILTERED]", "full_name"=>"Testing3 tester3", "email"=>"thirdemail@email.com"}, "controller"=>"users/registrations", "action"=>"create", "registration"=>{"user"=>{"username"=>"Third_username", "password"=>"[FILTERED]", "full_name"=>"Testing3 tester3", "email"=>"thirdemail@email.com"}}} }[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "thirdemail@email.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "Third_username"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "Third_username"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23:in `validate_username'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+Completed 200 OK in 422ms (Views: 0.2ms | ActiveRecord: 3.3ms | Allocations: 5799)
+
+
+Started POST "/users" for ::1 at 2022-05-16 17:20:08 +0100
+Processing by Users::RegistrationsController#create as */*
+  Parameters: {"user"=>{"username"=>"Third_username", "password"=>"[FILTERED]", "full_name"=>"Testing3 tester3", "email"=>"thirdemail@email.com"}, "registration"=>{"user"=>{"username"=>"Third_username", "password"=>"[FILTERED]", "full_name"=>"Testing3 tester3", "email"=>"thirdemail@email.com"}}}
+[31mUnpermitted parameters: :username, :full_name, :email. Context: { controller: Users::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007fe40ae85788>, params: {"user"=>{"username"=>"Third_username", "password"=>"[FILTERED]", "full_name"=>"Testing3 tester3", "email"=>"thirdemail@email.com"}, "controller"=>"users/registrations", "action"=>"create", "registration"=>{"user"=>{"username"=>"Third_username", "password"=>"[FILTERED]", "full_name"=>"Testing3 tester3", "email"=>"thirdemail@email.com"}}} }[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", ""], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23:in `validate_username'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK[0m
+Completed 200 OK in 438ms (Views: 0.3ms | ActiveRecord: 13.2ms | Allocations: 8129)
+
+
+Started POST "/users" for ::1 at 2022-05-16 17:20:11 +0100
+Processing by Users::RegistrationsController#create as */*
+  Parameters: {"user"=>{"username"=>"Third_username", "password"=>"[FILTERED]", "full_name"=>"Testing3 tester3", "email"=>"thirdemail@email.com"}, "registration"=>{"user"=>{"username"=>"Third_username", "password"=>"[FILTERED]", "full_name"=>"Testing3 tester3", "email"=>"thirdemail@email.com"}}}
+[31mUnpermitted parameters: :username, :full_name, :email. Context: { controller: Users::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007fe40a987cb8>, params: {"user"=>{"username"=>"Third_username", "password"=>"[FILTERED]", "full_name"=>"Testing3 tester3", "email"=>"thirdemail@email.com"}, "controller"=>"users/registrations", "action"=>"create", "registration"=>{"user"=>{"username"=>"Third_username", "password"=>"[FILTERED]", "full_name"=>"Testing3 tester3", "email"=>"thirdemail@email.com"}}} }[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", ""], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23:in `validate_username'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+Completed 200 OK in 417ms (Views: 0.2ms | ActiveRecord: 2.0ms | Allocations: 4656)
+
+
+Started POST "/users" for ::1 at 2022-05-16 17:20:47 +0100
+Processing by Users::RegistrationsController#create as */*
+  Parameters: {"user"=>{"username"=>"Third_username", "password"=>"[FILTERED]", "full_name"=>"Testing3 tester3", "email"=>"thirdemail@email.com"}, "registration"=>{"user"=>{"username"=>"Third_username", "password"=>"[FILTERED]", "full_name"=>"Testing3 tester3", "email"=>"thirdemail@email.com"}}}
+[31mUnpermitted parameter: :full_name. Context: { controller: Users::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007fe411e84110>, params: {"user"=>{"username"=>"Third_username", "password"=>"[FILTERED]", "full_name"=>"Testing3 tester3", "email"=>"thirdemail@email.com"}, "controller"=>"users/registrations", "action"=>"create", "registration"=>{"user"=>{"username"=>"Third_username", "password"=>"[FILTERED]", "full_name"=>"Testing3 tester3", "email"=>"thirdemail@email.com"}}} }[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "thirdemail@email.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "Third_username"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "Third_username"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23:in `validate_username'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+Completed 200 OK in 436ms (Views: 0.3ms | ActiveRecord: 8.6ms | Allocations: 9322)
+
+
+Started POST "/users" for ::1 at 2022-05-16 17:23:14 +0100
+Processing by Users::RegistrationsController#create as */*
+  Parameters: {"user"=>{"username"=>"Third_username", "password"=>"[FILTERED]", "full_name"=>"Testing3 tester3", "email"=>"thirdemail@email.com"}, "registration"=>{"user"=>{"username"=>"Third_username", "password"=>"[FILTERED]", "full_name"=>"Testing3 tester3", "email"=>"thirdemail@email.com"}}}
+[31mUnpermitted parameter: :full_name. Context: { controller: Users::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007fe4114d5df8>, params: {"user"=>{"username"=>"Third_username", "password"=>"[FILTERED]", "full_name"=>"Testing3 tester3", "email"=>"thirdemail@email.com"}, "controller"=>"users/registrations", "action"=>"create", "registration"=>{"user"=>{"username"=>"Third_username", "password"=>"[FILTERED]", "full_name"=>"Testing3 tester3", "email"=>"thirdemail@email.com"}}} }[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "thirdemail@email.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "Third_username"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+Completed 200 OK in 433ms (Views: 0.2ms | ActiveRecord: 9.5ms | Allocations: 8652)
+
+
+Started POST "/users" for ::1 at 2022-05-16 17:34:48 +0100
+Processing by Users::RegistrationsController#create as */*
+  Parameters: {"user"=>{"username"=>"Third_username", "password"=>"[FILTERED]", "email"=>"thirdemail@email.com"}, "registration"=>{"user"=>{"username"=>"Third_username", "password"=>"[FILTERED]", "email"=>"thirdemail@email.com"}}}
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (2.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "thirdemail@email.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "Third_username"], ["LIMIT", 1]]
+  [1m[36mUser Create (2.7ms)[0m  [1m[32mINSERT INTO "users" ("full_name", "created_at", "updated_at", "username", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["full_name", nil], ["created_at", "2022-05-16 16:34:49.630543"], ["updated_at", "2022-05-16 16:34:49.630543"], ["username", "Third_username"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["email", "thirdemail@email.com"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+Completed 500 Internal Server Error in 502ms (ActiveRecord: 22.4ms | Allocations: 15744)
+
+
+  
+NameError (undefined local variable or method `flash' for #<Users::RegistrationsController:0x00000000037280>
+
+      flash[key] = message if message.present?
+      ^^^^^):
+  
+devise (4.8.1) app/controllers/devise_controller.rb:159:in `set_flash_message'
+devise (4.8.1) app/controllers/devise_controller.rb:166:in `set_flash_message!'
+devise (4.8.1) app/controllers/devise/registrations_controller.rb:23:in `create'
+actionpack (7.0.2.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (7.0.2.3) lib/abstract_controller/base.rb:214:in `process_action'
+actionpack (7.0.2.3) lib/action_controller/metal/rendering.rb:53:in `process_action'
+actionpack (7.0.2.3) lib/abstract_controller/callbacks.rb:234:in `block in process_action'
+activesupport (7.0.2.3) lib/active_support/callbacks.rb:107:in `run_callbacks'
+actionpack (7.0.2.3) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.2.3) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (7.0.2.3) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.2.3) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.2.3) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.2.3) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.2.3) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.2.3) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.2.3) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.2.3) lib/abstract_controller/base.rb:151:in `process'
+actionview (7.0.2.3) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.2.3) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.2.3) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.2.3) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.2.3) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.2.3) lib/action_dispatch/routing/mapper.rb:18:in `block in <class:Constraints>'
+actionpack (7.0.2.3) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+actionpack (7.0.2.3) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.2.3) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.2.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.2.3) lib/action_dispatch/routing/route_set.rb:850:in `call'
+warden-jwt_auth (0.6.0) lib/warden/jwt_auth/middleware/token_dispatcher.rb:20:in `call'
+warden-jwt_auth (0.6.0) lib/warden/jwt_auth/middleware/revocation_manager.rb:21:in `call'
+rack (2.2.3) lib/rack/builder.rb:244:in `call'
+warden-jwt_auth (0.6.0) lib/warden/jwt_auth/middleware.rb:22:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/cookies.rb:693:in `call'
+activerecord (7.0.2.3) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.2.3) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.2.3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (7.0.2.3) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.2.3) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.2.3) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.2.3) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.2.3) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (7.0.2.3) lib/rails/engine.rb:530:in `call'
+puma (5.6.4) lib/puma/configuration.rb:252:in `call'
+puma (5.6.4) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.4) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.4) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.4) lib/puma/server.rb:441:in `process_client'
+puma (5.6.4) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started POST "/users" for ::1 at 2022-05-16 17:44:45 +0100
+Processing by Users::RegistrationsController#create as */*
+  Parameters: {"user"=>{"username"=>"Third_username", "password"=>"[FILTERED]", "email"=>"thirdemail@email.com"}, "registration"=>{"user"=>{"username"=>"Third_username", "password"=>"[FILTERED]", "email"=>"thirdemail@email.com"}}}
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users/registrations_controller.rb:7:in `create'
+  [1m[36mUser Exists? (2.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "thirdemail@email.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users/registrations_controller.rb:7:in `create'
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "Third_username"], ["LIMIT", 1]]
+  ↳ app/controllers/users/registrations_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users/registrations_controller.rb:7:in `create'
+Completed 200 OK in 490ms (Views: 0.3ms | ActiveRecord: 20.5ms | Allocations: 8952)
+
+
+Started POST "/users" for ::1 at 2022-05-16 17:46:07 +0100
+Processing by Users::RegistrationsController#create as */*
+  Parameters: {"user"=>{"username"=>"Fourth_username", "password"=>"[FILTERED]", "email"=>"fourthemail@email.com"}, "registration"=>{"user"=>{"username"=>"Fourth_username", "password"=>"[FILTERED]", "email"=>"fourthemail@email.com"}}}
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users/registrations_controller.rb:7:in `create'
+  [1m[36mUser Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "fourthemail@email.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users/registrations_controller.rb:7:in `create'
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "Fourth_username"], ["LIMIT", 1]]
+  ↳ app/controllers/users/registrations_controller.rb:7:in `create'
+  [1m[36mUser Create (2.2ms)[0m  [1m[32mINSERT INTO "users" ("full_name", "created_at", "updated_at", "username", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["full_name", nil], ["created_at", "2022-05-16 16:46:07.520024"], ["updated_at", "2022-05-16 16:46:07.520024"], ["username", "Fourth_username"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["email", "fourthemail@email.com"]]
+  ↳ app/controllers/users/registrations_controller.rb:7:in `create'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users/registrations_controller.rb:7:in `create'
+Completed 200 OK in 419ms (Views: 0.2ms | ActiveRecord: 4.9ms | Allocations: 4661)
+
+
+Started POST "/users" for ::1 at 2022-05-16 17:53:41 +0100
+Processing by Users::RegistrationsController#create as */*
+  Parameters: {"user"=>{"full_name"=>"First Name", "username"=>"Fourth_username", "password"=>"[FILTERED]", "email"=>"fourthemail@email.com"}, "registration"=>{"user"=>{"full_name"=>"First Name", "username"=>"Fourth_username", "password"=>"[FILTERED]", "email"=>"fourthemail@email.com"}}}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 75ms (ActiveRecord: 14.7ms | Allocations: 7968)
+
+
+  
+NameError (undefined local variable or method `flash' for #<Users::RegistrationsController:0x0000000003cf28>
+
+      flash[key] = message if message.present?
+      ^^^^^):
+  
+devise (4.8.1) app/controllers/devise_controller.rb:159:in `set_flash_message'
+devise (4.8.1) app/controllers/devise_controller.rb:115:in `require_no_authentication'
+activesupport (7.0.2.3) lib/active_support/callbacks.rb:400:in `block in make_lambda'
+activesupport (7.0.2.3) lib/active_support/callbacks.rb:180:in `block (2 levels) in halting_and_conditional'
+actionpack (7.0.2.3) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (7.0.2.3) lib/active_support/callbacks.rb:181:in `block in halting_and_conditional'
+activesupport (7.0.2.3) lib/active_support/callbacks.rb:595:in `block in invoke_before'
+activesupport (7.0.2.3) lib/active_support/callbacks.rb:595:in `each'
+activesupport (7.0.2.3) lib/active_support/callbacks.rb:595:in `invoke_before'
+activesupport (7.0.2.3) lib/active_support/callbacks.rb:106:in `run_callbacks'
+actionpack (7.0.2.3) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.2.3) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (7.0.2.3) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.2.3) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.2.3) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.2.3) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.2.3) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.2.3) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.2.3) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.2.3) lib/abstract_controller/base.rb:151:in `process'
+actionview (7.0.2.3) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.2.3) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.2.3) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.2.3) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.2.3) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.2.3) lib/action_dispatch/routing/mapper.rb:18:in `block in <class:Constraints>'
+actionpack (7.0.2.3) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+actionpack (7.0.2.3) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.2.3) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.2.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.2.3) lib/action_dispatch/routing/route_set.rb:850:in `call'
+warden-jwt_auth (0.6.0) lib/warden/jwt_auth/middleware/token_dispatcher.rb:20:in `call'
+warden-jwt_auth (0.6.0) lib/warden/jwt_auth/middleware/revocation_manager.rb:21:in `call'
+rack (2.2.3) lib/rack/builder.rb:244:in `call'
+warden-jwt_auth (0.6.0) lib/warden/jwt_auth/middleware.rb:22:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/cookies.rb:693:in `call'
+activerecord (7.0.2.3) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.2.3) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.2.3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (7.0.2.3) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.2.3) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.2.3) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.2.3) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.2.3) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (7.0.2.3) lib/rails/engine.rb:530:in `call'
+puma (5.6.4) lib/puma/configuration.rb:252:in `call'
+puma (5.6.4) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.4) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.4) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.4) lib/puma/server.rb:441:in `process_client'
+puma (5.6.4) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/users" for ::1 at 2022-05-16 17:53:56 +0100
+Processing by Users::RegistrationsController#create as */*
+  Parameters: {"user"=>{"full_name"=>"First Name", "username"=>"Fourth_username", "password"=>"[FILTERED]", "email"=>"fourthemail@email.com"}, "registration"=>{"user"=>{"full_name"=>"First Name", "username"=>"Fourth_username", "password"=>"[FILTERED]", "email"=>"fourthemail@email.com"}}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.7ms | Allocations: 5436)
+
+
+  
+NameError (undefined local variable or method `flash' for #<Users::RegistrationsController:0x0000000003d248>
+
+      flash[key] = message if message.present?
+      ^^^^^):
+  
+devise (4.8.1) app/controllers/devise_controller.rb:159:in `set_flash_message'
+devise (4.8.1) app/controllers/devise_controller.rb:115:in `require_no_authentication'
+activesupport (7.0.2.3) lib/active_support/callbacks.rb:400:in `block in make_lambda'
+activesupport (7.0.2.3) lib/active_support/callbacks.rb:180:in `block (2 levels) in halting_and_conditional'
+actionpack (7.0.2.3) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (7.0.2.3) lib/active_support/callbacks.rb:181:in `block in halting_and_conditional'
+activesupport (7.0.2.3) lib/active_support/callbacks.rb:595:in `block in invoke_before'
+activesupport (7.0.2.3) lib/active_support/callbacks.rb:595:in `each'
+activesupport (7.0.2.3) lib/active_support/callbacks.rb:595:in `invoke_before'
+activesupport (7.0.2.3) lib/active_support/callbacks.rb:106:in `run_callbacks'
+actionpack (7.0.2.3) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.2.3) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (7.0.2.3) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.2.3) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.2.3) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.2.3) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.2.3) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.2.3) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.2.3) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.2.3) lib/abstract_controller/base.rb:151:in `process'
+actionview (7.0.2.3) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.2.3) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.2.3) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.2.3) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.2.3) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.2.3) lib/action_dispatch/routing/mapper.rb:18:in `block in <class:Constraints>'
+actionpack (7.0.2.3) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+actionpack (7.0.2.3) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.2.3) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.2.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.2.3) lib/action_dispatch/routing/route_set.rb:850:in `call'
+warden-jwt_auth (0.6.0) lib/warden/jwt_auth/middleware/token_dispatcher.rb:20:in `call'
+warden-jwt_auth (0.6.0) lib/warden/jwt_auth/middleware/revocation_manager.rb:21:in `call'
+rack (2.2.3) lib/rack/builder.rb:244:in `call'
+warden-jwt_auth (0.6.0) lib/warden/jwt_auth/middleware.rb:22:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/cookies.rb:693:in `call'
+activerecord (7.0.2.3) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.2.3) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.2.3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (7.0.2.3) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.2.3) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.2.3) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.2.3) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.2.3) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (7.0.2.3) lib/rails/engine.rb:530:in `call'
+puma (5.6.4) lib/puma/configuration.rb:252:in `call'
+puma (5.6.4) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.4) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.4) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.4) lib/puma/server.rb:441:in `process_client'
+puma (5.6.4) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/users" for ::1 at 2022-05-16 17:54:25 +0100
+Processing by Users::RegistrationsController#create as */*
+  Parameters: {"user"=>{"full_name"=>"First Name", "username"=>"Fourth_username", "password"=>"[FILTERED]", "email"=>"fourthemail@email.com"}, "registration"=>{"user"=>{"full_name"=>"First Name", "username"=>"Fourth_username", "password"=>"[FILTERED]", "email"=>"fourthemail@email.com"}}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 13.1ms | Allocations: 8776)
+
+
+  
+NameError (undefined local variable or method `flash' for #<Users::RegistrationsController:0x00000000042d88>
+
+      flash[key] = message if message.present?
+      ^^^^^):
+  
+devise (4.8.1) app/controllers/devise_controller.rb:159:in `set_flash_message'
+devise (4.8.1) app/controllers/devise_controller.rb:115:in `require_no_authentication'
+activesupport (7.0.2.3) lib/active_support/callbacks.rb:400:in `block in make_lambda'
+activesupport (7.0.2.3) lib/active_support/callbacks.rb:180:in `block (2 levels) in halting_and_conditional'
+actionpack (7.0.2.3) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (7.0.2.3) lib/active_support/callbacks.rb:181:in `block in halting_and_conditional'
+activesupport (7.0.2.3) lib/active_support/callbacks.rb:595:in `block in invoke_before'
+activesupport (7.0.2.3) lib/active_support/callbacks.rb:595:in `each'
+activesupport (7.0.2.3) lib/active_support/callbacks.rb:595:in `invoke_before'
+activesupport (7.0.2.3) lib/active_support/callbacks.rb:106:in `run_callbacks'
+actionpack (7.0.2.3) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.2.3) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (7.0.2.3) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.2.3) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.2.3) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.2.3) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.2.3) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.2.3) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.2.3) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.2.3) lib/abstract_controller/base.rb:151:in `process'
+actionview (7.0.2.3) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.2.3) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.2.3) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.2.3) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.2.3) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.2.3) lib/action_dispatch/routing/mapper.rb:18:in `block in <class:Constraints>'
+actionpack (7.0.2.3) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+actionpack (7.0.2.3) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.2.3) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.2.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.2.3) lib/action_dispatch/routing/route_set.rb:850:in `call'
+warden-jwt_auth (0.6.0) lib/warden/jwt_auth/middleware/token_dispatcher.rb:20:in `call'
+warden-jwt_auth (0.6.0) lib/warden/jwt_auth/middleware/revocation_manager.rb:21:in `call'
+rack (2.2.3) lib/rack/builder.rb:244:in `call'
+warden-jwt_auth (0.6.0) lib/warden/jwt_auth/middleware.rb:22:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/cookies.rb:693:in `call'
+activerecord (7.0.2.3) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.2.3) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.2.3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (7.0.2.3) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.2.3) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.2.3) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.2.3) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.2.3) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (7.0.2.3) lib/rails/engine.rb:530:in `call'
+puma (5.6.4) lib/puma/configuration.rb:252:in `call'
+puma (5.6.4) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.4) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.4) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.4) lib/puma/server.rb:441:in `process_client'
+puma (5.6.4) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/users" for ::1 at 2022-05-16 17:58:05 +0100
+Processing by Users::RegistrationsController#create as */*
+  Parameters: {"user"=>{"username"=>"Fourth_username", "password"=>"[FILTERED]", "email"=>"fourthemail@email.com"}, "registration"=>{"user"=>{"username"=>"Fourth_username", "password"=>"[FILTERED]", "email"=>"fourthemail@email.com"}}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.7ms | Allocations: 5436)
+
+
+  
+NameError (undefined local variable or method `flash' for #<Users::RegistrationsController:0x00000000043120>
+
+      flash[key] = message if message.present?
+      ^^^^^):
+  
+devise (4.8.1) app/controllers/devise_controller.rb:159:in `set_flash_message'
+devise (4.8.1) app/controllers/devise_controller.rb:115:in `require_no_authentication'
+activesupport (7.0.2.3) lib/active_support/callbacks.rb:400:in `block in make_lambda'
+activesupport (7.0.2.3) lib/active_support/callbacks.rb:180:in `block (2 levels) in halting_and_conditional'
+actionpack (7.0.2.3) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (7.0.2.3) lib/active_support/callbacks.rb:181:in `block in halting_and_conditional'
+activesupport (7.0.2.3) lib/active_support/callbacks.rb:595:in `block in invoke_before'
+activesupport (7.0.2.3) lib/active_support/callbacks.rb:595:in `each'
+activesupport (7.0.2.3) lib/active_support/callbacks.rb:595:in `invoke_before'
+activesupport (7.0.2.3) lib/active_support/callbacks.rb:106:in `run_callbacks'
+actionpack (7.0.2.3) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.2.3) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (7.0.2.3) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.2.3) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.2.3) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.2.3) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.2.3) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.2.3) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.2.3) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.2.3) lib/abstract_controller/base.rb:151:in `process'
+actionview (7.0.2.3) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.2.3) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.2.3) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.2.3) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.2.3) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.2.3) lib/action_dispatch/routing/mapper.rb:18:in `block in <class:Constraints>'
+actionpack (7.0.2.3) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+actionpack (7.0.2.3) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.2.3) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.2.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.2.3) lib/action_dispatch/routing/route_set.rb:850:in `call'
+warden-jwt_auth (0.6.0) lib/warden/jwt_auth/middleware/token_dispatcher.rb:20:in `call'
+warden-jwt_auth (0.6.0) lib/warden/jwt_auth/middleware/revocation_manager.rb:21:in `call'
+rack (2.2.3) lib/rack/builder.rb:244:in `call'
+warden-jwt_auth (0.6.0) lib/warden/jwt_auth/middleware.rb:22:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/cookies.rb:693:in `call'
+activerecord (7.0.2.3) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.2.3) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.2.3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (7.0.2.3) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.2.3) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.2.3) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.2.3) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.2.3) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (7.0.2.3) lib/rails/engine.rb:530:in `call'
+puma (5.6.4) lib/puma/configuration.rb:252:in `call'
+puma (5.6.4) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.4) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.4) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.4) lib/puma/server.rb:441:in `process_client'
+puma (5.6.4) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/users" for ::1 at 2022-05-16 18:00:02 +0100
+Processing by Users::RegistrationsController#create as */*
+  Parameters: {"user"=>{"username"=>"Fourth_username", "password"=>"[FILTERED]", "email"=>"fourthemail@email.com"}, "registration"=>{"user"=>{"username"=>"Fourth_username", "password"=>"[FILTERED]", "email"=>"fourthemail@email.com"}}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 6.0ms | Allocations: 8689)
+
+
+  
+NameError (undefined local variable or method `flash' for #<Users::RegistrationsController:0x00000000048cb0>
+
+      flash[key] = message if message.present?
+      ^^^^^):
+  
+devise (4.8.1) app/controllers/devise_controller.rb:159:in `set_flash_message'
+devise (4.8.1) app/controllers/devise_controller.rb:115:in `require_no_authentication'
+activesupport (7.0.2.3) lib/active_support/callbacks.rb:400:in `block in make_lambda'
+activesupport (7.0.2.3) lib/active_support/callbacks.rb:180:in `block (2 levels) in halting_and_conditional'
+actionpack (7.0.2.3) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (7.0.2.3) lib/active_support/callbacks.rb:181:in `block in halting_and_conditional'
+activesupport (7.0.2.3) lib/active_support/callbacks.rb:595:in `block in invoke_before'
+activesupport (7.0.2.3) lib/active_support/callbacks.rb:595:in `each'
+activesupport (7.0.2.3) lib/active_support/callbacks.rb:595:in `invoke_before'
+activesupport (7.0.2.3) lib/active_support/callbacks.rb:106:in `run_callbacks'
+actionpack (7.0.2.3) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.2.3) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (7.0.2.3) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.2.3) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.2.3) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.2.3) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.2.3) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.2.3) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.2.3) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.2.3) lib/abstract_controller/base.rb:151:in `process'
+actionview (7.0.2.3) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.2.3) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.2.3) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.2.3) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.2.3) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.2.3) lib/action_dispatch/routing/mapper.rb:18:in `block in <class:Constraints>'
+actionpack (7.0.2.3) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+actionpack (7.0.2.3) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.2.3) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.2.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.2.3) lib/action_dispatch/routing/route_set.rb:850:in `call'
+warden-jwt_auth (0.6.0) lib/warden/jwt_auth/middleware/token_dispatcher.rb:20:in `call'
+warden-jwt_auth (0.6.0) lib/warden/jwt_auth/middleware/revocation_manager.rb:21:in `call'
+rack (2.2.3) lib/rack/builder.rb:244:in `call'
+warden-jwt_auth (0.6.0) lib/warden/jwt_auth/middleware.rb:22:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/cookies.rb:693:in `call'
+activerecord (7.0.2.3) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.2.3) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.2.3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (7.0.2.3) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.2.3) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.2.3) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.2.3) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.2.3) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (7.0.2.3) lib/rails/engine.rb:530:in `call'
+puma (5.6.4) lib/puma/configuration.rb:252:in `call'
+puma (5.6.4) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.4) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.4) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.4) lib/puma/server.rb:441:in `process_client'
+puma (5.6.4) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/users" for ::1 at 2022-05-16 18:03:53 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Users::RegistrationsController#create as */*
+  Parameters: {"user"=>{"username"=>"Fourth_username", "password"=>"[FILTERED]", "email"=>"fourthemail@email.com"}, "registration"=>{"user"=>{"username"=>"Fourth_username", "password"=>"[FILTERED]", "email"=>"fourthemail@email.com"}}}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 719ms (ActiveRecord: 9.2ms | Allocations: 286530)
+
+
+  
+NameError (undefined local variable or method `flash' for #<Users::RegistrationsController:0x0000000000d520>
+
+      flash[key] = message if message.present?
+      ^^^^^):
+  
+devise (4.8.1) app/controllers/devise_controller.rb:159:in `set_flash_message'
+devise (4.8.1) app/controllers/devise_controller.rb:115:in `require_no_authentication'
+activesupport (7.0.2.3) lib/active_support/callbacks.rb:400:in `block in make_lambda'
+activesupport (7.0.2.3) lib/active_support/callbacks.rb:180:in `block (2 levels) in halting_and_conditional'
+actionpack (7.0.2.3) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (7.0.2.3) lib/active_support/callbacks.rb:181:in `block in halting_and_conditional'
+activesupport (7.0.2.3) lib/active_support/callbacks.rb:595:in `block in invoke_before'
+activesupport (7.0.2.3) lib/active_support/callbacks.rb:595:in `each'
+activesupport (7.0.2.3) lib/active_support/callbacks.rb:595:in `invoke_before'
+activesupport (7.0.2.3) lib/active_support/callbacks.rb:106:in `run_callbacks'
+actionpack (7.0.2.3) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.2.3) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (7.0.2.3) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.2.3) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.2.3) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.2.3) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.2.3) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.2.3) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.2.3) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.2.3) lib/abstract_controller/base.rb:151:in `process'
+actionview (7.0.2.3) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.2.3) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.2.3) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.2.3) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.2.3) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.2.3) lib/action_dispatch/routing/mapper.rb:18:in `block in <class:Constraints>'
+actionpack (7.0.2.3) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+actionpack (7.0.2.3) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.2.3) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.2.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.2.3) lib/action_dispatch/routing/route_set.rb:850:in `call'
+warden-jwt_auth (0.6.0) lib/warden/jwt_auth/middleware/token_dispatcher.rb:20:in `call'
+warden-jwt_auth (0.6.0) lib/warden/jwt_auth/middleware/revocation_manager.rb:21:in `call'
+rack (2.2.3) lib/rack/builder.rb:244:in `call'
+warden-jwt_auth (0.6.0) lib/warden/jwt_auth/middleware.rb:22:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/cookies.rb:693:in `call'
+activerecord (7.0.2.3) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.2.3) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.2.3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (7.0.2.3) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.2.3) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.2.3) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.2.3) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.2.3) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (7.0.2.3) lib/rails/engine.rb:530:in `call'
+puma (5.6.4) lib/puma/configuration.rb:252:in `call'
+puma (5.6.4) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.4) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.4) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.4) lib/puma/server.rb:441:in `process_client'
+puma (5.6.4) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/users" for ::1 at 2022-05-16 18:04:46 +0100
+Processing by Users::RegistrationsController#create as */*
+  Parameters: {"user"=>{"username"=>"Fourth_username", "password"=>"[FILTERED]", "email"=>"fourthemail@email.com"}, "registration"=>{"user"=>{"username"=>"Fourth_username", "password"=>"[FILTERED]", "email"=>"fourthemail@email.com"}}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 6.2ms | Allocations: 8711)
+
+
+  
+NameError (undefined local variable or method `flash' for #<Users::RegistrationsController:0x00000000012fe8>
+
+      flash[key] = message if message.present?
+      ^^^^^):
+  
+devise (4.8.1) app/controllers/devise_controller.rb:159:in `set_flash_message'
+devise (4.8.1) app/controllers/devise_controller.rb:115:in `require_no_authentication'
+activesupport (7.0.2.3) lib/active_support/callbacks.rb:400:in `block in make_lambda'
+activesupport (7.0.2.3) lib/active_support/callbacks.rb:180:in `block (2 levels) in halting_and_conditional'
+actionpack (7.0.2.3) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (7.0.2.3) lib/active_support/callbacks.rb:181:in `block in halting_and_conditional'
+activesupport (7.0.2.3) lib/active_support/callbacks.rb:595:in `block in invoke_before'
+activesupport (7.0.2.3) lib/active_support/callbacks.rb:595:in `each'
+activesupport (7.0.2.3) lib/active_support/callbacks.rb:595:in `invoke_before'
+activesupport (7.0.2.3) lib/active_support/callbacks.rb:106:in `run_callbacks'
+actionpack (7.0.2.3) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.2.3) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (7.0.2.3) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.2.3) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.2.3) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.2.3) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.2.3) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.2.3) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.2.3) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.2.3) lib/abstract_controller/base.rb:151:in `process'
+actionview (7.0.2.3) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.2.3) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.2.3) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.2.3) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.2.3) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.2.3) lib/action_dispatch/routing/mapper.rb:18:in `block in <class:Constraints>'
+actionpack (7.0.2.3) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+actionpack (7.0.2.3) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.2.3) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.2.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.2.3) lib/action_dispatch/routing/route_set.rb:850:in `call'
+warden-jwt_auth (0.6.0) lib/warden/jwt_auth/middleware/token_dispatcher.rb:20:in `call'
+warden-jwt_auth (0.6.0) lib/warden/jwt_auth/middleware/revocation_manager.rb:21:in `call'
+rack (2.2.3) lib/rack/builder.rb:244:in `call'
+warden-jwt_auth (0.6.0) lib/warden/jwt_auth/middleware.rb:22:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/cookies.rb:693:in `call'
+activerecord (7.0.2.3) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.2.3) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.2.3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (7.0.2.3) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.2.3) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.2.3) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.2.3) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.2.3) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (7.0.2.3) lib/rails/engine.rb:530:in `call'
+puma (5.6.4) lib/puma/configuration.rb:252:in `call'
+puma (5.6.4) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.4) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.4) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.4) lib/puma/server.rb:441:in `process_client'
+puma (5.6.4) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/users" for ::1 at 2022-05-16 18:09:57 +0100
+Processing by Users::RegistrationsController#create as */*
+  Parameters: {"user"=>{"username"=>"Fourth_username", "password"=>"[FILTERED]", "email"=>"fourthemail@email.com"}, "registration"=>{"user"=>{"username"=>"Fourth_username", "password"=>"[FILTERED]", "email"=>"fourthemail@email.com"}}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 5.5ms | Allocations: 8650)
+
+
+  
+NameError (undefined local variable or method `flash' for #<Users::RegistrationsController:0x00000000018a60>
+
+      flash[key] = message if message.present?
+      ^^^^^):
+  
+devise (4.8.1) app/controllers/devise_controller.rb:159:in `set_flash_message'
+devise (4.8.1) app/controllers/devise_controller.rb:115:in `require_no_authentication'
+activesupport (7.0.2.3) lib/active_support/callbacks.rb:400:in `block in make_lambda'
+activesupport (7.0.2.3) lib/active_support/callbacks.rb:180:in `block (2 levels) in halting_and_conditional'
+actionpack (7.0.2.3) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (7.0.2.3) lib/active_support/callbacks.rb:181:in `block in halting_and_conditional'
+activesupport (7.0.2.3) lib/active_support/callbacks.rb:595:in `block in invoke_before'
+activesupport (7.0.2.3) lib/active_support/callbacks.rb:595:in `each'
+activesupport (7.0.2.3) lib/active_support/callbacks.rb:595:in `invoke_before'
+activesupport (7.0.2.3) lib/active_support/callbacks.rb:106:in `run_callbacks'
+actionpack (7.0.2.3) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.2.3) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (7.0.2.3) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.2.3) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.2.3) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.2.3) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.2.3) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.2.3) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.2.3) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.2.3) lib/abstract_controller/base.rb:151:in `process'
+actionview (7.0.2.3) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.2.3) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.2.3) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.2.3) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.2.3) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.2.3) lib/action_dispatch/routing/mapper.rb:18:in `block in <class:Constraints>'
+actionpack (7.0.2.3) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+actionpack (7.0.2.3) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.2.3) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.2.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.2.3) lib/action_dispatch/routing/route_set.rb:850:in `call'
+warden-jwt_auth (0.6.0) lib/warden/jwt_auth/middleware/token_dispatcher.rb:20:in `call'
+warden-jwt_auth (0.6.0) lib/warden/jwt_auth/middleware/revocation_manager.rb:21:in `call'
+rack (2.2.3) lib/rack/builder.rb:244:in `call'
+warden-jwt_auth (0.6.0) lib/warden/jwt_auth/middleware.rb:22:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/cookies.rb:693:in `call'
+activerecord (7.0.2.3) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.2.3) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.2.3) lib/rails/rack/logger.rb:36:in `call_app'
+railties (7.0.2.3) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.2.3) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.2.3) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.2.3) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.2.3) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/server_timing.rb:20:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.2.3) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (7.0.2.3) lib/rails/engine.rb:530:in `call'
+puma (5.6.4) lib/puma/configuration.rb:252:in `call'
+puma (5.6.4) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.4) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.4) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.4) lib/puma/server.rb:441:in `process_client'
+puma (5.6.4) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started POST "/users" for ::1 at 2022-05-16 18:14:28 +0100
+Processing by Users::RegistrationsController#create as */*
+  Parameters: {"user"=>{"username"=>"Fourth_username", "password"=>"[FILTERED]", "email"=>"fourthemail@email.com"}, "registration"=>{"user"=>{"username"=>"Fourth_username", "password"=>"[FILTERED]", "email"=>"fourthemail@email.com"}}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/devise_controller.rb:109:in `require_no_authentication'
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 19ms (ActiveRecord: 7.3ms | Allocations: 4714)
+
+
+Started GET "/" for ::1 at 2022-05-16 18:14:29 +0100
+Processing by Rails::WelcomeController#index as */*
+  Rendering /home/m_b030/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/m_b030/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.2.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.7ms | Allocations: 328)
+Completed 200 OK in 16ms (Views: 3.5ms | ActiveRecord: 0.0ms | Allocations: 2321)
+
+
+Started POST "/users" for ::1 at 2022-05-16 18:15:08 +0100
+Processing by Users::RegistrationsController#create as */*
+  Parameters: {"user"=>{"username"=>"Fourth_username", "password"=>"[FILTERED]", "email"=>"fourthemail@email.com"}, "registration"=>{"user"=>{"username"=>"Fourth_username", "password"=>"[FILTERED]", "email"=>"fourthemail@email.com"}}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/devise_controller.rb:109:in `require_no_authentication'
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 6.5ms | Allocations: 8240)
+
+
+  
+NameError (undefined local variable or method `flash' for #<Users::RegistrationsController:0x00000000023d48>
+
+      flash[key] = message if message.present?
+      ^^^^^):
+  
+app/controllers/devise_controller.rb:159:in `set_flash_message'
+app/controllers/devise_controller.rb:115:in `require_no_authentication'
+Started POST "/users" for ::1 at 2022-05-16 19:57:20 +0100
+Processing by Users::RegistrationsController#create as */*
+  Parameters: {"users"=>{"username"=>"Fourth_username", "password"=>"[FILTERED]", "email"=>"fourthemail@email.com"}, "registration"=>{"users"=>{"username"=>"Fourth_username", "password"=>"[FILTERED]", "email"=>"fourthemail@email.com"}}}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/devise_controller.rb:109:in `require_no_authentication'
+Completed 500 Internal Server Error in 102ms (ActiveRecord: 18.8ms | Allocations: 7464)
+
+
+  
+NameError (undefined local variable or method `flash' for #<Users::RegistrationsController:0x00000000024108>
+
+      flash[key] = message if message.present?
+      ^^^^^):
+  
+app/controllers/devise_controller.rb:159:in `set_flash_message'
+app/controllers/devise_controller.rb:115:in `require_no_authentication'
+Started POST "/users" for ::1 at 2022-05-16 19:58:31 +0100
+Processing by Users::RegistrationsController#create as */*
+  Parameters: {"users"=>{"username"=>"Fourth_username", "password"=>"[FILTERED]", "email"=>"fourthemail@email.com"}, "registration"=>{"users"=>{"username"=>"Fourth_username", "password"=>"[FILTERED]", "email"=>"fourthemail@email.com"}}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/devise_controller.rb:109:in `require_no_authentication'
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.8ms | Allocations: 5045)
+
+
+  
+NameError (undefined local variable or method `flash' for #<Users::RegistrationsController:0x00000000024450>
+
+      flash[key] = message if message.present?
+      ^^^^^):
+  
+app/controllers/devise_controller.rb:159:in `set_flash_message'
+app/controllers/devise_controller.rb:115:in `require_no_authentication'
+Started GET "/api/v1/users/4/reservations" for ::1 at 2022-05-16 19:58:53 +0100
+Processing by Api::V1::ReservationsController#index as JSON
+  Parameters: {"user_id"=>"4", "reservation"=>{}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:8:in `index'
+  [1m[36mReservation Load (2.5ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."user_id" = $1[0m  [["user_id", 4]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:8:in `index'
+Completed 200 OK in 25ms (Views: 8.3ms | ActiveRecord: 14.1ms | Allocations: 6473)
+
+
+Started POST "/api/v1/courses" for ::1 at 2022-05-16 19:59:01 +0100
+Processing by Api::V1::CoursesController#create as JSON
+  Parameters: {"title"=>"Testing888", "description"=>"Dummy descriptions design to give a feel of things that are things which are not things you catch my drift", "category"=>"Computer", "duration"=>2, "photo"=>"Blank photo", "price"=>345.3, "user_id"=>2, "course"=>{"title"=>"Testing888", "description"=>"Dummy descriptions design to give a feel of things that are things which are not things you catch my drift", "category"=>"Computer", "duration"=>2, "photo"=>"Blank photo", "price"=>345.3, "user_id"=>2}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:20:in `create'
+  [1m[36mCourse Create (3.1ms)[0m  [1m[32mINSERT INTO "courses" ("title", "description", "category", "duration", "photo", "price", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["title", "Testing888"], ["description", "Dummy descriptions design to give a feel of things that are things which are not things you catch my drift"], ["category", "Computer"], ["duration", 2], ["photo", "Blank photo"], ["price", 345.3], ["user_id", 2], ["created_at", "2022-05-16 18:59:01.992084"], ["updated_at", "2022-05-16 18:59:01.992084"]]
+  ↳ app/controllers/api/v1/courses_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:20:in `create'
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/courses_controller.rb:21:in `create'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:22:in `create'
+  [1m[36mCoursesUser Create (3.2ms)[0m  [1m[32mINSERT INTO "courses_users" ("user_id", "course_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["course_id", 24], ["created_at", "2022-05-16 18:59:02.042326"], ["updated_at", "2022-05-16 18:59:02.042326"]]
+  ↳ app/controllers/api/v1/courses_controller.rb:22:in `create'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:22:in `create'
+Completed 201 Created in 79ms (Views: 0.6ms | ActiveRecord: 20.6ms | Allocations: 15563)
+
+
+Started POST "/users" for ::1 at 2022-05-16 19:59:26 +0100
+Processing by Users::RegistrationsController#create as */*
+  Parameters: {"users"=>{"username"=>"Fourth_username", "password"=>"[FILTERED]", "email"=>"fourthemail@email.com"}, "registration"=>{"users"=>{"username"=>"Fourth_username", "password"=>"[FILTERED]", "email"=>"fourthemail@email.com"}}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/devise_controller.rb:109:in `require_no_authentication'
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.6ms | Allocations: 5256)
+
+
+  
+NameError (undefined local variable or method `flash' for #<Users::RegistrationsController:0x00000000024bd0>
+
+      flash[key] = message if message.present?
+      ^^^^^):
+  
+app/controllers/devise_controller.rb:159:in `set_flash_message'
+app/controllers/devise_controller.rb:115:in `require_no_authentication'
+Started POST "/users" for ::1 at 2022-05-16 20:00:15 +0100
+Processing by Users::RegistrationsController#create as */*
+  Parameters: {"user"=>{"username"=>"Fourth_username", "password"=>"[FILTERED]", "email"=>"fourthemail@email.com"}, "registration"=>{"user"=>{"username"=>"Fourth_username", "password"=>"[FILTERED]", "email"=>"fourthemail@email.com"}}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/devise_controller.rb:109:in `require_no_authentication'
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.7ms | Allocations: 5027)
+
+
+  
+NameError (undefined local variable or method `flash' for #<Users::RegistrationsController:0x00000000024f68>
+
+      flash[key] = message if message.present?
+      ^^^^^):
+  
+app/controllers/devise_controller.rb:159:in `set_flash_message'
+app/controllers/devise_controller.rb:115:in `require_no_authentication'
+Started GET "/users" for ::1 at 2022-05-16 20:01:44 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+Started POST "/users" for ::1 at 2022-05-16 20:01:59 +0100
+Processing by Users::RegistrationsController#create as */*
+  Parameters: {"user"=>{"username"=>"Fourth_username", "password"=>"[FILTERED]", "email"=>"fourthemail@email.com"}, "registration"=>{"user"=>{"username"=>"Fourth_username", "password"=>"[FILTERED]", "email"=>"fourthemail@email.com"}}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/devise_controller.rb:109:in `require_no_authentication'
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 8.6ms | Allocations: 8281)
+
+
+  
+NameError (undefined local variable or method `flash' for #<Users::RegistrationsController:0x0000000002acd8>
+
+      flash[key] = message if message.present?
+      ^^^^^):
+  
+app/controllers/devise_controller.rb:159:in `set_flash_message'
+app/controllers/devise_controller.rb:115:in `require_no_authentication'
+Started POST "/users" for ::1 at 2022-05-16 20:02:32 +0100
+Processing by Users::RegistrationsController#create as */*
+  Parameters: {"user"=>{"username"=>"Fourth_username", "password"=>"[FILTERED]", "email"=>"fourthemail@email.com"}, "registration"=>{"user"=>{"username"=>"Fourth_username", "password"=>"[FILTERED]", "email"=>"fourthemail@email.com"}}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/devise_controller.rb:109:in `require_no_authentication'
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 6.2ms | Allocations: 8282)
+
+
+  
+NameError (undefined local variable or method `flash' for #<Users::RegistrationsController:0x000000000307c8>
+
+      flash[key] = message if message.present?
+      ^^^^^):
+  
+app/controllers/devise_controller.rb:159:in `set_flash_message'
+app/controllers/devise_controller.rb:115:in `require_no_authentication'
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started POST "/users" for ::1 at 2022-05-16 20:04:02 +0100
+Processing by Users::RegistrationsController#create as */*
+  Parameters: {"user"=>{"username"=>"Fourth_username", "password"=>"[FILTERED]", "email"=>"fourthemail@email.com"}, "registration"=>{"user"=>{"username"=>"Fourth_username", "password"=>"[FILTERED]", "email"=>"fourthemail@email.com"}}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/devise_controller.rb:109:in `require_no_authentication'
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 6.2ms | Allocations: 8281)
+
+
+  
+NameError (undefined local variable or method `flash' for #<Users::RegistrationsController:0x000000000362e0>
+
+      flash[key] = message if message.present?
+      ^^^^^):
+  
+app/controllers/devise_controller.rb:159:in `set_flash_message'
+app/controllers/devise_controller.rb:115:in `require_no_authentication'
+Started POST "/users" for ::1 at 2022-05-16 20:04:38 +0100
+Processing by Users::RegistrationsController#create as */*
+  Parameters: {"user"=>{"username"=>"Fourth_username", "password"=>"[FILTERED]", "email"=>"fourthemail@email.com"}, "registration"=>{"user"=>{"username"=>"Fourth_username", "password"=>"[FILTERED]", "email"=>"fourthemail@email.com"}}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/devise_controller.rb:109:in `require_no_authentication'
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 21ms (ActiveRecord: 6.7ms | Allocations: 4554)
+
+
+Started GET "/" for ::1 at 2022-05-16 20:04:38 +0100
+Processing by Rails::WelcomeController#index as */*
+  Rendering /home/m_b030/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/m_b030/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.2.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.5ms | Allocations: 318)
+Completed 200 OK in 5ms (Views: 3.3ms | ActiveRecord: 0.0ms | Allocations: 985)
+
+
+Started POST "/users" for ::1 at 2022-05-16 20:06:19 +0100
+Processing by Users::RegistrationsController#create as */*
+  Parameters: {"user"=>{"username"=>"Fourth_username", "password"=>"[FILTERED]", "email"=>"fourthemail@email.com"}, "registration"=>{"user"=>{"username"=>"Fourth_username", "password"=>"[FILTERED]", "email"=>"fourthemail@email.com"}}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/devise_controller.rb:109:in `require_no_authentication'
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 5.7ms | Allocations: 7905)
+
+
+  
+NoMethodError (undefined method `set_flash_message' for #<Users::RegistrationsController:0x000000000416b8>
+
+      set_flash_message(:alert, 'already_authenticated', scope: 'devise.failure')
+      ^^^^^^^^^^^^^^^^^
+Did you mean?  set_flash_message!):
+  
+app/controllers/devise_controller.rb:115:in `require_no_authentication'
+Started POST "/users" for ::1 at 2022-05-16 20:07:00 +0100
+Processing by Users::RegistrationsController#create as */*
+  Parameters: {"user"=>{"username"=>"Fourth_username", "password"=>"[FILTERED]", "email"=>"fourthemail@email.com"}, "registration"=>{"user"=>{"username"=>"Fourth_username", "password"=>"[FILTERED]", "email"=>"fourthemail@email.com"}}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/devise_controller.rb:109:in `require_no_authentication'
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 5.4ms | Allocations: 7931)
+
+
+  
+NoMethodError (undefined method `set_flash_message' for #<Users::RegistrationsController:0x00000000047270>
+
+      set_flash_message(:alert, 'already_authenticated', scope: 'devise.failure')
+      ^^^^^^^^^^^^^^^^^
+Did you mean?  set_flash_message!):
+  
+app/controllers/devise_controller.rb:115:in `require_no_authentication'
+Started POST "/users" for ::1 at 2022-05-16 20:07:19 +0100
+Processing by Users::RegistrationsController#create as */*
+  Parameters: {"user"=>{"username"=>"Fourth_username", "password"=>"[FILTERED]", "email"=>"fourthemail@email.com"}, "registration"=>{"user"=>{"username"=>"Fourth_username", "password"=>"[FILTERED]", "email"=>"fourthemail@email.com"}}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/devise_controller.rb:109:in `require_no_authentication'
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 5.5ms | Allocations: 7871)
+
+
+  
+NoMethodError (undefined method `set_flash_message' for #<Users::RegistrationsController:0x0000000004cdd8>
+
+      set_flash_message(:alert, 'already_authenticated', scope: 'devise.failure')
+      ^^^^^^^^^^^^^^^^^
+Did you mean?  set_flash_message!):
+  
+app/controllers/devise_controller.rb:115:in `require_no_authentication'
+Started POST "/users" for ::1 at 2022-05-16 20:08:01 +0100
+Processing by Users::RegistrationsController#create as */*
+  Parameters: {"user"=>{"username"=>"Fourth_username", "password"=>"[FILTERED]", "email"=>"fourthemail@email.com"}, "registration"=>{"user"=>{"username"=>"Fourth_username", "password"=>"[FILTERED]", "email"=>"fourthemail@email.com"}}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/devise_controller.rb:109:in `require_no_authentication'
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 5.9ms | Allocations: 8242)
+
+
+  
+NameError (undefined local variable or method `flash' for #<Users::RegistrationsController:0x000000000529b8>
+
+      flash[key] = message if message.present?
+      ^^^^^):
+  
+app/controllers/devise_controller.rb:159:in `set_flash_message'
+app/controllers/devise_controller.rb:115:in `require_no_authentication'
+Started POST "/users" for ::1 at 2022-05-16 20:08:59 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (13.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Users::RegistrationsController#create as */*
+  Parameters: {"user"=>{"username"=>"Fourth_username", "password"=>"[FILTERED]", "email"=>"fourthemail@email.com"}, "registration"=>{"user"=>{"username"=>"Fourth_username", "password"=>"[FILTERED]", "email"=>"fourthemail@email.com"}}}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/devise_controller.rb:109:in `require_no_authentication'
+Completed 500 Internal Server Error in 778ms (ActiveRecord: 10.3ms | Allocations: 286134)
+
+
+  
+NameError (undefined local variable or method `flash' for #<Users::RegistrationsController:0x0000000000d520>
+
+      flash[key] = message if message.present?
+      ^^^^^):
+  
+app/controllers/devise_controller.rb:159:in `set_flash_message'
+app/controllers/devise_controller.rb:115:in `require_no_authentication'
+Started GET "/api/v1/users/4/reservations" for ::1 at 2022-05-16 20:09:57 +0100
+Processing by Api::V1::ReservationsController#index as JSON
+  Parameters: {"user_id"=>"4", "reservation"=>{}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:8:in `index'
+  [1m[36mReservation Load (1.6ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."user_id" = $1[0m  [["user_id", 4]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:8:in `index'
+Completed 200 OK in 28ms (Views: 10.5ms | ActiveRecord: 7.9ms | Allocations: 6528)
+
+
+Started POST "/api/v1/courses" for ::1 at 2022-05-16 20:10:03 +0100
+Processing by Api::V1::CoursesController#create as JSON
+  Parameters: {"title"=>"Testing888", "description"=>"Dummy descriptions design to give a feel of things that are things which are not things you catch my drift", "category"=>"Computer", "duration"=>2, "photo"=>"Blank photo", "price"=>345.3, "user_id"=>2, "course"=>{"title"=>"Testing888", "description"=>"Dummy descriptions design to give a feel of things that are things which are not things you catch my drift", "category"=>"Computer", "duration"=>2, "photo"=>"Blank photo", "price"=>345.3, "user_id"=>2}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:20:in `create'
+  [1m[36mCourse Create (1.9ms)[0m  [1m[32mINSERT INTO "courses" ("title", "description", "category", "duration", "photo", "price", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["title", "Testing888"], ["description", "Dummy descriptions design to give a feel of things that are things which are not things you catch my drift"], ["category", "Computer"], ["duration", 2], ["photo", "Blank photo"], ["price", 345.3], ["user_id", 2], ["created_at", "2022-05-16 19:10:03.393044"], ["updated_at", "2022-05-16 19:10:03.393044"]]
+  ↳ app/controllers/api/v1/courses_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:20:in `create'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/courses_controller.rb:21:in `create'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:22:in `create'
+  [1m[36mCoursesUser Create (2.1ms)[0m  [1m[32mINSERT INTO "courses_users" ("user_id", "course_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["course_id", 25], ["created_at", "2022-05-16 19:10:03.428686"], ["updated_at", "2022-05-16 19:10:03.428686"]]
+  ↳ app/controllers/api/v1/courses_controller.rb:22:in `create'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:22:in `create'
+Completed 201 Created in 63ms (Views: 0.8ms | ActiveRecord: 18.6ms | Allocations: 15561)
+
+
+Started GET "/api/v1/courses" for ::1 at 2022-05-16 20:10:08 +0100
+Processing by Api::V1::CoursesController#index as JSON
+  Parameters: {"course"=>{}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCourse Load (1.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:8:in `index'
+Completed 200 OK in 13ms (Views: 6.3ms | ActiveRecord: 1.8ms | Allocations: 5499)
+
+
+Started GET "/api/v1/courses" for ::1 at 2022-05-16 20:12:19 +0100
+Processing by Api::V1::CoursesController#index as JSON
+  Parameters: {"course"=>{}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mCourse Load (0.7ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:8:in `index'
+Completed 200 OK in 13ms (Views: 7.4ms | ActiveRecord: 1.3ms | Allocations: 5204)
+
+
+Started POST "/users" for ::1 at 2022-05-16 20:14:27 +0100
+Processing by Users::RegistrationsController#create as */*
+  Parameters: {"user"=>{"username"=>"Fourth_username"}, "registration"=>{"user"=>{"username"=>"Fourth_username"}}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/devise_controller.rb:109:in `require_no_authentication'
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.6ms | Allocations: 5149)
+
+
+  
+NameError (undefined local variable or method `flash' for #<Users::RegistrationsController:0x0000000000dde0>
+
+      flash[key] = message if message.present?
+      ^^^^^):
+  
+app/controllers/devise_controller.rb:159:in `set_flash_message'
+app/controllers/devise_controller.rb:115:in `require_no_authentication'
+Started POST "/users" for ::1 at 2022-05-16 20:14:48 +0100
+Processing by Users::RegistrationsController#create as */*
+  Parameters: {"user"=>{"username"=>"Fourth_username"}, "registration"=>{"user"=>{"username"=>"Fourth_username"}}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/devise_controller.rb:109:in `require_no_authentication'
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 5.9ms | Allocations: 8301)
+
+
+  
+NameError (undefined local variable or method `flash' for #<Users::RegistrationsController:0x00000000013830>
+
+      flash[key] = message if message.present?
+      ^^^^^):
+  
+app/controllers/devise_controller.rb:159:in `set_flash_message'
+app/controllers/devise_controller.rb:115:in `require_no_authentication'
+Started POST "/users" for ::1 at 2022-05-16 20:15:58 +0100
+  
+SyntaxError (/mnt/c/Users/m_bth/Desktop/stuff/code/Module 6 repos/Capstone/Book-a-class/app/controllers/users/registrations_controller.rb:5: syntax error, unexpected local variable or method, expecting `end'
+    render :json params
+                 ^~~~~~
+):
+  
+app/controllers/users/registrations_controller.rb:5: syntax error, unexpected local variable or method, expecting `end'
+app/controllers/users/registrations_controller.rb:5: syntax error, unexpected local variable or method, expecting `end'
+app/controllers/users/registrations_controller.rb:5: syntax error, unexpected local variable or method, expecting `end'
+Started POST "/users" for ::1 at 2022-05-16 20:16:18 +0100
+Processing by Users::RegistrationsController#create as */*
+  Parameters: {"user"=>{"username"=>"Fourth_username"}, "registration"=>{"user"=>{"username"=>"Fourth_username"}}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/devise_controller.rb:109:in `require_no_authentication'
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 6.9ms | Allocations: 8302)
+
+
+  
+NameError (undefined local variable or method `flash' for #<Users::RegistrationsController:0x0000000001ebe0>
+
+      flash[key] = message if message.present?
+      ^^^^^):
+  
+app/controllers/devise_controller.rb:159:in `set_flash_message'
+app/controllers/devise_controller.rb:115:in `require_no_authentication'
+Started POST "/users" for ::1 at 2022-05-16 20:16:51 +0100
+  
+ActionController::RoutingError (uninitialized constant Users::RegistrationsController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/api/v1/users/4/reservations" for ::1 at 2022-05-16 20:40:44 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::ReservationsController#index as JSON
+  Parameters: {"user_id"=>"4", "reservation"=>{}}
+Completed 401 Unauthorized in 11ms (ActiveRecord: 3.5ms | Allocations: 1258)
+
+
+Started POST "/api/v1/courses" for ::1 at 2022-05-16 20:40:53 +0100
+Processing by Api::V1::CoursesController#create as JSON
+  Parameters: {"title"=>"Testing888", "description"=>"Dummy descriptions design to give a feel of things that are things which are not things you catch my drift", "category"=>"Computer", "duration"=>2, "photo"=>"Blank photo", "price"=>345.3, "user_id"=>2, "course"=>{"title"=>"Testing888", "description"=>"Dummy descriptions design to give a feel of things that are things which are not things you catch my drift", "category"=>"Computer", "duration"=>2, "photo"=>"Blank photo", "price"=>345.3, "user_id"=>2}}
+Completed 401 Unauthorized in 1ms (ActiveRecord: 2.1ms | Allocations: 244)
+
+
+Started POST "/users" for ::1 at 2022-05-16 20:41:13 +0100
+Processing by Users::RegistrationsController#create as */*
+  Parameters: {"user"=>{"username"=>"Fourth_username"}, "registration"=>{"user"=>{"username"=>"Fourth_username"}}}
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (2.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "Fourth_username"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[31mROLLBACK[0m
+Completed 200 OK in 54ms (Views: 0.4ms | ActiveRecord: 14.7ms | Allocations: 12066)
+
+
+Started POST "/users" for ::1 at 2022-05-16 20:48:18 +0100
+Processing by Users::RegistrationsController#create as */*
+  Parameters: {"user"=>{"username"=>"Fourth_username", "full_name"=>"Five", "password"=>"[FILTERED]", "email"=>"Five@five.com"}, "registration"=>{"user"=>{"username"=>"Fourth_username", "full_name"=>"Five", "password"=>"[FILTERED]", "email"=>"Five@five.com"}}}
+[31mUnpermitted parameter: :full_name. Context: { controller: Users::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007ff52b9272c8>, params: {"user"=>{"username"=>"Fourth_username", "full_name"=>"Five", "password"=>"[FILTERED]", "email"=>"Five@five.com"}, "controller"=>"users/registrations", "action"=>"create", "registration"=>{"user"=>{"username"=>"Fourth_username", "full_name"=>"Five", "password"=>"[FILTERED]", "email"=>"Five@five.com"}}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (1.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "Five@five.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "Fourth_username"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+Completed 200 OK in 232ms (Views: 0.2ms | ActiveRecord: 9.3ms | Allocations: 17525)
+
+
+Started POST "/users" for ::1 at 2022-05-16 20:56:19 +0100
+Processing by Users::RegistrationsController#create as */*
+  Parameters: {"user"=>{"username"=>"Fourth_username", "full_name"=>"Five", "password"=>"[FILTERED]", "email"=>"Five@five.com"}, "registration"=>{"user"=>{"username"=>"Fourth_username", "full_name"=>"Five", "password"=>"[FILTERED]", "email"=>"Five@five.com"}}}
+[31mUnpermitted parameter: :full_name. Context: { controller: Users::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007ff52b3b7b80>, params: {"user"=>{"username"=>"Fourth_username", "full_name"=>"Five", "password"=>"[FILTERED]", "email"=>"Five@five.com"}, "controller"=>"users/registrations", "action"=>"create", "registration"=>{"user"=>{"username"=>"Fourth_username", "full_name"=>"Five", "password"=>"[FILTERED]", "email"=>"Five@five.com"}}} }[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users/registrations_controller.rb:5:in `create'
+  [1m[36mUser Exists? (1.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "Five@five.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users/registrations_controller.rb:5:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "Fourth_username"], ["LIMIT", 1]]
+  ↳ app/controllers/users/registrations_controller.rb:5:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users/registrations_controller.rb:5:in `create'
+Completed 400 Bad Request in 212ms (Views: 0.2ms | ActiveRecord: 11.1ms | Allocations: 9489)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: full_name):
+  
+app/controllers/users/registrations_controller.rb:6:in `create'
+Started POST "/users" for ::1 at 2022-05-16 20:57:11 +0100
+Processing by Users::RegistrationsController#create as */*
+  Parameters: {"user"=>{"username"=>"Fourth_username", "full_name"=>"Five", "password"=>"[FILTERED]", "email"=>"Five@five.com"}, "registration"=>{"user"=>{"username"=>"Fourth_username", "full_name"=>"Five", "password"=>"[FILTERED]", "email"=>"Five@five.com"}}}
+Completed 400 Bad Request in 1ms (ActiveRecord: 0.0ms | Allocations: 734)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: full_name):
+  
+app/controllers/users/registrations_controller.rb:5:in `create'
+Started POST "/users" for ::1 at 2022-05-16 21:01:00 +0100
+Processing by Users::RegistrationsController#create as */*
+  Parameters: {"user"=>{"username"=>"Fourth_username", "full_name"=>"Five", "password"=>"[FILTERED]", "email"=>"Five@five.com"}, "registration"=>{"user"=>{"username"=>"Fourth_username", "full_name"=>"Five", "password"=>"[FILTERED]", "email"=>"Five@five.com"}}}
+[31mUnpermitted parameters: :username, :password, :email. Context: { controller: Users::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007ff52b217690>, params: {"user"=>{"username"=>"Fourth_username", "full_name"=>"Five", "password"=>"[FILTERED]", "email"=>"Five@five.com"}, "controller"=>"users/registrations", "action"=>"create", "registration"=>{"user"=>{"username"=>"Fourth_username", "full_name"=>"Five", "password"=>"[FILTERED]", "email"=>"Five@five.com"}}} }[0m
+[31mUnpermitted parameter: :full_name. Context: { controller: Users::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007ff52b217690>, params: {"user"=>{"username"=>"Fourth_username", "full_name"=>"Five", "password"=>"[FILTERED]", "email"=>"Five@five.com"}, "controller"=>"users/registrations", "action"=>"create", "registration"=>{"user"=>{"username"=>"Fourth_username", "full_name"=>"Five", "password"=>"[FILTERED]", "email"=>"Five@five.com"}}} }[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users/registrations_controller.rb:6:in `create'
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "Five@five.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users/registrations_controller.rb:6:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "Fourth_username"], ["LIMIT", 1]]
+  ↳ app/controllers/users/registrations_controller.rb:6:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users/registrations_controller.rb:6:in `create'
+Completed 200 OK in 183ms (Views: 0.3ms | ActiveRecord: 7.3ms | Allocations: 7373)
+
+
+Started POST "/users" for ::1 at 2022-05-16 21:01:56 +0100
+Processing by Users::RegistrationsController#create as */*
+  Parameters: {"user"=>{"username"=>"Fourth_username", "full_name"=>"Five", "password"=>"[FILTERED]", "email"=>"Five@five.com"}, "registration"=>{"user"=>{"username"=>"Fourth_username", "full_name"=>"Five", "password"=>"[FILTERED]", "email"=>"Five@five.com"}}}
+[31mUnpermitted parameter: :full_name. Context: { controller: Users::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007ff52a845950>, params: {"user"=>{"username"=>"Fourth_username", "full_name"=>"Five", "password"=>"[FILTERED]", "email"=>"Five@five.com"}, "controller"=>"users/registrations", "action"=>"create", "registration"=>{"user"=>{"username"=>"Fourth_username", "full_name"=>"Five", "password"=>"[FILTERED]", "email"=>"Five@five.com"}}} }[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users/registrations_controller.rb:6:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "Five@five.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users/registrations_controller.rb:6:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "Fourth_username"], ["LIMIT", 1]]
+  ↳ app/controllers/users/registrations_controller.rb:6:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users/registrations_controller.rb:6:in `create'
+Completed 200 OK in 181ms (Views: 0.2ms | ActiveRecord: 4.1ms | Allocations: 7194)
+
+
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started POST "/users" for ::1 at 2022-05-16 21:05:13 +0100
+Processing by Users::RegistrationsController#create as */*
+  Parameters: {"user"=>{"username"=>"Fourth_username", "full_name"=>"Five", "password"=>"[FILTERED]", "email"=>"Five@five.com"}, "registration"=>{"user"=>{"username"=>"Fourth_username", "full_name"=>"Five", "password"=>"[FILTERED]", "email"=>"Five@five.com"}}}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users/registrations_controller.rb:6:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "Five@five.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users/registrations_controller.rb:6:in `create'
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "Fourth_username"], ["LIMIT", 1]]
+  ↳ app/controllers/users/registrations_controller.rb:6:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users/registrations_controller.rb:6:in `create'
+Completed 200 OK in 180ms (Views: 0.2ms | ActiveRecord: 4.1ms | Allocations: 7115)
+
+
+Started POST "/users" for ::1 at 2022-05-16 21:05:34 +0100
+Processing by Users::RegistrationsController#create as */*
+  Parameters: {"user"=>{"username"=>"Five_username", "full_name"=>"Five", "password"=>"[FILTERED]", "email"=>"Five@five.com"}, "registration"=>{"user"=>{"username"=>"Five_username", "full_name"=>"Five", "password"=>"[FILTERED]", "email"=>"Five@five.com"}}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users/registrations_controller.rb:6:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "Five@five.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users/registrations_controller.rb:6:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "Five_username"], ["LIMIT", 1]]
+  ↳ app/controllers/users/registrations_controller.rb:6:in `create'
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("full_name", "created_at", "updated_at", "username", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["full_name", "Five"], ["created_at", "2022-05-16 20:05:34.635003"], ["updated_at", "2022-05-16 20:05:34.635003"], ["username", "Five_username"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["email", "Five@five.com"]]
+  ↳ app/controllers/users/registrations_controller.rb:6:in `create'
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users/registrations_controller.rb:6:in `create'
+Completed 500 Internal Server Error in 182ms (ActiveRecord: 3.4ms | Allocations: 9418)
+
+
+  
+NameError (undefined local variable or method `flash' for #<Users::RegistrationsController:0x00000000029798>
+
+      flash[key] = message if message.present?
+      ^^^^^):
+  
+app/controllers/devise_controller.rb:159:in `set_flash_message'
+app/controllers/devise_controller.rb:166:in `set_flash_message!'
+app/controllers/users/registrations_controller.rb:6:in `create'
+Started POST "/users" for ::1 at 2022-05-16 21:21:10 +0100
+Processing by Users::RegistrationsController#create as JSON
+  Parameters: {"user"=>{"username"=>"Five_username", "full_name"=>"Five", "password"=>"[FILTERED]", "email"=>"Five@five.com"}, "registration"=>{"user"=>{"username"=>"Five_username", "full_name"=>"Five", "password"=>"[FILTERED]", "email"=>"Five@five.com"}}}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users/registrations_controller.rb:6:in `create'
+  [1m[36mUser Exists? (1.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "Five@five.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users/registrations_controller.rb:6:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "Five_username"], ["LIMIT", 1]]
+  ↳ app/controllers/users/registrations_controller.rb:6:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users/registrations_controller.rb:6:in `create'
+Completed 200 OK in 209ms (Views: 0.4ms | ActiveRecord: 10.1ms | Allocations: 8943)
+
+
+Started POST "/users" for ::1 at 2022-05-16 21:21:38 +0100
+Processing by Users::RegistrationsController#create as JSON
+  Parameters: {"user"=>{"username"=>"Six_username", "full_name"=>"Six", "password"=>"[FILTERED]", "email"=>"Six@Six.com"}, "registration"=>{"user"=>{"username"=>"Six_username", "full_name"=>"Six", "password"=>"[FILTERED]", "email"=>"Six@Six.com"}}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users/registrations_controller.rb:6:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "Six@Six.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users/registrations_controller.rb:6:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "Six_username"], ["LIMIT", 1]]
+  ↳ app/controllers/users/registrations_controller.rb:6:in `create'
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("full_name", "created_at", "updated_at", "username", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["full_name", "Six"], ["created_at", "2022-05-16 20:21:38.356420"], ["updated_at", "2022-05-16 20:21:38.356420"], ["username", "Six_username"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["email", "Six@Six.com"]]
+  ↳ app/controllers/users/registrations_controller.rb:6:in `create'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users/registrations_controller.rb:6:in `create'
+Completed 200 OK in 177ms (Views: 0.1ms | ActiveRecord: 2.3ms | Allocations: 4677)
+
+
