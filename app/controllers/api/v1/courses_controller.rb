@@ -1,7 +1,7 @@
 module Api
   module V1
     class CoursesController < ApplicationController
-      # before_action :authenticate_user!
+      before_action :authenticateing_users
       ALLOWED_DATA = %(title, description, category, duration, photo, price, user_id).freeze
 
       def index
@@ -22,7 +22,7 @@ module Api
           CoursesUser.create(course: courses, user: courses_users)
           render json: courses, status: :created
         else
-          render json: courses.errors, status: :unproccessable_entity
+          render json: courses.errors, status: :unprocessable_entity
         end
       end
 

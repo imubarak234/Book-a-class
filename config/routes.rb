@@ -17,7 +17,7 @@ Rails.application.routes.draw do
         get '/start_dates', to: 'start_dates#index'
       end
 
-      post 'authenticate', to: 'authentication#create'
+      post '/authenticate', to: 'authentication#create'
     end
   end 
 end
