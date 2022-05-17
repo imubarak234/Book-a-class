@@ -50,3 +50,12 @@ course1 = Course.create(
     photo: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fflyclipart.com%2Fpython-logo-png-transparent-python-logo-images-python-logo-png-205864&psig=AOvVaw1XvksYI9HwvKqdxStJeyED&ust=1652868512306000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCLjNtaHA5vcCFQAAAAAdAAAAABAO',
     price: '3000'
   )
+
+  course4 = Course.create(
+    title: 'React',
+    description: 'Learn React and become a front-end developer',
+    category: 'Web Development',
+    duration: '600',
+    photo: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fflyclipart.com%2Fsmartlogic-explores-javascript-react-and-flux-tech-logos-react-logo-png-221735&psig=AOvVaw0QpdCva1q3lwmtf2QARIzq&ust=1652868578384000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCND-y73A5vcCFQAAAAAdAAAAABAD',
+    price: '4000'
+  )
