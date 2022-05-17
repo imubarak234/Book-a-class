@@ -28,70 +28,74 @@ course1 = Course.create(
     title: 'Ruby on Rails',
     description: 'Learn Ruby on Rails and become a full stack developer',
     category: 'Web Development',
-    duration: '300 hours',
-    photo: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fcommons.wikimedia.org%2Fwiki%2FFile%3ADevicon-ruby-plain-wordmark.svg&psig=AOvVaw1YHCNwo37ZLbQD01-BQ1tf&ust=1652868335117000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCKiVlci_5vcCFQAAAAAdAAAAABAD',
-    price: '1000'
+    duration: 300,
+    photo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Devicon-ruby-plain-wordmark.svg/512px-Devicon-ruby-plain-wordmark.svg.png?20190106214356',
+    price: 1000
   )
 
   course2 = Course.create(
     title: 'JavaScript',
     description: 'Learn JavaScript and become a front-end developer',
     category: 'Web Development',
-    duration: '400 hours',
-    photo: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fpngset.com%2Fdownload-free-png-efdei&psig=AOvVaw11wiqURoiQjnyYU_ShrUrt&ust=1652868441865000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCLjW_YjA5vcCFQAAAAAdAAAAABAD',
-    price: '2000'
+    duration: 400,
+    photo: 'https://pngset.com/images/library-of-javascript-icon-graphic-freeuse-files-logo-logo-javascript-icon-in-number-symbol-text-first-aid-transparent-png-1497709.png',
+    price: 2000
   )
 
   course3 = Course.create(
     title: 'Python',
     description: 'Learn Python and become a back-end developer',
     category: 'Web Development',
-    duration: '500 hours',
-    photo: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fflyclipart.com%2Fpython-logo-png-transparent-python-logo-images-python-logo-png-205864&psig=AOvVaw1XvksYI9HwvKqdxStJeyED&ust=1652868512306000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCLjNtaHA5vcCFQAAAAAdAAAAABAO',
-    price: '3000'
+    duration: 500,
+    photo: 'https://pngset.com/images/python-logo-text-number-symbol-alphabet-transparent-png-95398.png',
+    price: 3000
   )
 
   course4 = Course.create(
     title: 'React',
     description: 'Learn React and become a front-end developer',
     category: 'Web Development',
-    duration: '600 hours',
-    photo: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fflyclipart.com%2Fsmartlogic-explores-javascript-react-and-flux-tech-logos-react-logo-png-221735&psig=AOvVaw0QpdCva1q3lwmtf2QARIzq&ust=1652868578384000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCND-y73A5vcCFQAAAAAdAAAAABAD',
-    price: '4000'
+    duration: 600,
+    photo: 'https://www.vhv.rs/dpng/d/524-5245981_react-js-logo-png-transparent-png-download.png',
+    price: 4000
   )
 
   course5 = Course.create(
     title: 'Vue',
     description: 'Learn Vue and become a front-end developer',
     category: 'Web Development',
-    duration: '700 hours',
-    photo: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fmasteringjs.io%2Ftutorials%2Fvue%2Flogo&psig=AOvVaw2fViD_2aD9QCiBk5lC-JRy&ust=1652868633152000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCNif9NrA5vcCFQAAAAAdAAAAABAJ',
-    price: '5000'
+    duration: 700,
+    photo: 'https://masteringjs.io/assets/images/vue/vue-transparent.png',
+    price: 5000
   )
 
   reservation1 = Reservation.create(
     reserve_date: '2020-05-10',
-    duration: '50',
+    duration: 50,
     user_id: user1.id,
     course_id: course1.id
   )
 
   reservation2 = Reservation.create(
     reserve_date: '2020-05-10',
-    duration: '50',
+    duration: 50,
     user_id: user2.id,
     course_id: course2.id
   )
 
-  # courses_users1 = CoursesUsers.create(
-#   user_id: user1.id,
-#   course_id: course1.id
-# )
+  reservation3 = Reservation.create(
+    reserve_date: '2020-05-15',
+    duration: 50,
+    user_id: user1.id,
+    course_id: course5.id
+  )
 
-# courses_users2 = CoursesUsers.create(
-#   user_id: user2.id,
-#   course_id: course2.id
-# )
+  reservation4 = Reservation.create(
+    reserve_date: '2020-05-30',
+    duration: 50,
+    user_id: user2.id,
+    course_id: course3.id
+  )
 
 start_date1 = StartDate.create(
   start_date: '2020-05-10',
@@ -116,4 +120,15 @@ start_date4 = StartDate.create(
 start_date5 = StartDate.create(
   start_date: '2020-05-14',
   course_id: course5.id
+)
+
+start_date6 = StartDate.create(
+  start_date: '2020-05-30',
+  course_id: course1.id
+)
+
+
+start_date7 = StartDate.create(
+  start_date: '2020-05-28',
+  course_id: course3.id
 )
