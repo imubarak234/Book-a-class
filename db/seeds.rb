@@ -23,3 +23,12 @@ user2 = User.create!(
   username: 'ben',
   password: '123456'
 )
+
+course1 = Course.create(
+    title: 'Ruby on Rails',
+    description: 'Learn Ruby on Rails and become a full stack developer',
+    category: 'Web Development',
+    duration: '300',
+    photo: 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fcommons.wikimedia.org%2Fwiki%2FFile%3ADevicon-ruby-plain-wordmark.svg&psig=AOvVaw1YHCNwo37ZLbQD01-BQ1tf&ust=1652868335117000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCKiVlci_5vcCFQAAAAAdAAAAABAD',
+    price: '1000'
+  )
