@@ -1,6 +1,6 @@
 module Api
   module V1
-    class User < ApplicationController
+    class UsersController < ApplicationController
       ALLOWED_DATA = %(full_name, email, username, password).freeze
 
       def index; end

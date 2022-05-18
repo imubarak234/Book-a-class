@@ -6202,3 +6202,127 @@ Processing by Api::V1::CoursesController#index as JSON
 Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.4ms | Allocations: 4012)
 
 
+Started POST "/api/v1/users" for ::1 at 2022-05-18 04:10:26 +0100
+  
+ActionController::RoutingError (uninitialized constant Api::V1::UsersController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  Api::V1::UserController
+               Api::V1::CoursesController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started POST "/api/v1/users" for ::1 at 2022-05-18 04:10:43 +0100
+  
+ActionController::RoutingError (uninitialized constant Api::V1::UsersController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  Api::V1::UserController
+               Api::V1::CoursesController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started POST "/api/v1/users" for ::1 at 2022-05-18 04:11:02 +0100
+  
+ActionController::RoutingError (uninitialized constant Api::V1::UsersController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  Api::V1::UserController
+               Api::V1::CoursesController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started POST "/api/v1/users" for ::1 at 2022-05-18 04:11:20 +0100
+  
+ActionController::RoutingError (uninitialized constant Api::V1::UsersController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  Api::V1::UserController
+               Api::V1::CoursesController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started POST "/api/v1/users" for ::1 at 2022-05-18 04:12:08 +0100
+  
+ActionController::RoutingError (uninitialized constant Api::V1::UsersController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  Api::V1::UserController
+               Api::V1::CoursesController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started POST "/api/v1/users" for ::1 at 2022-05-18 04:15:29 +0100
+  
+ActionController::RoutingError (uninitialized constant Api::V1::UsersController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  Api::V1::UserController
+               Api::V1::CoursesController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started POST "/api/v1/users" for ::1 at 2022-05-18 04:16:38 +0100
+  
+ActionController::RoutingError (uninitialized constant Api::V1::UsersController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  Api::V1::UserController
+               Api::V1::CoursesController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started POST "/api/v1/users" for ::1 at 2022-05-18 04:17:25 +0100
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"Nine_username", "password"=>"[FILTERED]", "email"=>"nine@nine.com", "full_name"=>"Nine Ninetester"}}
+Completed 500 Internal Server Error in 72ms (ActiveRecord: 24.6ms | Allocations: 9121)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'user' for User.
+
+          raise UnknownAttributeError.new(self, k.to_s)
+          ^^^^^):
+  
+app/controllers/api/v1/users_controller.rb:10:in `create'
+Started POST "/api/v1/users" for ::1 at 2022-05-18 04:18:24 +0100
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"Nine_username", "password"=>"[FILTERED]", "email"=>"nine@nine.com", "full_name"=>"Nine Ninetester", "user"=>{"full_name"=>"Nine Ninetester", "username"=>"Nine_username", "email"=>"nine@nine.com"}}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:12:in `create'
+  [1m[36mUser Exists? (2.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "Nine_username"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:12:in `create'
+  [1m[36mUser Create (2.6ms)[0m  [1m[32mINSERT INTO "users" ("full_name", "created_at", "updated_at", "username", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "email", "password_digest") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["full_name", "Nine Ninetester"], ["created_at", "2022-05-18 03:18:24.388374"], ["updated_at", "2022-05-18 03:18:24.388374"], ["username", "Nine_username"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["email", "nine@nine.com"], ["password_digest", "[FILTERED]"]]
+  ↳ app/controllers/api/v1/users_controller.rb:12:in `create'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:12:in `create'
+Completed 200 OK in 204ms (Views: 0.2ms | ActiveRecord: 10.8ms | Allocations: 16528)
+
+
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started POST "/api/v1/users" for ::1 at 2022-05-18 04:19:12 +0100
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"Nine_username", "password"=>"[FILTERED]", "email"=>"nine@nine.com", "full_name"=>"Nine Ninetester", "user"=>{"full_name"=>"Nine Ninetester", "username"=>"Nine_username", "email"=>"nine@nine.com"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:12:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "Nine_username"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:12:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/users_controller.rb:12:in `create'
+Completed 200 OK in 173ms (Views: 0.1ms | ActiveRecord: 1.0ms | Allocations: 2619)
+
+
