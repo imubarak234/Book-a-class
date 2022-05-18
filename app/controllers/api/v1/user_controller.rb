@@ -3,8 +3,7 @@ module Api
     class User < ApplicationController
       ALLOWED_DATA = %(full_name, email, username, password).freeze
 
-      def index
-      end
+      def index; end
 
       def create
         data = json_payload.select { |k| ALLOWED_DATA.include?(k) }

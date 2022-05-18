@@ -1,7 +1,7 @@
 module Api
   module V1
     class CoursesController < ApplicationController
-      #before_action :authenticateing_users
+      # before_action :authenticateing_users
       ALLOWED_DATA = %(title, description, category, duration, photo, price, user_id).freeze
 
       def index
