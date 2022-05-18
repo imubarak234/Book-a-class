@@ -1,7 +1,7 @@
 module Api
   module V1
     class ReservationsController < ApplicationController
-      before_action :authenticateing_users
+      # before_action :authenticateing_users
       ALLOWED_DATA = %(duration, reserve_date, course_id, user_id).freeze
 
       def index

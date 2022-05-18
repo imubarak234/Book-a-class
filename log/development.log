@@ -5922,3 +5922,407 @@ Processing by Api::V1::CoursesController#index as JSON
 Completed 200 OK in 5ms (Views: 2.7ms | ActiveRecord: 0.6ms | Allocations: 4650)
 
 
+Started GET "/" for ::1 at 2022-05-17 16:52:28 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/m_b030/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/m_b030/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.2.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 3.4ms | Allocations: 519)
+Completed 200 OK in 27ms (Views: 9.9ms | Allocations: 3505)
+
+
+Started GET "/api/v1/courses" for ::1 at 2022-05-18 02:19:09 +0100
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::CoursesController#index as JSON
+Filter chain halted as :authenticateing_users rendered or redirected
+Completed 200 OK in 5ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 1182)
+
+
+Started GET "/api/v1/courses" for ::1 at 2022-05-18 02:19:10 +0100
+Processing by Api::V1::CoursesController#index as JSON
+Filter chain halted as :authenticateing_users rendered or redirected
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 156)
+
+
+Started GET "/api/v1/courses" for ::1 at 2022-05-18 02:19:35 +0100
+Started GET "/api/v1/courses/1/reservations" for ::1 at 2022-05-18 02:19:35 +0100
+Processing by Api::V1::CoursesController#index as JSON
+Filter chain halted as :authenticateing_users rendered or redirected
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 131)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/courses/1/reservations"):
+  
+Started GET "/api/v1/courses" for ::1 at 2022-05-18 02:19:35 +0100
+Started GET "/api/v1/courses/1/reservations" for ::1 at 2022-05-18 02:19:35 +0100
+Processing by Api::V1::CoursesController#index as JSON
+Filter chain halted as :authenticateing_users rendered or redirected
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 174)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/courses/1/reservations"):
+  
+Started GET "/api/v1/courses/1/reservations" for ::1 at 2022-05-18 02:19:37 +0100
+Started GET "/api/v1/courses" for ::1 at 2022-05-18 02:19:37 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/courses/1/reservations"):
+  
+Processing by Api::V1::CoursesController#index as JSON
+Filter chain halted as :authenticateing_users rendered or redirected
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 116)
+
+
+Started GET "/api/v1/courses/1/reservations" for ::1 at 2022-05-18 02:19:37 +0100
+Started GET "/api/v1/courses" for ::1 at 2022-05-18 02:19:37 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/courses/1/reservations"):
+  
+Processing by Api::V1::CoursesController#index as JSON
+Filter chain halted as :authenticateing_users rendered or redirected
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 110)
+
+
+Started GET "/api/v1/courses" for ::1 at 2022-05-18 02:19:43 +0100
+Started GET "/api/v1/courses/1/reservations" for ::1 at 2022-05-18 02:19:43 +0100
+Processing by Api::V1::CoursesController#index as JSON
+Filter chain halted as :authenticateing_users rendered or redirected
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 125)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/courses/1/reservations"):
+  
+Started GET "/api/v1/courses" for ::1 at 2022-05-18 02:19:43 +0100
+Started GET "/api/v1/courses/1/reservations" for ::1 at 2022-05-18 02:19:43 +0100
+Processing by Api::V1::CoursesController#index as JSON
+Filter chain halted as :authenticateing_users rendered or redirected
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 126)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/courses/1/reservations"):
+  
+Started GET "/api/v1/courses" for ::1 at 2022-05-18 02:21:15 +0100
+Started GET "/api/v1/courses/1/reservations" for ::1 at 2022-05-18 02:21:15 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/courses/1/reservations"):
+  
+Processing by Api::V1::CoursesController#index as JSON
+Started GET "/api/v1/courses/1/reservations" for ::1 at 2022-05-18 02:21:15 +0100
+  [1m[36mCourse Load (2.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:8:in `index'
+Completed 200 OK in 28ms (Views: 11.2ms | ActiveRecord: 6.3ms | Allocations: 13335)
+
+
+Started GET "/api/v1/courses" for ::1 at 2022-05-18 02:21:15 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/courses/1/reservations"):
+  
+Processing by Api::V1::CoursesController#index as JSON
+  [1m[36mCourse Load (0.4ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.4ms | Allocations: 4091)
+
+
+Started GET "/api/v1/courses" for ::1 at 2022-05-18 02:21:27 +0100
+Started GET "/api/v1/courses/1/reservations" for ::1 at 2022-05-18 02:21:27 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/courses/1/reservations"):
+  
+Processing by Api::V1::CoursesController#index as JSON
+  [1m[36mCourse Load (0.6ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.6ms | Allocations: 4273)
+
+
+Started GET "/api/v1/courses/1/reservations" for ::1 at 2022-05-18 02:21:27 +0100
+Started GET "/api/v1/courses" for ::1 at 2022-05-18 02:21:27 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/courses/1/reservations"):
+  
+Processing by Api::V1::CoursesController#index as JSON
+  [1m[36mCourse Load (0.4ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.4ms | Allocations: 4012)
+
+
+Started GET "/api/v1/courses" for ::1 at 2022-05-18 02:21:47 +0100
+Processing by Api::V1::CoursesController#index as JSON
+  [1m[36mCourse Load (0.4ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.4ms | Allocations: 4012)
+
+
+Started GET "/api/v1/courses" for ::1 at 2022-05-18 02:21:47 +0100
+Processing by Api::V1::CoursesController#index as JSON
+  [1m[36mCourse Load (0.4ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.4ms | Allocations: 4012)
+
+
+Started GET "/api/v1/courses" for ::1 at 2022-05-18 02:22:05 +0100
+Started GET "/api/v1/courses/1/reservations" for ::1 at 2022-05-18 02:22:05 +0100
+Processing by Api::V1::CoursesController#index as JSON
+  [1m[36mCourse Load (0.4ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.4ms | Allocations: 4182)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/courses/1/reservations"):
+  
+Started GET "/api/v1/courses" for ::1 at 2022-05-18 02:22:05 +0100
+Started GET "/api/v1/courses/1/reservations" for ::1 at 2022-05-18 02:22:05 +0100
+Processing by Api::V1::CoursesController#index as JSON
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/courses/1/reservations"):
+  
+  [1m[36mCourse Load (0.7ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:8:in `index'
+Completed 200 OK in 8ms (Views: 6.7ms | ActiveRecord: 0.7ms | Allocations: 9463)
+
+
+Started GET "/api/v1/courses" for ::1 at 2022-05-18 02:41:50 +0100
+Processing by Api::V1::CoursesController#index as JSON
+  [1m[36mCourse Load (2.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:8:in `index'
+Completed 200 OK in 61ms (Views: 60.5ms | ActiveRecord: 15.2ms | Allocations: 6460)
+
+
+Started GET "/api/v1/courses" for ::1 at 2022-05-18 02:41:50 +0100
+Processing by Api::V1::CoursesController#index as JSON
+  [1m[36mCourse Load (0.4ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.4ms | Allocations: 4012)
+
+
+Started GET "/api/v1/courses" for ::1 at 2022-05-18 02:41:53 +0100
+Processing by Api::V1::CoursesController#index as JSON
+  [1m[36mCourse Load (0.5ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.5ms | Allocations: 4012)
+
+
+Started GET "/api/v1/courses" for ::1 at 2022-05-18 02:41:53 +0100
+Processing by Api::V1::CoursesController#index as JSON
+  [1m[36mCourse Load (0.6ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.6ms | Allocations: 4012)
+
+
+Started GET "/api/v1/courses" for ::1 at 2022-05-18 02:41:56 +0100
+Processing by Api::V1::CoursesController#index as JSON
+  [1m[36mCourse Load (0.4ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.4ms | Allocations: 4012)
+
+
+Started GET "/api/v1/courses" for ::1 at 2022-05-18 02:41:56 +0100
+Processing by Api::V1::CoursesController#index as JSON
+  [1m[36mCourse Load (0.4ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.4ms | Allocations: 4012)
+
+
+Started GET "/api/v1/courses" for ::1 at 2022-05-18 02:41:59 +0100
+Started GET "/api/v1/courses/1/reservations" for ::1 at 2022-05-18 02:41:59 +0100
+Processing by Api::V1::CoursesController#index as JSON
+  [1m[36mCourse Load (0.5ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.5ms | Allocations: 4075)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/courses/1/reservations"):
+  
+Started GET "/api/v1/courses" for ::1 at 2022-05-18 02:41:59 +0100
+Started GET "/api/v1/courses/1/reservations" for ::1 at 2022-05-18 02:41:59 +0100
+Processing by Api::V1::CoursesController#index as JSON
+  [1m[36mCourse Load (0.6ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:8:in `index'
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.6ms | Allocations: 4056)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/courses/1/reservations"):
+  
+Started GET "/api/v1/courses" for ::1 at 2022-05-18 02:42:02 +0100
+Processing by Api::V1::CoursesController#index as JSON
+  [1m[36mCourse Load (0.6ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.6ms | Allocations: 4012)
+
+
+Started GET "/api/v1/courses" for ::1 at 2022-05-18 02:42:03 +0100
+Processing by Api::V1::CoursesController#index as JSON
+  [1m[36mCourse Load (0.5ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.5ms | Allocations: 4012)
+
+
+Started GET "/api/v1/courses" for ::1 at 2022-05-18 03:18:03 +0100
+Processing by Api::V1::CoursesController#index as JSON
+  [1m[36mCourse Load (2.4ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:8:in `index'
+Completed 200 OK in 56ms (Views: 55.6ms | ActiveRecord: 18.4ms | Allocations: 6304)
+
+
+Started GET "/api/v1/courses" for ::1 at 2022-05-18 03:18:03 +0100
+Processing by Api::V1::CoursesController#index as JSON
+  [1m[36mCourse Load (0.4ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.4ms | Allocations: 4012)
+
+
+Started GET "/api/v1/courses" for ::1 at 2022-05-18 03:31:30 +0100
+Processing by Api::V1::CoursesController#index as JSON
+  [1m[36mCourse Load (0.7ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:8:in `index'
+Completed 200 OK in 38ms (Views: 37.3ms | ActiveRecord: 7.7ms | Allocations: 6303)
+
+
+Started GET "/api/v1/courses" for ::1 at 2022-05-18 03:31:30 +0100
+Processing by Api::V1::CoursesController#index as JSON
+  [1m[36mCourse Load (0.4ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.4ms | Allocations: 4012)
+
+
+Started GET "/api/v1/courses" for ::1 at 2022-05-18 03:33:46 +0100
+Processing by Api::V1::CoursesController#index as JSON
+  [1m[36mCourse Load (0.4ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.4ms | Allocations: 4012)
+
+
+Started GET "/api/v1/courses" for ::1 at 2022-05-18 03:33:46 +0100
+Processing by Api::V1::CoursesController#index as JSON
+  [1m[36mCourse Load (0.4ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.4ms | Allocations: 4012)
+
+
+Started POST "/api/v1/users" for ::1 at 2022-05-18 04:10:26 +0100
+  
+ActionController::RoutingError (uninitialized constant Api::V1::UsersController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  Api::V1::UserController
+               Api::V1::CoursesController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started POST "/api/v1/users" for ::1 at 2022-05-18 04:10:43 +0100
+  
+ActionController::RoutingError (uninitialized constant Api::V1::UsersController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  Api::V1::UserController
+               Api::V1::CoursesController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started POST "/api/v1/users" for ::1 at 2022-05-18 04:11:02 +0100
+  
+ActionController::RoutingError (uninitialized constant Api::V1::UsersController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  Api::V1::UserController
+               Api::V1::CoursesController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started POST "/api/v1/users" for ::1 at 2022-05-18 04:11:20 +0100
+  
+ActionController::RoutingError (uninitialized constant Api::V1::UsersController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  Api::V1::UserController
+               Api::V1::CoursesController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started POST "/api/v1/users" for ::1 at 2022-05-18 04:12:08 +0100
+  
+ActionController::RoutingError (uninitialized constant Api::V1::UsersController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  Api::V1::UserController
+               Api::V1::CoursesController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started POST "/api/v1/users" for ::1 at 2022-05-18 04:15:29 +0100
+  
+ActionController::RoutingError (uninitialized constant Api::V1::UsersController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  Api::V1::UserController
+               Api::V1::CoursesController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started POST "/api/v1/users" for ::1 at 2022-05-18 04:16:38 +0100
+  
+ActionController::RoutingError (uninitialized constant Api::V1::UsersController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+Did you mean?  Api::V1::UserController
+               Api::V1::CoursesController
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started POST "/api/v1/users" for ::1 at 2022-05-18 04:17:25 +0100
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"Nine_username", "password"=>"[FILTERED]", "email"=>"nine@nine.com", "full_name"=>"Nine Ninetester"}}
+Completed 500 Internal Server Error in 72ms (ActiveRecord: 24.6ms | Allocations: 9121)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'user' for User.
+
+          raise UnknownAttributeError.new(self, k.to_s)
+          ^^^^^):
+  
+app/controllers/api/v1/users_controller.rb:10:in `create'
+Started POST "/api/v1/users" for ::1 at 2022-05-18 04:18:24 +0100
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"Nine_username", "password"=>"[FILTERED]", "email"=>"nine@nine.com", "full_name"=>"Nine Ninetester", "user"=>{"full_name"=>"Nine Ninetester", "username"=>"Nine_username", "email"=>"nine@nine.com"}}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:12:in `create'
+  [1m[36mUser Exists? (2.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "Nine_username"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:12:in `create'
+  [1m[36mUser Create (2.6ms)[0m  [1m[32mINSERT INTO "users" ("full_name", "created_at", "updated_at", "username", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "email", "password_digest") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["full_name", "Nine Ninetester"], ["created_at", "2022-05-18 03:18:24.388374"], ["updated_at", "2022-05-18 03:18:24.388374"], ["username", "Nine_username"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["email", "nine@nine.com"], ["password_digest", "[FILTERED]"]]
+  ↳ app/controllers/api/v1/users_controller.rb:12:in `create'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:12:in `create'
+Completed 200 OK in 204ms (Views: 0.2ms | ActiveRecord: 10.8ms | Allocations: 16528)
+
+
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started POST "/api/v1/users" for ::1 at 2022-05-18 04:19:12 +0100
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"Nine_username", "password"=>"[FILTERED]", "email"=>"nine@nine.com", "full_name"=>"Nine Ninetester", "user"=>{"full_name"=>"Nine Ninetester", "username"=>"Nine_username", "email"=>"nine@nine.com"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:12:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "Nine_username"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:12:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/v1/users_controller.rb:12:in `create'
+Completed 200 OK in 173ms (Views: 0.1ms | ActiveRecord: 1.0ms | Allocations: 2619)
+
+
