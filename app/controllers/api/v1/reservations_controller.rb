@@ -2,7 +2,7 @@ module Api
   module V1
     class ReservationsController < ApplicationController
       before_action :authenticateing_users
-      #include ActionController::HttpAuthentication::Token
+      # include ActionController::HttpAuthentication::Token
       ALLOWED_DATA = %(duration, reserve_date, course_id).freeze
 
       def index

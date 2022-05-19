@@ -7548,3 +7548,17 @@ Processing by Api::V1::CoursesController#index as JSON
 Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.5ms | Allocations: 4019)
 
 
+Started GET "/api/v1/courses" for ::1 at 2022-05-19 04:04:39 +0100
+Processing by Api::V1::CoursesController#index as JSON
+  [1m[36mCourse Load (0.4ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.4ms | Allocations: 4012)
+
+
+Started GET "/api/v1/courses" for ::1 at 2022-05-19 04:04:39 +0100
+Processing by Api::V1::CoursesController#index as JSON
+  [1m[36mCourse Load (0.8ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:8:in `index'
+Completed 200 OK in 19ms (Views: 17.4ms | ActiveRecord: 0.8ms | Allocations: 4012)
+
+
