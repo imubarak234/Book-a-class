@@ -20,14 +20,6 @@ class ApplicationController < ActionController::API
     end
   end
 
-  def current_user
-    token, _options = token_and_options(request)
-    if token
-      user_id = AuthenticationTokenService.decode(token)
-      User.find(user_id)
-    end
-  end
-
   private
 
   def set_default_format
