@@ -6326,3 +6326,1225 @@ Processing by Api::V1::UsersController#create as JSON
 Completed 200 OK in 173ms (Views: 0.1ms | ActiveRecord: 1.0ms | Allocations: 2619)
 
 
+Started POST "/api/v1/authenticate" for ::1 at 2022-05-18 09:24:12 +0100
+Processing by Api::V1::AuthenticationController#create as JSON
+  Parameters: {"username"=>"test", "password"=>"[FILTERED]", "authentication"=>{"username"=>"test", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "test"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/authentication_controller.rb:24:in `user'
+Completed 500 Internal Server Error in 77ms (ActiveRecord: 27.5ms | Allocations: 4410)
+
+
+  
+NoMethodError (undefined method `authenticate' for nil:NilClass
+
+        raise AuthenticationError unless user.authenticate(params.require(:password))
+                                             ^^^^^^^^^^^^^):
+  
+app/controllers/api/v1/authentication_controller.rb:12:in `create'
+Started POST "/api/v1/authenticate" for ::1 at 2022-05-18 09:30:44 +0100
+Processing by Api::V1::AuthenticationController#create as JSON
+  Parameters: {"username"=>"Nine_username", "password"=>"[FILTERED]", "authentication"=>{"username"=>"Nine_username", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Nine_username"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/authentication_controller.rb:24:in `user'
+Completed 201 Created in 228ms (Views: 0.3ms | ActiveRecord: 7.3ms | Allocations: 10796)
+
+
+Started POST "/api/v1/authenticate" for ::1 at 2022-05-18 09:45:17 +0100
+Processing by Api::V1::AuthenticationController#create as JSON
+  Parameters: {"username"=>"Nine_username", "password"=>"[FILTERED]", "authentication"=>{"username"=>"Nine_username", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Nine_username"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/authentication_controller.rb:24:in `user'
+Completed 201 Created in 223ms (Views: 0.2ms | ActiveRecord: 8.1ms | Allocations: 6719)
+
+
+Started POST "/api/v1/authenticate" for ::1 at 2022-05-18 09:47:40 +0100
+Processing by Api::V1::AuthenticationController#create as JSON
+  Parameters: {"username"=>"Nine_username", "password"=>"[FILTERED]", "authentication"=>{"username"=>"Nine_username", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Nine_username"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/authentication_controller.rb:24:in `user'
+Completed 201 Created in 178ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 788)
+
+
+Started POST "/api/v1/authenticate" for ::1 at 2022-05-18 09:48:50 +0100
+Processing by Api::V1::AuthenticationController#create as JSON
+  Parameters: {"username"=>"Nine_username", "password"=>"[FILTERED]", "authentication"=>{"username"=>"Nine_username", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Nine_username"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/authentication_controller.rb:24:in `user'
+Completed 201 Created in 179ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 700)
+
+
+Started POST "/api/v1/authenticate" for ::1 at 2022-05-18 09:50:34 +0100
+Processing by Api::V1::AuthenticationController#create as JSON
+  Parameters: {"username"=>"Nine_username", "password"=>"[FILTERED]", "authentication"=>{"username"=>"Nine_username", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Nine_username"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/authentication_controller.rb:24:in `user'
+Completed 201 Created in 177ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 700)
+
+
+Started POST "/api/v1/authenticate" for ::1 at 2022-05-18 10:13:43 +0100
+Processing by Api::V1::AuthenticationController#create as JSON
+  Parameters: {"username"=>"Nine_username", "password"=>"[FILTERED]", "authentication"=>{"username"=>"Nine_username", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Nine_username"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/authentication_controller.rb:24:in `user'
+Completed 201 Created in 200ms (Views: 0.2ms | ActiveRecord: 7.4ms | Allocations: 3060)
+
+
+Started POST "/api/v1/authenticate" for ::1 at 2022-05-18 10:17:30 +0100
+Processing by Api::V1::AuthenticationController#create as JSON
+  Parameters: {"username"=>"Nine_username", "password"=>"[FILTERED]", "authentication"=>{"username"=>"Nine_username", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Nine_username"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/authentication_controller.rb:24:in `user'
+Completed 201 Created in 169ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 695)
+
+
+Started POST "/api/v1/authenticate" for ::1 at 2022-05-18 10:25:56 +0100
+Processing by Api::V1::AuthenticationController#create as JSON
+  Parameters: {"username"=>"Nine_username", "password"=>"[FILTERED]", "authentication"=>{"username"=>"Nine_username", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Nine_username"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/authentication_controller.rb:24:in `user'
+Completed 201 Created in 201ms (Views: 0.2ms | ActiveRecord: 8.4ms | Allocations: 2946)
+
+
+Started POST "/api/v1/authenticate" for ::1 at 2022-05-18 10:26:29 +0100
+Processing by Api::V1::AuthenticationController#create as JSON
+  Parameters: {"username"=>"Nine_username", "password"=>"[FILTERED]", "authentication"=>{"username"=>"Nine_username", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Nine_username"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/authentication_controller.rb:24:in `user'
+Completed 201 Created in 172ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 695)
+
+
+Started POST "/api/v1/authenticate" for ::1 at 2022-05-18 10:27:05 +0100
+Processing by Api::V1::AuthenticationController#create as JSON
+  Parameters: {"username"=>"test", "password"=>"[FILTERED]", "authentication"=>{"username"=>"test", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "test"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/authentication_controller.rb:24:in `user'
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.3ms | Allocations: 1675)
+
+
+  
+NoMethodError (undefined method `authenticate' for nil:NilClass
+
+        raise AuthenticationError unless user.authenticate(params.require(:password))
+                                             ^^^^^^^^^^^^^):
+  
+app/controllers/api/v1/authentication_controller.rb:12:in `create'
+Started POST "/api/v1/authenticate" for ::1 at 2022-05-18 10:28:02 +0100
+Processing by Api::V1::AuthenticationController#create as JSON
+  Parameters: {"username"=>"Nine_username", "password"=>"[FILTERED]", "authentication"=>{"username"=>"Nine_username", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Nine_username"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/authentication_controller.rb:24:in `user'
+Completed 201 Created in 173ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 697)
+
+
+Started POST "/api/v1/authenticate" for ::1 at 2022-05-18 10:29:06 +0100
+Processing by Api::V1::AuthenticationController#create as JSON
+  Parameters: {"username"=>"Nine_username", "password"=>"[FILTERED]", "authentication"=>{"username"=>"Nine_username", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Nine_username"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/authentication_controller.rb:24:in `user'
+Completed 201 Created in 171ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 695)
+
+
+Started POST "/api/v1/authenticate" for ::1 at 2022-05-18 10:30:26 +0100
+Processing by Api::V1::AuthenticationController#create as JSON
+  Parameters: {"username"=>"Nine_username", "password"=>"[FILTERED]", "authentication"=>{"username"=>"Nine_username", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Nine_username"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/authentication_controller.rb:24:in `user'
+Completed 201 Created in 174ms (Views: 0.2ms | ActiveRecord: 0.5ms | Allocations: 695)
+
+
+Started POST "/api/v1/authenticate" for ::1 at 2022-05-18 10:51:26 +0100
+Processing by Api::V1::AuthenticationController#create as JSON
+  Parameters: {"username"=>"Nine_username", "password"=>"[FILTERED]", "authentication"=>{"username"=>"Nine_username", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Nine_username"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/authentication_controller.rb:24:in `user'
+Completed 201 Created in 258ms (Views: 0.2ms | ActiveRecord: 29.2ms | Allocations: 2954)
+
+
+Started GET "/api/v1/courses" for ::1 at 2022-05-18 10:51:27 +0100
+Processing by Api::V1::CoursesController#index as JSON
+  [1m[36mCourse Load (3.3ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:8:in `index'
+Completed 200 OK in 16ms (Views: 8.0ms | ActiveRecord: 3.3ms | Allocations: 8074)
+
+
+Started GET "/api/v1/courses" for ::1 at 2022-05-18 10:51:27 +0100
+Processing by Api::V1::CoursesController#index as JSON
+  [1m[36mCourse Load (0.4ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.4ms | Allocations: 4015)
+
+
+Started GET "/api/v1/courses" for ::1 at 2022-05-18 10:51:38 +0100
+Processing by Api::V1::CoursesController#index as JSON
+  [1m[36mCourse Load (0.5ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.5ms | Allocations: 4012)
+
+
+Started GET "/api/v1/courses" for ::1 at 2022-05-18 10:51:38 +0100
+Processing by Api::V1::CoursesController#index as JSON
+  [1m[36mCourse Load (0.7ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:8:in `index'
+Completed 200 OK in 8ms (Views: 6.5ms | ActiveRecord: 0.7ms | Allocations: 4012)
+
+
+Started POST "/api/v1/users" for ::1 at 2022-05-18 11:16:24 +0100
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"ten_username", "password"=>"[FILTERED]", "email"=>"ten@ten.com", "full_name"=>"Tester 10", "user"=>{"full_name"=>"Tester 10", "username"=>"ten_username", "email"=>"ten@ten.com"}}
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:12:in `create'
+  [1m[36mUser Exists? (1.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "ten_username"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:12:in `create'
+  [1m[36mUser Create (4.5ms)[0m  [1m[32mINSERT INTO "users" ("full_name", "created_at", "updated_at", "username", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "email", "password_digest") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["full_name", "Tester 10"], ["created_at", "2022-05-18 10:16:25.012306"], ["updated_at", "2022-05-18 10:16:25.012306"], ["username", "ten_username"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["email", "ten@ten.com"], ["password_digest", "[FILTERED]"]]
+  ↳ app/controllers/api/v1/users_controller.rb:12:in `create'
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:12:in `create'
+Completed 200 OK in 220ms (Views: 0.2ms | ActiveRecord: 23.5ms | Allocations: 5939)
+
+
+Started POST "/api/v1/users" for ::1 at 2022-05-18 11:25:57 +0100
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"test", "password"=>"[FILTERED]", "email"=>"m.bthedon@yahoo.com", "full_name"=>"gggg", "user"=>{"full_name"=>"gggg", "username"=>"test", "email"=>"m.bthedon@yahoo.com"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:12:in `create'
+  [1m[36mUser Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "test"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:12:in `create'
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("full_name", "created_at", "updated_at", "username", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "email", "password_digest") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["full_name", "gggg"], ["created_at", "2022-05-18 10:25:57.289322"], ["updated_at", "2022-05-18 10:25:57.289322"], ["username", "test"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["email", "m.bthedon@yahoo.com"], ["password_digest", "[FILTERED]"]]
+  ↳ app/controllers/api/v1/users_controller.rb:12:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:12:in `create'
+Completed 200 OK in 207ms (Views: 0.1ms | ActiveRecord: 9.2ms | Allocations: 5097)
+
+
+Started GET "/api/v1/courses" for ::1 at 2022-05-18 11:25:57 +0100
+Processing by Api::V1::CoursesController#index as JSON
+  [1m[36mCourse Load (1.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 5.4ms | ActiveRecord: 1.1ms | Allocations: 4135)
+
+
+Started GET "/api/v1/courses" for ::1 at 2022-05-18 11:25:57 +0100
+Processing by Api::V1::CoursesController#index as JSON
+  [1m[36mCourse Load (0.7ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 5.5ms | ActiveRecord: 0.7ms | Allocations: 4012)
+
+
+Started POST "/api/v1/authenticate" for ::1 at 2022-05-18 11:33:37 +0100
+Processing by Api::V1::AuthenticationController#create as JSON
+  Parameters: {"username"=>"Nine_username", "password"=>"[FILTERED]", "authentication"=>{"username"=>"Nine_username", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Nine_username"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/authentication_controller.rb:24:in `user'
+Completed 201 Created in 214ms (Views: 0.2ms | ActiveRecord: 10.5ms | Allocations: 2991)
+
+
+Started POST "/api/v1/authenticate" for ::1 at 2022-05-18 11:34:56 +0100
+Processing by Api::V1::AuthenticationController#create as JSON
+  Parameters: {"username"=>"Nine_username", "password"=>"[FILTERED]", "authentication"=>{"username"=>"Nine_username", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Nine_username"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/authentication_controller.rb:24:in `user'
+Completed 201 Created in 173ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 695)
+
+
+Started GET "/api/v1/courses" for ::1 at 2022-05-18 11:34:57 +0100
+Processing by Api::V1::CoursesController#index as JSON
+  [1m[36mCourse Load (1.3ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 5.4ms | ActiveRecord: 1.3ms | Allocations: 4088)
+
+
+Started GET "/api/v1/courses" for ::1 at 2022-05-18 11:34:57 +0100
+Processing by Api::V1::CoursesController#index as JSON
+  [1m[36mCourse Load (0.5ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.5ms | Allocations: 4012)
+
+
+Started GET "/api/v1/courses" for ::1 at 2022-05-18 11:35:35 +0100
+Processing by Api::V1::CoursesController#index as JSON
+  [1m[36mCourse Load (0.7ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.7ms | Allocations: 4012)
+
+
+Started GET "/api/v1/courses" for ::1 at 2022-05-18 11:35:35 +0100
+Processing by Api::V1::CoursesController#index as JSON
+  [1m[36mCourse Load (0.6ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.6ms | Allocations: 4012)
+
+
+Started GET "/api/v1/courses" for ::1 at 2022-05-18 11:35:41 +0100
+Processing by Api::V1::CoursesController#index as JSON
+  [1m[36mCourse Load (0.5ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.5ms | Allocations: 4012)
+
+
+Started GET "/api/v1/courses" for ::1 at 2022-05-18 11:35:41 +0100
+Processing by Api::V1::CoursesController#index as JSON
+  [1m[36mCourse Load (0.7ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.7ms | Allocations: 4012)
+
+
+Started POST "/api/v1/users" for ::1 at 2022-05-18 11:43:14 +0100
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"dd", "password"=>"[FILTERED]", "email"=>"webmaster@ccb.gov.ng", "full_name"=>"Testers", "user"=>{"full_name"=>"Testers", "username"=>"dd", "email"=>"webmaster@ccb.gov.ng"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:12:in `create'
+  [1m[36mUser Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "dd"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:12:in `create'
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("full_name", "created_at", "updated_at", "username", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "email", "password_digest") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["full_name", "Testers"], ["created_at", "2022-05-18 10:43:14.250598"], ["updated_at", "2022-05-18 10:43:14.250598"], ["username", "dd"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["email", "webmaster@ccb.gov.ng"], ["password_digest", "[FILTERED]"]]
+  ↳ app/controllers/api/v1/users_controller.rb:12:in `create'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:12:in `create'
+Completed 200 OK in 211ms (Views: 0.2ms | ActiveRecord: 10.5ms | Allocations: 5090)
+
+
+Started GET "/api/v1/courses" for ::1 at 2022-05-18 11:43:14 +0100
+Processing by Api::V1::CoursesController#index as JSON
+  [1m[36mCourse Load (1.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 1.1ms | Allocations: 4118)
+
+
+Started GET "/api/v1/courses" for ::1 at 2022-05-18 11:43:14 +0100
+Processing by Api::V1::CoursesController#index as JSON
+  [1m[36mCourse Load (0.5ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.5ms | Allocations: 4012)
+
+
+Started POST "/api/v1/users" for ::1 at 2022-05-18 11:43:58 +0100
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"ddsssss", "password"=>"[FILTERED]", "email"=>"webmastadawdwr@ccb.gov.ng", "full_name"=>"Testersingss", "user"=>{"full_name"=>"Testersingss", "username"=>"ddsssss", "email"=>"webmastadawdwr@ccb.gov.ng"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:12:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "ddsssss"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:12:in `create'
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("full_name", "created_at", "updated_at", "username", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "email", "password_digest") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["full_name", "Testersingss"], ["created_at", "2022-05-18 10:43:58.348205"], ["updated_at", "2022-05-18 10:43:58.348205"], ["username", "ddsssss"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["email", "webmastadawdwr@ccb.gov.ng"], ["password_digest", "[FILTERED]"]]
+  ↳ app/controllers/api/v1/users_controller.rb:12:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:12:in `create'
+Completed 200 OK in 175ms (Views: 0.1ms | ActiveRecord: 1.2ms | Allocations: 2924)
+
+
+Started GET "/api/v1/courses" for ::1 at 2022-05-18 11:43:58 +0100
+Processing by Api::V1::CoursesController#index as JSON
+  [1m[36mCourse Load (0.5ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.5ms | Allocations: 4012)
+
+
+Started GET "/api/v1/courses" for ::1 at 2022-05-18 11:43:58 +0100
+Processing by Api::V1::CoursesController#index as JSON
+  [1m[36mCourse Load (0.6ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.6ms | Allocations: 4012)
+
+
+Started POST "/api/v1/users" for ::1 at 2022-05-18 11:46:06 +0100
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"ssfdfreerrg", "password"=>"[FILTERED]", "email"=>"m.bthesfwefdon@yahosfsso.com", "full_name"=>"ggggergter", "user"=>{"full_name"=>"ggggergter", "username"=>"ssfdfreerrg", "email"=>"m.bthesfwefdon@yahosfsso.com"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:12:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "ssfdfreerrg"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:12:in `create'
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("full_name", "created_at", "updated_at", "username", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "email", "password_digest") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["full_name", "ggggergter"], ["created_at", "2022-05-18 10:46:06.729683"], ["updated_at", "2022-05-18 10:46:06.729683"], ["username", "ssfdfreerrg"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["email", "m.bthesfwefdon@yahosfsso.com"], ["password_digest", "[FILTERED]"]]
+  ↳ app/controllers/api/v1/users_controller.rb:12:in `create'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:12:in `create'
+Completed 200 OK in 177ms (Views: 0.1ms | ActiveRecord: 2.3ms | Allocations: 2925)
+
+
+Started GET "/api/v1/courses" for ::1 at 2022-05-18 11:46:07 +0100
+Processing by Api::V1::CoursesController#index as JSON
+  [1m[36mCourse Load (0.4ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.4ms | Allocations: 4012)
+
+
+Started GET "/api/v1/courses" for ::1 at 2022-05-18 11:46:07 +0100
+Processing by Api::V1::CoursesController#index as JSON
+  [1m[36mCourse Load (0.6ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.6ms | Allocations: 4012)
+
+
+Started POST "/api/v1/users" for ::1 at 2022-05-18 11:49:18 +0100
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"qwdadf", "password"=>"[FILTERED]", "email"=>"sfsefwe@assdvz.com", "full_name"=>"dfsfsd", "user"=>{"full_name"=>"dfsfsd", "username"=>"qwdadf", "email"=>"sfsefwe@assdvz.com"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:12:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "qwdadf"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:12:in `create'
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("full_name", "created_at", "updated_at", "username", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "email", "password_digest") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["full_name", "dfsfsd"], ["created_at", "2022-05-18 10:49:18.827926"], ["updated_at", "2022-05-18 10:49:18.827926"], ["username", "qwdadf"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["email", "sfsefwe@assdvz.com"], ["password_digest", "[FILTERED]"]]
+  ↳ app/controllers/api/v1/users_controller.rb:12:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:12:in `create'
+Completed 200 OK in 176ms (Views: 0.1ms | ActiveRecord: 1.3ms | Allocations: 2920)
+
+
+Started GET "/api/v1/courses" for ::1 at 2022-05-18 11:49:18 +0100
+Processing by Api::V1::CoursesController#index as JSON
+  [1m[36mCourse Load (0.5ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.5ms | Allocations: 4012)
+
+
+Started GET "/api/v1/courses" for ::1 at 2022-05-18 11:49:18 +0100
+Processing by Api::V1::CoursesController#index as JSON
+  [1m[36mCourse Load (0.4ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.4ms | Allocations: 4012)
+
+
+Started POST "/api/v1/authenticate" for ::1 at 2022-05-18 11:51:00 +0100
+Processing by Api::V1::AuthenticationController#create as JSON
+  Parameters: {"username"=>"Nine_username", "password"=>"[FILTERED]", "authentication"=>{"username"=>"Nine_username", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Nine_username"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/authentication_controller.rb:24:in `user'
+Completed 201 Created in 178ms (Views: 0.2ms | ActiveRecord: 0.8ms | Allocations: 737)
+
+
+Started GET "/api/v1/courses" for ::1 at 2022-05-18 11:51:00 +0100
+Processing by Api::V1::CoursesController#index as JSON
+  [1m[36mCourse Load (0.5ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.5ms | Allocations: 4012)
+
+
+Started GET "/api/v1/courses" for ::1 at 2022-05-18 11:51:00 +0100
+Processing by Api::V1::CoursesController#index as JSON
+  [1m[36mCourse Load (0.8ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.8ms | Allocations: 4012)
+
+
+Started POST "/api/v1/authenticate" for ::1 at 2022-05-18 11:52:18 +0100
+Processing by Api::V1::AuthenticationController#create as JSON
+  Parameters: {"username"=>"Nine_username", "password"=>"[FILTERED]", "authentication"=>{"username"=>"Nine_username", "password"=>"[FILTERED]"}}
+Started GET "/api/v1/courses" for ::1 at 2022-05-18 11:52:18 +0100
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Nine_username"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/authentication_controller.rb:24:in `user'
+Completed 201 Created in 181ms (Views: 0.2ms | ActiveRecord: 0.5ms | Allocations: 1077)
+
+
+Processing by Api::V1::CoursesController#index as JSON
+  [1m[36mCourse Load (0.4ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.4ms | Allocations: 4012)
+
+
+Started GET "/api/v1/courses" for ::1 at 2022-05-18 11:52:18 +0100
+Processing by Api::V1::CoursesController#index as JSON
+  [1m[36mCourse Load (0.3ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.3ms | Allocations: 4012)
+
+
+Started GET "/api/v1/courses" for ::1 at 2022-05-18 12:06:56 +0100
+Processing by Api::V1::CoursesController#index as JSON
+  [1m[36mCourse Load (1.8ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:8:in `index'
+Completed 200 OK in 55ms (Views: 54.3ms | ActiveRecord: 15.3ms | Allocations: 6343)
+
+
+Started GET "/api/v1/courses" for ::1 at 2022-05-18 12:06:56 +0100
+Processing by Api::V1::CoursesController#index as JSON
+  [1m[36mCourse Load (0.5ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.5ms | Allocations: 4012)
+
+
+Started POST "/api/v1/authenticate" for ::1 at 2022-05-18 12:07:20 +0100
+Processing by Api::V1::AuthenticationController#create as JSON
+  Parameters: {"username"=>"Nine_username", "password"=>"[FILTERED]", "authentication"=>{"username"=>"Nine_username", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Nine_username"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/authentication_controller.rb:24:in `user'
+Completed 201 Created in 173ms (Views: 0.2ms | ActiveRecord: 1.0ms | Allocations: 732)
+
+
+Started POST "/api/v1/authenticate" for ::1 at 2022-05-18 12:07:38 +0100
+Processing by Api::V1::AuthenticationController#create as JSON
+  Parameters: {"username"=>"Nine_username", "password"=>"[FILTERED]", "authentication"=>{"username"=>"Nine_username", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Nine_username"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/authentication_controller.rb:24:in `user'
+Completed 201 Created in 179ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 704)
+
+
+Started GET "/api/v1/courses" for ::1 at 2022-05-18 12:07:38 +0100
+Processing by Api::V1::CoursesController#index as JSON
+  [1m[36mCourse Load (0.4ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:8:in `index'
+Completed 200 OK in 21ms (Views: 20.5ms | ActiveRecord: 0.4ms | Allocations: 4012)
+
+
+Started GET "/api/v1/courses" for ::1 at 2022-05-18 12:07:38 +0100
+Processing by Api::V1::CoursesController#index as JSON
+  [1m[36mCourse Load (0.3ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:8:in `index'
+Completed 200 OK in 37ms (Views: 36.7ms | ActiveRecord: 0.3ms | Allocations: 4012)
+
+
+Started POST "/api/v1/authenticate" for ::1 at 2022-05-18 12:08:01 +0100
+Processing by Api::V1::AuthenticationController#create as JSON
+  Parameters: {"username"=>"Nine_username", "password"=>"[FILTERED]", "authentication"=>{"username"=>"Nine_username", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Nine_username"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/authentication_controller.rb:24:in `user'
+Completed 201 Created in 174ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 704)
+
+
+Started GET "/api/v1/courses" for ::1 at 2022-05-18 12:08:01 +0100
+Processing by Api::V1::CoursesController#index as JSON
+  [1m[36mCourse Load (0.4ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.4ms | Allocations: 4012)
+
+
+Started GET "/api/v1/courses" for ::1 at 2022-05-18 12:08:01 +0100
+Processing by Api::V1::CoursesController#index as JSON
+  [1m[36mCourse Load (0.4ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.4ms | Allocations: 4012)
+
+
+Started POST "/api/v1/authenticate" for ::1 at 2022-05-18 12:11:08 +0100
+Processing by Api::V1::AuthenticationController#create as JSON
+  Parameters: {"username"=>"Nine_username", "password"=>"[FILTERED]", "authentication"=>{"username"=>"Nine_username", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Nine_username"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/authentication_controller.rb:24:in `user'
+Completed 201 Created in 181ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 695)
+
+
+Started POST "/api/v1/authenticate" for ::1 at 2022-05-18 12:12:20 +0100
+Started GET "/api/v1/courses" for ::1 at 2022-05-18 12:12:20 +0100
+Processing by Api::V1::AuthenticationController#create as JSON
+  Parameters: {"username"=>"Nine_username", "password"=>"[FILTERED]", "authentication"=>{"username"=>"Nine_username", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Nine_username"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/authentication_controller.rb:24:in `user'
+Completed 201 Created in 175ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 819)
+
+
+Processing by Api::V1::CoursesController#index as JSON
+  [1m[36mCourse Load (0.4ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.4ms | Allocations: 4012)
+
+
+Started GET "/api/v1/courses" for ::1 at 2022-05-18 12:12:20 +0100
+Processing by Api::V1::CoursesController#index as JSON
+  [1m[36mCourse Load (0.4ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.4ms | Allocations: 4012)
+
+
+Started POST "/api/v1/users" for ::1 at 2022-05-18 12:17:14 +0100
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"dfgdfgdf", "password"=>"[FILTERED]", "email"=>"m.btdfghedon@yahdfgoo.com", "full_name"=>"wwerwerwe", "user"=>{"full_name"=>"wwerwerwe", "username"=>"dfgdfgdf", "email"=>"m.btdfghedon@yahdfgoo.com"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:12:in `create'
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "dfgdfgdf"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:12:in `create'
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("full_name", "created_at", "updated_at", "username", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "email", "password_digest") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["full_name", "wwerwerwe"], ["created_at", "2022-05-18 11:17:14.263834"], ["updated_at", "2022-05-18 11:17:14.263834"], ["username", "dfgdfgdf"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["email", "m.btdfghedon@yahdfgoo.com"], ["password_digest", "[FILTERED]"]]
+  ↳ app/controllers/api/v1/users_controller.rb:12:in `create'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:12:in `create'
+Completed 200 OK in 181ms (Views: 0.1ms | ActiveRecord: 4.1ms | Allocations: 2902)
+
+
+Started GET "/api/v1/courses" for ::1 at 2022-05-18 12:17:14 +0100
+Processing by Api::V1::CoursesController#index as JSON
+  [1m[36mCourse Load (0.5ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.5ms | Allocations: 4012)
+
+
+Started GET "/api/v1/courses" for ::1 at 2022-05-18 12:17:14 +0100
+Processing by Api::V1::CoursesController#index as JSON
+  [1m[36mCourse Load (0.5ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.5ms | Allocations: 4012)
+
+
+Started POST "/api/v1/users" for ::1 at 2022-05-18 12:23:38 +0100
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"SDWQDQ", "password"=>"[FILTERED]", "email"=>"dssvsdvs@sdfov.com", "full_name"=>"zxcdxvdfv", "user"=>{"full_name"=>"zxcdxvdfv", "username"=>"SDWQDQ", "email"=>"dssvsdvs@sdfov.com"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:12:in `create'
+  [1m[36mUser Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "SDWQDQ"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:12:in `create'
+  [1m[36mUser Create (1.2ms)[0m  [1m[32mINSERT INTO "users" ("full_name", "created_at", "updated_at", "username", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "email", "password_digest") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["full_name", "zxcdxvdfv"], ["created_at", "2022-05-18 11:23:38.880882"], ["updated_at", "2022-05-18 11:23:38.880882"], ["username", "SDWQDQ"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["email", "dssvsdvs@sdfov.com"], ["password_digest", "[FILTERED]"]]
+  ↳ app/controllers/api/v1/users_controller.rb:12:in `create'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:12:in `create'
+Completed 200 OK in 224ms (Views: 0.3ms | ActiveRecord: 12.5ms | Allocations: 5109)
+
+
+Started GET "/api/v1/courses" for ::1 at 2022-05-18 12:23:39 +0100
+Processing by Api::V1::CoursesController#index as JSON
+  [1m[36mCourse Load (2.0ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:8:in `index'
+Completed 200 OK in 8ms (Views: 5.9ms | ActiveRecord: 2.0ms | Allocations: 4118)
+
+
+Started GET "/api/v1/courses" for ::1 at 2022-05-18 12:23:39 +0100
+Processing by Api::V1::CoursesController#index as JSON
+  [1m[36mCourse Load (0.6ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.6ms | Allocations: 4012)
+
+
+Started POST "/api/v1/users" for ::1 at 2022-05-18 12:23:55 +0100
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"sdfsdfsdf", "password"=>"[FILTERED]", "email"=>"sdsdsdfds@sidhfgis.coma", "full_name"=>"dfgdfgdfgg", "user"=>{"full_name"=>"dfgdfgdfgg", "username"=>"sdfsdfsdf", "email"=>"sdsdsdfds@sidhfgis.coma"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:12:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "sdfsdfsdf"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:12:in `create'
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("full_name", "created_at", "updated_at", "username", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "email", "password_digest") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["full_name", "dfgdfgdfgg"], ["created_at", "2022-05-18 11:23:55.703548"], ["updated_at", "2022-05-18 11:23:55.703548"], ["username", "sdfsdfsdf"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["email", "sdsdsdfds@sidhfgis.coma"], ["password_digest", "[FILTERED]"]]
+  ↳ app/controllers/api/v1/users_controller.rb:12:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:12:in `create'
+Completed 200 OK in 181ms (Views: 0.1ms | ActiveRecord: 1.3ms | Allocations: 2919)
+
+
+Started GET "/api/v1/courses" for ::1 at 2022-05-18 12:23:55 +0100
+Processing by Api::V1::CoursesController#index as JSON
+  [1m[36mCourse Load (0.5ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.5ms | Allocations: 4012)
+
+
+Started GET "/api/v1/courses" for ::1 at 2022-05-18 12:23:55 +0100
+Processing by Api::V1::CoursesController#index as JSON
+  [1m[36mCourse Load (0.4ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.4ms | Allocations: 4012)
+
+
+Started POST "/api/v1/users" for ::1 at 2022-05-18 12:24:52 +0100
+Processing by Api::V1::UsersController#create as JSON
+  Parameters: {"username"=>"adsdfdfv", "password"=>"[FILTERED]", "email"=>"dsfwefwef@sdwbsds.com", "full_name"=>"asdsefgrs", "user"=>{"full_name"=>"asdsefgrs", "username"=>"adsdfdfv", "email"=>"dsfwefwef@sdwbsds.com"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:12:in `create'
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER($1) LIMIT $2[0m  [["username", "adsdfdfv"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:12:in `create'
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("full_name", "created_at", "updated_at", "username", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "email", "password_digest") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["full_name", "asdsefgrs"], ["created_at", "2022-05-18 11:24:53.058475"], ["updated_at", "2022-05-18 11:24:53.058475"], ["username", "adsdfdfv"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["email", "dsfwefwef@sdwbsds.com"], ["password_digest", "[FILTERED]"]]
+  ↳ app/controllers/api/v1/users_controller.rb:12:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:12:in `create'
+Completed 200 OK in 179ms (Views: 0.1ms | ActiveRecord: 1.8ms | Allocations: 2923)
+
+
+Started GET "/api/v1/courses" for ::1 at 2022-05-18 12:24:53 +0100
+Processing by Api::V1::CoursesController#index as JSON
+  [1m[36mCourse Load (0.6ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.6ms | Allocations: 4012)
+
+
+Started GET "/api/v1/courses" for ::1 at 2022-05-18 12:24:53 +0100
+Processing by Api::V1::CoursesController#index as JSON
+  [1m[36mCourse Load (0.4ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.4ms | Allocations: 4012)
+
+
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started POST "/api/v1/authenticate" for ::1 at 2022-05-19 01:56:59 +0100
+Processing by Api::V1::AuthenticationController#create as JSON
+  Parameters: {"username"=>"ggg", "password"=>"[FILTERED]", "authentication"=>{"username"=>"ggg", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "ggg"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/authentication_controller.rb:24:in `user'
+Completed 500 Internal Server Error in 52ms (ActiveRecord: 12.4ms | Allocations: 5499)
+
+
+  
+NoMethodError (undefined method `authenticate' for nil:NilClass
+
+        raise AuthenticationError unless user.authenticate(params.require(:password))
+                                             ^^^^^^^^^^^^^):
+  
+app/controllers/api/v1/authentication_controller.rb:12:in `create'
+Started POST "/api/v1/authenticate" for ::1 at 2022-05-19 01:59:00 +0100
+Processing by Api::V1::AuthenticationController#create as JSON
+  Parameters: {"username"=>"ddsssss", "password"=>"[FILTERED]", "authentication"=>{"username"=>"ddsssss", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "ddsssss"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/authentication_controller.rb:24:in `user'
+Completed 200 OK in 177ms (Views: 0.3ms | ActiveRecord: 0.7ms | Allocations: 2981)
+
+
+Started POST "/api/v1/authenticate" for ::1 at 2022-05-19 01:59:51 +0100
+Processing by Api::V1::AuthenticationController#create as JSON
+  Parameters: {"username"=>"ssfdfreerrg", "password"=>"[FILTERED]", "authentication"=>{"username"=>"ssfdfreerrg", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "ssfdfreerrg"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/authentication_controller.rb:24:in `user'
+Completed 200 OK in 169ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 925)
+
+
+Started POST "/api/v1/authenticate" for ::1 at 2022-05-19 02:01:19 +0100
+Processing by Api::V1::AuthenticationController#create as JSON
+  Parameters: {"username"=>"ddsssss", "password"=>"[FILTERED]", "authentication"=>{"username"=>"ddsssss", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "ddsssss"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/authentication_controller.rb:24:in `user'
+Completed 200 OK in 168ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 924)
+
+
+Started POST "/api/v1/authenticate" for ::1 at 2022-05-19 02:01:32 +0100
+Processing by Api::V1::AuthenticationController#create as JSON
+  Parameters: {"username"=>"ddsssss", "password"=>"[FILTERED]", "authentication"=>{"username"=>"ddsssss", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "ddsssss"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/authentication_controller.rb:24:in `user'
+Completed 200 OK in 170ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 924)
+
+
+Started POST "/api/v1/authenticate" for ::1 at 2022-05-19 02:05:35 +0100
+Processing by Api::V1::AuthenticationController#create as JSON
+  Parameters: {"username"=>"ddsssss", "password"=>"[FILTERED]", "authentication"=>{"username"=>"ddsssss", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "ddsssss"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/authentication_controller.rb:24:in `user'
+Completed 200 OK in 170ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 924)
+
+
+Started POST "/api/v1/authenticate" for ::1 at 2022-05-19 02:05:48 +0100
+Processing by Api::V1::AuthenticationController#create as JSON
+  Parameters: {"username"=>"qwdadf", "password"=>"[FILTERED]", "authentication"=>{"username"=>"qwdadf", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "qwdadf"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/authentication_controller.rb:24:in `user'
+Completed 200 OK in 171ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 925)
+
+
+Started POST "/api/v1/authenticate" for ::1 at 2022-05-19 02:05:50 +0100
+Processing by Api::V1::AuthenticationController#create as JSON
+  Parameters: {"username"=>"qwdadf", "password"=>"[FILTERED]", "authentication"=>{"username"=>"qwdadf", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "qwdadf"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/authentication_controller.rb:24:in `user'
+Completed 200 OK in 167ms (Views: 0.5ms | ActiveRecord: 0.2ms | Allocations: 924)
+
+
+Started POST "/api/v1/authenticate" for ::1 at 2022-05-19 02:07:07 +0100
+Processing by Api::V1::AuthenticationController#create as JSON
+  Parameters: {"username"=>"qwdadf", "password"=>"[FILTERED]", "authentication"=>{"username"=>"qwdadf", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "qwdadf"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/authentication_controller.rb:24:in `user'
+Completed 200 OK in 170ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 925)
+
+
+Started POST "/api/v1/authenticate" for ::1 at 2022-05-19 02:07:18 +0100
+Processing by Api::V1::AuthenticationController#create as JSON
+  Parameters: {"username"=>"kmkjk", "password"=>"[FILTERED]", "authentication"=>{"username"=>"kmkjk", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "kmkjk"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/authentication_controller.rb:24:in `user'
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.3ms | Allocations: 1634)
+
+
+  
+NoMethodError (undefined method `authenticate' for nil:NilClass
+
+        raise AuthenticationError unless user.authenticate(params.require(:password))
+                                             ^^^^^^^^^^^^^):
+  
+app/controllers/api/v1/authentication_controller.rb:12:in `create'
+Started POST "/api/v1/authenticate" for ::1 at 2022-05-19 02:08:20 +0100
+Processing by Api::V1::AuthenticationController#create as JSON
+  Parameters: {"username"=>"ddsssss", "password"=>"[FILTERED]", "authentication"=>{"username"=>"ddsssss", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "ddsssss"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/authentication_controller.rb:24:in `user'
+Completed 200 OK in 170ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 924)
+
+
+Started POST "/api/v1/authenticate" for ::1 at 2022-05-19 02:08:22 +0100
+Processing by Api::V1::AuthenticationController#create as JSON
+  Parameters: {"username"=>"mmmmmm", "password"=>"[FILTERED]", "authentication"=>{"username"=>"mmmmmm", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "mmmmmm"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/authentication_controller.rb:24:in `user'
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.2ms | Allocations: 1634)
+
+
+  
+NoMethodError (undefined method `authenticate' for nil:NilClass
+
+        raise AuthenticationError unless user.authenticate(params.require(:password))
+                                             ^^^^^^^^^^^^^):
+  
+app/controllers/api/v1/authentication_controller.rb:12:in `create'
+Started POST "/api/v1/authenticate" for ::1 at 2022-05-19 02:08:24 +0100
+Processing by Api::V1::AuthenticationController#create as JSON
+  Parameters: {"username"=>"mmmmmm", "password"=>"[FILTERED]", "authentication"=>{"username"=>"mmmmmm", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "mmmmmm"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/authentication_controller.rb:24:in `user'
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.2ms | Allocations: 1635)
+
+
+  
+NoMethodError (undefined method `authenticate' for nil:NilClass
+
+        raise AuthenticationError unless user.authenticate(params.require(:password))
+                                             ^^^^^^^^^^^^^):
+  
+app/controllers/api/v1/authentication_controller.rb:12:in `create'
+Started POST "/api/v1/authenticate" for ::1 at 2022-05-19 02:11:43 +0100
+Processing by Api::V1::AuthenticationController#create as JSON
+  Parameters: {"username"=>"mmmmmm", "password"=>"[FILTERED]", "authentication"=>{"username"=>"mmmmmm", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "mmmmmm"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/authentication_controller.rb:24:in `user'
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.5ms | Allocations: 1634)
+
+
+  
+NoMethodError (undefined method `authenticate' for nil:NilClass
+
+        raise AuthenticationError unless user.authenticate(params.require(:password))
+                                             ^^^^^^^^^^^^^):
+  
+app/controllers/api/v1/authentication_controller.rb:12:in `create'
+Started POST "/api/v1/authenticate" for ::1 at 2022-05-19 02:11:46 +0100
+Processing by Api::V1::AuthenticationController#create as JSON
+  Parameters: {"username"=>"mmmmmm", "password"=>"[FILTERED]", "authentication"=>{"username"=>"mmmmmm", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "mmmmmm"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/authentication_controller.rb:24:in `user'
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.3ms | Allocations: 1635)
+
+
+  
+NoMethodError (undefined method `authenticate' for nil:NilClass
+
+        raise AuthenticationError unless user.authenticate(params.require(:password))
+                                             ^^^^^^^^^^^^^):
+  
+app/controllers/api/v1/authentication_controller.rb:12:in `create'
+Started POST "/api/v1/authenticate" for ::1 at 2022-05-19 02:12:33 +0100
+Processing by Api::V1::AuthenticationController#create as JSON
+  Parameters: {"username"=>"mmmmmm", "password"=>"[FILTERED]", "authentication"=>{"username"=>"mmmmmm", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "mmmmmm"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/authentication_controller.rb:24:in `user'
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.2ms | Allocations: 1634)
+
+
+  
+NoMethodError (undefined method `authenticate' for nil:NilClass
+
+        raise AuthenticationError unless user.authenticate(params.require(:password))
+                                             ^^^^^^^^^^^^^):
+  
+app/controllers/api/v1/authentication_controller.rb:12:in `create'
+Started POST "/api/v1/authenticate" for ::1 at 2022-05-19 02:12:49 +0100
+Processing by Api::V1::AuthenticationController#create as JSON
+  Parameters: {"username"=>"mmmmmm", "password"=>"[FILTERED]", "authentication"=>{"username"=>"mmmmmm", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "mmmmmm"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/authentication_controller.rb:24:in `user'
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.2ms | Allocations: 1634)
+
+
+  
+NoMethodError (undefined method `authenticate' for nil:NilClass
+
+        raise AuthenticationError unless user.authenticate(params.require(:password))
+                                             ^^^^^^^^^^^^^):
+  
+app/controllers/api/v1/authentication_controller.rb:12:in `create'
+Started POST "/api/v1/authenticate" for ::1 at 2022-05-19 02:13:25 +0100
+Processing by Api::V1::AuthenticationController#create as JSON
+  Parameters: {"username"=>"mmmmmm", "password"=>"[FILTERED]", "authentication"=>{"username"=>"mmmmmm", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "mmmmmm"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/authentication_controller.rb:24:in `user'
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.3ms | Allocations: 1634)
+
+
+  
+NoMethodError (undefined method `authenticate' for nil:NilClass
+
+        raise AuthenticationError unless user.authenticate(params.require(:password))
+                                             ^^^^^^^^^^^^^):
+  
+app/controllers/api/v1/authentication_controller.rb:12:in `create'
+Started POST "/api/v1/authenticate" for ::1 at 2022-05-19 02:13:27 +0100
+Processing by Api::V1::AuthenticationController#create as JSON
+  Parameters: {"username"=>"mmmmmm", "password"=>"[FILTERED]", "authentication"=>{"username"=>"mmmmmm", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "mmmmmm"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/authentication_controller.rb:24:in `user'
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.2ms | Allocations: 1635)
+
+
+  
+NoMethodError (undefined method `authenticate' for nil:NilClass
+
+        raise AuthenticationError unless user.authenticate(params.require(:password))
+                                             ^^^^^^^^^^^^^):
+  
+app/controllers/api/v1/authentication_controller.rb:12:in `create'
+Started POST "/api/v1/authenticate" for ::1 at 2022-05-19 02:13:49 +0100
+Processing by Api::V1::AuthenticationController#create as JSON
+  Parameters: {"username"=>"mmmmmm", "password"=>"[FILTERED]", "authentication"=>{"username"=>"mmmmmm", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "mmmmmm"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/authentication_controller.rb:24:in `user'
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.2ms | Allocations: 1635)
+
+
+  
+NoMethodError (undefined method `authenticate' for nil:NilClass
+
+        raise AuthenticationError unless user.authenticate(params.require(:password))
+                                             ^^^^^^^^^^^^^):
+  
+app/controllers/api/v1/authentication_controller.rb:12:in `create'
+Started POST "/api/v1/authenticate" for ::1 at 2022-05-19 02:14:05 +0100
+Processing by Api::V1::AuthenticationController#create as JSON
+  Parameters: {"username"=>"mmmmmm", "password"=>"[FILTERED]", "authentication"=>{"username"=>"mmmmmm", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "mmmmmm"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/authentication_controller.rb:24:in `user'
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.3ms | Allocations: 1635)
+
+
+  
+NoMethodError (undefined method `authenticate' for nil:NilClass
+
+        raise AuthenticationError unless user.authenticate(params.require(:password))
+                                             ^^^^^^^^^^^^^):
+  
+app/controllers/api/v1/authentication_controller.rb:12:in `create'
+Started POST "/api/v1/authenticate" for ::1 at 2022-05-19 02:16:15 +0100
+Processing by Api::V1::AuthenticationController#create as JSON
+  Parameters: {"username"=>"mmmmmm", "password"=>"[FILTERED]", "authentication"=>{"username"=>"mmmmmm", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "mmmmmm"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/authentication_controller.rb:24:in `user'
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.2ms | Allocations: 1634)
+
+
+  
+NoMethodError (undefined method `authenticate' for nil:NilClass
+
+        raise AuthenticationError unless user.authenticate(params.require(:password))
+                                             ^^^^^^^^^^^^^):
+  
+app/controllers/api/v1/authentication_controller.rb:12:in `create'
+Started POST "/api/v1/authenticate" for ::1 at 2022-05-19 02:18:00 +0100
+Processing by Api::V1::AuthenticationController#create as JSON
+  Parameters: {"username"=>"dd", "password"=>"[FILTERED]", "authentication"=>{"username"=>"dd", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "dd"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/authentication_controller.rb:24:in `user'
+Completed 200 OK in 169ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 924)
+
+
+Started POST "/api/v1/authenticate" for ::1 at 2022-05-19 02:18:09 +0100
+Processing by Api::V1::AuthenticationController#create as JSON
+  Parameters: {"username"=>"mmmmmm", "password"=>"[FILTERED]", "authentication"=>{"username"=>"mmmmmm", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "mmmmmm"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/authentication_controller.rb:24:in `user'
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.2ms | Allocations: 1634)
+
+
+  
+NoMethodError (undefined method `authenticate' for nil:NilClass
+
+        raise AuthenticationError unless user.authenticate(params.require(:password))
+                                             ^^^^^^^^^^^^^):
+  
+app/controllers/api/v1/authentication_controller.rb:12:in `create'
+Started POST "/api/v1/authenticate" for ::1 at 2022-05-19 02:18:56 +0100
+Processing by Api::V1::AuthenticationController#create as JSON
+  Parameters: {"username"=>"mmmmmm", "password"=>"[FILTERED]", "authentication"=>{"username"=>"mmmmmm", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "mmmmmm"], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/authentication_controller.rb:24:in `user'
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.2ms | Allocations: 1634)
+
+
+  
+NoMethodError (undefined method `authenticate' for nil:NilClass
+
+        raise AuthenticationError unless user.authenticate(params.require(:password))
+                                             ^^^^^^^^^^^^^):
+  
+app/controllers/api/v1/authentication_controller.rb:12:in `create'
+Started GET "/api/v1/courses" for ::1 at 2022-05-19 02:48:16 +0100
+Processing by Api::V1::CoursesController#index as JSON
+  [1m[36mCourse Load (2.7ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:8:in `index'
+Completed 200 OK in 66ms (Views: 57.8ms | ActiveRecord: 10.1ms | Allocations: 10472)
+
+
+Started GET "/api/v1/courses" for ::1 at 2022-05-19 02:48:17 +0100
+Processing by Api::V1::CoursesController#index as JSON
+  [1m[36mCourse Load (0.4ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.4ms | Allocations: 4019)
+
+
+Started GET "/api/v1/courses" for ::1 at 2022-05-19 02:48:28 +0100
+Started GET "/api/v1/courses/1/reservations" for ::1 at 2022-05-19 02:48:28 +0100
+Processing by Api::V1::CoursesController#index as JSON
+  [1m[36mCourse Load (0.8ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.8ms | Allocations: 4209)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/courses/1/reservations"):
+  
+Started GET "/api/v1/courses" for ::1 at 2022-05-19 02:48:28 +0100
+Started GET "/api/v1/courses/1/reservations" for ::1 at 2022-05-19 02:48:28 +0100
+Processing by Api::V1::CoursesController#index as JSON
+  [1m[36mCourse Load (0.5ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.5ms | Allocations: 4146)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/courses/1/reservations"):
+  
+Started GET "/api/v1/courses" for ::1 at 2022-05-19 03:11:13 +0100
+Processing by Api::V1::CoursesController#index as JSON
+  [1m[36mCourse Load (1.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:8:in `index'
+Completed 200 OK in 49ms (Views: 48.8ms | ActiveRecord: 10.7ms | Allocations: 6303)
+
+
+Started GET "/api/v1/courses" for ::1 at 2022-05-19 03:11:13 +0100
+Processing by Api::V1::CoursesController#index as JSON
+  [1m[36mCourse Load (0.5ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.5ms | Allocations: 4012)
+
+
+Started GET "/api/v1/users/4/reservations" for ::1 at 2022-05-19 03:16:25 +0100
+Processing by Api::V1::ReservationsController#index as JSON
+  Parameters: {"user_id"=>"4", "reservation"=>{}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `authenticateing_users'
+Completed 404 Not Found in 21ms (ActiveRecord: 12.3ms | Allocations: 5566)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  
+app/controllers/api/v1/reservations_controller.rb:12:in `index'
+Started GET "/api/v1/users/4/reservations" for ::1 at 2022-05-19 03:17:48 +0100
+Processing by Api::V1::ReservationsController#index as JSON
+  Parameters: {"user_id"=>"4", "reservation"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `authenticateing_users'
+Completed 404 Not Found in 10ms (Views: 0.2ms | ActiveRecord: 3.9ms | Allocations: 5634)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User without an ID):
+  
+app/controllers/api/v1/reservations_controller.rb:13:in `index'
+Started GET "/api/v1/users/4/reservations" for ::1 at 2022-05-19 03:18:09 +0100
+Processing by Api::V1::ReservationsController#index as JSON
+  Parameters: {"user_id"=>"4", "reservation"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `authenticateing_users'
+Completed 200 OK in 10ms (Views: 0.1ms | ActiveRecord: 3.8ms | Allocations: 5192)
+
+
+Started GET "/api/v1/users/4/reservations" for ::1 at 2022-05-19 03:19:46 +0100
+Processing by Api::V1::ReservationsController#index as JSON
+  Parameters: {"user_id"=>"4", "reservation"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `authenticateing_users'
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 3.8ms | Allocations: 7981)
+
+
+  
+NameError (undefined local variable or method `user_id' for #<Api::V1::ReservationsController:0x00000000040358>
+
+          render json: user_id
+                       ^^^^^^^
+Did you mean?  user_ids):
+  
+app/controllers/api/v1/reservations_controller.rb:12:in `index'
+Started GET "/api/v1/users/4/reservations" for ::1 at 2022-05-19 03:20:32 +0100
+Processing by Api::V1::ReservationsController#index as JSON
+  Parameters: {"user_id"=>"4", "reservation"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `authenticateing_users'
+  [1m[36mReservation Load (12.2ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."user_id" = $1[0m  [["user_id", 12]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:13:in `index'
+Completed 200 OK in 24ms (Views: 2.0ms | ActiveRecord: 17.0ms | Allocations: 5990)
+
+
+  [1m[36mReservation Load (0.8ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."user_id" = $1[0m  [["user_id", 12]]
+  [1m[36mReservation Load (0.5ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[36mReservation Count (4.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "reservations" WHERE "reservations"."user_id" = $1[0m  [["user_id", 2]]
+Started GET "/api/v1/users/2/reservations" for ::1 at 2022-05-19 03:21:12 +0100
+Processing by Api::V1::ReservationsController#index as JSON
+  Parameters: {"user_id"=>"2", "reservation"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `authenticateing_users'
+  [1m[36mReservation Load (0.2ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" WHERE "reservations"."user_id" = $1[0m  [["user_id", 12]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:13:in `index'
+Completed 200 OK in 3ms (Views: 1.0ms | ActiveRecord: 0.6ms | Allocations: 1519)
+
+
+Started GET "/api/v1/users/2/reservations" for ::1 at 2022-05-19 03:21:26 +0100
+Processing by Api::V1::ReservationsController#index as JSON
+  Parameters: {"user_id"=>"2", "reservation"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `authenticateing_users'
+Completed 200 OK in 9ms (Views: 0.1ms | ActiveRecord: 3.8ms | Allocations: 5251)
+
+
+Started GET "/api/v1/courses" for ::1 at 2022-05-19 03:21:53 +0100
+Processing by Api::V1::CoursesController#index as JSON
+  Parameters: {"course"=>{}}
+  [1m[36mCourse Load (0.5ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 5.0ms | ActiveRecord: 3.0ms | Allocations: 6125)
+
+
+Started GET "/api/v1/users/2/reservations" for ::1 at 2022-05-19 03:22:01 +0100
+Processing by Api::V1::ReservationsController#index as JSON
+  Parameters: {"user_id"=>"2", "reservation"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `authenticateing_users'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 915)
+
+
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1[0m  [["id", 2]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 /* loading for inspect */ LIMIT $2[0m  [["id", 2], ["LIMIT", 11]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 /* loading for inspect */ LIMIT $2[0m  [["id", 2], ["LIMIT", 11]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 /* loading for inspect */ LIMIT $2[0m  [["id", 2], ["LIMIT", 11]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 /* loading for inspect */ LIMIT $2[0m  [["id", 2], ["LIMIT", 11]]
+Started POST "/api/v1/users/2/reservations" for ::1 at 2022-05-19 03:34:24 +0100
+Processing by Api::V1::ReservationsController#create as JSON
+  Parameters: {"user_id"=>"2", "reservation"=>{}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `authenticateing_users'
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 7.1ms | Allocations: 4888)
+
+
+  
+JSON::ParserError (859: unexpected token at ''):
+  
+app/controllers/application_controller.rb:10:in `json_payload'
+app/controllers/api/v1/reservations_controller.rb:23:in `create'
+Started POST "/api/v1/users/2/reservations" for ::1 at 2022-05-19 03:35:23 +0100
+Processing by Api::V1::ReservationsController#create as JSON
+  Parameters: {"user_id"=>"2", "reservation"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `authenticateing_users'
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 6.5ms | Allocations: 5324)
+
+
+  
+JSON::ParserError (859: unexpected token at ''):
+  
+app/controllers/application_controller.rb:10:in `json_payload'
+app/controllers/api/v1/reservations_controller.rb:23:in `create'
+Started POST "/api/v1/users/2/reservations" for ::1 at 2022-05-19 03:35:59 +0100
+Processing by Api::V1::ReservationsController#create as JSON
+  Parameters: {"user_id"=>"2", "reservation"=>{}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `authenticateing_users'
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 3.8ms | Allocations: 5286)
+
+
+  
+JSON::ParserError (859: unexpected token at ''):
+  
+app/controllers/application_controller.rb:10:in `json_payload'
+app/controllers/api/v1/reservations_controller.rb:23:in `create'
+Started POST "/api/v1/users/2/reservations" for ::1 at 2022-05-19 03:36:47 +0100
+Processing by Api::V1::ReservationsController#create as JSON
+  Parameters: {"user_id"=>"2", "reservation"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `authenticateing_users'
+Completed 500 Internal Server Error in 64ms (ActiveRecord: 4.5ms | Allocations: 5286)
+
+
+  
+JSON::ParserError (859: unexpected token at ''):
+  
+app/controllers/application_controller.rb:10:in `json_payload'
+app/controllers/api/v1/reservations_controller.rb:23:in `create'
+Started GET "/api/v1/users/2/reservations" for ::1 at 2022-05-19 03:37:01 +0100
+Processing by Api::V1::ReservationsController#index as JSON
+  Parameters: {"user_id"=>"2", "reservation"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `authenticateing_users'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `authenticateing_users'
+Completed 200 OK in 4ms (Views: 0.5ms | ActiveRecord: 0.3ms | Allocations: 2086)
+
+
+Started GET "/api/v1/users/2/reservations" for ::1 at 2022-05-19 03:37:28 +0100
+Processing by Api::V1::ReservationsController#index as JSON
+  Parameters: {"user_id"=>"2", "reservation"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `authenticateing_users'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:27:in `current_user'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `authenticateing_users'
+Completed 200 OK in 12ms (Views: 0.1ms | ActiveRecord: 4.3ms | Allocations: 6172)
+
+
+Started POST "/api/v1/users/2/reservations" for ::1 at 2022-05-19 03:41:13 +0100
+Processing by Api::V1::ReservationsController#create as JSON
+  Parameters: {"duration"=>5, "reserve_date"=>"10020-303", "course_id"=>4, "user_id"=>"2", "reservation"=>{"reserve_date"=>"10020-303", "duration"=>5, "course_id"=>4}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `authenticateing_users'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `authenticateing_users'
+Completed 200 OK in 29ms (Views: 0.2ms | ActiveRecord: 5.1ms | Allocations: 9616)
+
+
+Started POST "/api/v1/users/2/reservations" for ::1 at 2022-05-19 03:41:27 +0100
+Processing by Api::V1::ReservationsController#create as JSON
+  Parameters: {"duration"=>5, "reserve_date"=>"10020-303", "course_id"=>4, "user_id"=>"2", "reservation"=>{"reserve_date"=>"10020-303", "duration"=>5, "course_id"=>4}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `authenticateing_users'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `authenticateing_users'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 2304)
+
+
+  [1m[36mReservation Load (0.2ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" ORDER BY "reservations"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started POST "/api/v1/users/2/reservations" for ::1 at 2022-05-19 03:43:38 +0100
+Processing by Api::V1::ReservationsController#create as JSON
+  Parameters: {"duration"=>5, "reserve_date"=>"10020-303", "course_id"=>4, "user_id"=>"2", "reservation"=>{"reserve_date"=>"10020-303", "duration"=>5, "course_id"=>4}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `authenticateing_users'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `authenticateing_users'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 2191)
+
+
+Started POST "/api/v1/users/2/reservations" for ::1 at 2022-05-19 03:44:43 +0100
+Processing by Api::V1::ReservationsController#create as JSON
+  Parameters: {"duration"=>5, "reserve_date"=>"10020-303", "course_id"=>4, "user_id"=>"2", "reservation"=>{"reserve_date"=>"10020-303", "duration"=>5, "course_id"=>4}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `authenticateing_users'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:17:in `authenticateing_users'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:21:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/reservations_controller.rb:21:in `create'
+  [1m[36mReservation Create (5.0ms)[0m  [1m[32mINSERT INTO "reservations" ("reserve_date", "duration", "user_id", "course_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["reserve_date", "10020-303"], ["duration", 5], ["user_id", 12], ["course_id", 4], ["created_at", "2022-05-19 02:44:43.533585"], ["updated_at", "2022-05-19 02:44:43.533585"]]
+  ↳ app/controllers/api/v1/reservations_controller.rb:21:in `create'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/reservations_controller.rb:21:in `create'
+Completed 200 OK in 34ms (Views: 0.2ms | ActiveRecord: 11.7ms | Allocations: 12750)
+
+
+  [1m[36mReservation Load (0.2ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations" ORDER BY "reservations"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/api/v1/courses" for ::1 at 2022-05-19 04:03:48 +0100
+Processing by Api::V1::CoursesController#index as JSON
+  [1m[36mCourse Load (3.3ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:8:in `index'
+Completed 200 OK in 211ms (Views: 202.9ms | ActiveRecord: 37.3ms | Allocations: 10883)
+
+
+Started GET "/api/v1/courses" for ::1 at 2022-05-19 04:03:49 +0100
+Processing by Api::V1::CoursesController#index as JSON
+  [1m[36mCourse Load (0.5ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/controllers/api/v1/courses_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.5ms | Allocations: 4019)
+
+

@@ -29,7 +29,7 @@ module Api
       end
 
       def handle_unauthenticated
-        head :unauthorized
+        render json: { error: 'user not authorized' }
       end
     end
   end

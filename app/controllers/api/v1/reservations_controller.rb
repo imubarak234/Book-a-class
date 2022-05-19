@@ -1,11 +1,12 @@
 module Api
   module V1
     class ReservationsController < ApplicationController
-      # before_action :authenticateing_users
-      ALLOWED_DATA = %(duration, reserve_date, course_id, user_id).freeze
+      before_action :authenticateing_users
+      #include ActionController::HttpAuthentication::Token
+      ALLOWED_DATA = %(duration, reserve_date, course_id).freeze
 
       def index
-        render json: Reservation.where(user_id: User.find(params[:user_id]).id)
+        render json: Reservation.where(user_id: authenticateing_users)
       end
 
       def show
@@ -15,6 +16,7 @@ module Api
       def create
         data = json_payload.select { |k| ALLOWED_DATA.include?(k) }
         reservation = Reservation.new(data)
+        reservation.user_id = authenticateing_users.id
 
         if reservation.save
           render json: { success: 'The reservation was succesfully created' }
