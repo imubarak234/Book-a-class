@@ -12,6 +12,10 @@ The project requirements can be viewed [here](https://github.com/microverseinc/c
 
 [Front-End](https://github.com/Hombre2014/book-a-class-frontend)
 
+## Kanban board
+
+[Link](https://github.com/Hombre2014/Book-a-class/projects/1)
+
 ## Built With
 
 - Languages: JavaScript, Ruby
