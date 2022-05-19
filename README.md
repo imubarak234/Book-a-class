@@ -35,31 +35,13 @@ Open a browser and go to: `https://localhost:3000` to view the app.
 `cd Book-a-class`</br>
 `rails db:drop db:create db:migrate db:seed`
 
-### Install dependencies
+### To start the front-end, do the following:
 
-```
-npm i 
-or
-npm install
-```
-
-### Usage
-
-Start server with:
-
-```
-rails server
-```
-
-Visit http://localhost:3000/ in your browser.
-
-### Open API documentation
-
-```
-Coming soon!
-```
-
-## Testing
+Run the following commands:</br>
+`git clone https://github.com/Hombre2014/book-a-class-frontend`</br>
+`npm install`</br>
+`npm start`</br>
+The WebDev server will ask you to change the port 3000, since it is already ocupied by the Rails server. Type "Y" and continue. The WebDev server will run on port 3001 and will open a new browser loading the home page.
 
 ## Authors
 
