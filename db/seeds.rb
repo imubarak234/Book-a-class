@@ -6,16 +6,6 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
-#   Character.create(name: "Luke", movie: movies.first)
-
-#require "faker"
-
 user1 = User.create!(
   full_name: 'Kalolo Lemba',
   email: 'kalololemba@gmail.com',
@@ -23,6 +13,37 @@ user1 = User.create!(
   password: '123456'
 )
 
+user2 = User.create!(
+  full_name: 'Ben King',
+  email: 'ben@gmail.com',
+  username: 'ben',
+  password: '123456'
+)
+
+course1 = Course.create(
+    title: 'Web Developer',
+    description: 'Become a Certified HTML, CSS, JavaScript Web Developer. Complete coverage of HTML, CSS, Javascript while you Earn Four Respected Certifications. Over 25 Engaging Lab Exercises. Server Side Development with PHP. Dozens of Code Examples to Download and Study. Client Side Programming with Javascript. Learn Database Development with mySQL.',
+    category: 'Web Development',
+    duration: 50,
+    photo: 'https://images.unsplash.com/photo-1590608897129-79da98d15969?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170',
+    price: 120
+  )
+
+  course2 = Course.create(
+    title: 'Fullstack Web Developer',
+    description: 'The Complete 2022 Fullstack Web Developer Course. Learn HTML5, CSS3, JavaScript, Python, Wagtail CMS, PHP & MySQL from scratch! Learn Python from beginner to advanced. Wagtail Pythons top Content Management System (Like WordPress, but better). Lots of projects, big and small! Build a Login/Registration/Members-only website, just like Facebook. Learn the LAMP Stack: Linux, Apache, PHP and MySQL.',
+    category: 'Web Development',
+    duration: 120,
+    photo: 'https://images.unsplash.com/photo-1565106430482-8f6e74349ca1?ixlib=rb-1.2.1&raw_url=true&q=80&fm=jpg&crop=entropy&cs=tinysrgb&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170',
+    price: 200
+  )
+
+user1 = User.create!(
+  full_name: 'Kalolo Lemba',
+  email: 'kalololemba@gmail.com',
+  username: 'KingKaylo',
+  password: '123456'
+)
 
 user2 = User.create!(
   full_name: 'Ben King',
