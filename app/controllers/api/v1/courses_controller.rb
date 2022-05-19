@@ -18,18 +18,17 @@ module Api
         # courses.update(user: current_user)
 
         if courses.save
-          courses_users = User.find(courses.user_id)
-          CoursesUser.create(course: courses, user: courses_users)
-          render json: courses, status: :created
+          render json: { success: 'The course was succesfully created' }
         else
-          render json: courses.errors, status: :unprocessable_entity
+          render json: { error: 'could not create course' }
         end
       end
 
       def destroy
-        var = CoursesUser.where(course_id: params[:id])
-        var.destroy_all
+        StartDate.where(course_id: params[:id]).delete_all
+        Reservation.where(course_id: params[:id]).delete_all
         Course.find(params[:id]).destroy!
+        render json: { success: 'The course deleted' }
       end
 
       private

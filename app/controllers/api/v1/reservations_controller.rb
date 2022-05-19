@@ -6,7 +6,7 @@ module Api
       ALLOWED_DATA = %(duration, reserve_date, course_id).freeze
 
       def index
-        render json: Reservation.where(user_id: authenticateing_users)
+        render json: Reservation.where(user_id: authenticateing_users.id)
       end
 
       def show
