@@ -2,15 +2,15 @@
 
 # Book a class
 
->  This is the final group capstone project The back-end is Book-a-class
+>  This is the final group capstone project - Book-a-class. This is the back-end. The front-end is book-a-class-frontend. Please, see the link below.
+
+## Link to the front end repo
+
+[Link](https://github.com/Hombre2014/book-a-class-frontend)
 
 ## Project requirements
 
 The project requirements can be viewed [here](https://github.com/microverseinc/curriculum-final-capstone/blob/main/projects/business_requirements.md)
-
-## Book a class front-end
-
-[Front-End](https://github.com/Hombre2014/book-a-class-frontend)
 
 ## Kanban board
 
@@ -54,17 +54,17 @@ The WebDev server will ask you to change the port 3000, since it is already ocup
 - GitHub: [@imubarak234](https://github.com/imubarak234)
 - LinkedIn: [Mubarak Ibrahim](https://www.linkedin.com/in/mubarak-ibrahim-1540a5208/)
 
-👤 **Kalolo Chola Lemba**
-
-- GitHub: [@KayLemba](https://github.com/KayLemba)
-- Twitter: [@King_Kaylo1](https://twitter.com/King_Kaylo1)
-- LinkedIn: [Kalolo (Chola) Lemba](https://www.linkedin.com/in/kalolo-lemba-41a8339a/)
-
 👤 **Yuriy Chamkoriyski**
 
 - GitHub: [@Hombre2014](https://github.com/Hombre2014)
 - Twitter: [@Chamkoriyski](https://twitter.com/Chamkoriyski)
 - LinkedIn: [axebit](https://linkedin.com/in/axebit)
+
+👤 **Kalolo Chola Lemba**
+
+- GitHub: [@KayLemba](https://github.com/KayLemba)
+- Twitter: [@King_Kaylo1](https://twitter.com/King_Kaylo1)
+- LinkedIn: [Kalolo (Chola) Lemba](https://www.linkedin.com/in/kalolo-lemba-41a8339a/)
 
 ## 🤝 Contributing
 
